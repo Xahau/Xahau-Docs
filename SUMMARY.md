@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Hooks](README.md)
+* [Security Audit](security-audit/README.md)
+  * [Responsible Disclosure](security-audit/responsible-disclosure.md)
 * [Testnet V3](testnet-v3/README.md)
   * [Faucet & Explorer](testnet-v3/faucet-and-explorer.md)
   * [Peering (your own node)](testnet-v3/peering-your-own-node.md)
