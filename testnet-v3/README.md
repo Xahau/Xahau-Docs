@@ -2,9 +2,8 @@
 description: >-
   The Hooks Testnet V3 is the current testnet with the Hooks amendment and other
   Hooks sidechain specific features enabled.
-cover: >-
-  https://images.unsplash.com/photo-1554475900-0a0350e3fc7b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxmbGFza3xlbnwwfHx8fDE2ODg0Nzc1MDJ8MA&ixlib=rb-4.0.3&q=85
-coverY: 49
+cover: ../.gitbook/assets/cdn.feather.webp
+coverY: 0
 ---
 
 # Testnet V3

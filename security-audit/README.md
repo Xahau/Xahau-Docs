@@ -1,3 +1,8 @@
+---
+cover: ../.gitbook/assets/cdn.feather-1.webp
+coverY: 0
+---
+
 # Security Audit
 
 The successful completion of the audit represents an essential milestone. It affirms the security measures and propels the ecosystem closer to a vision of integrating Hooks into the XRPL.
