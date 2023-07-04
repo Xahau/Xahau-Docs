@@ -6,11 +6,9 @@ description: >-
 
 # Burn 2 Mint
 
-## Burn2Mint Technical Manual (HooksV3)
+## Burn2Mint Technical Manual (Hooks V3 Testnet)
 
 {% hint style="warning" %}
-### Warning
-
 This process is deliberately non-trivial and is not designed for end users.\
 \
 **Burn2Mint is intended for use by liquidity providers only.**
