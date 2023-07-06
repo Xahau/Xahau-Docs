@@ -11,5 +11,6 @@ coverY: 0
 The Hooks V3 Testnet can be used to test & build all Hooks features, run Smart Contracts on an XRP Ledger Protocol chain & interact with the new network features.
 
 {% hint style="info" %}
-The Hooks V3 Testnet can be considered a Side Chain of the XRP Ledger Testnet.
+**The Hooks V3 Testnet can be considered a Side Chain of the XRP Ledger Testnet.**
 {% endhint %}
+
