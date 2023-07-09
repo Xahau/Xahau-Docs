@@ -67,6 +67,12 @@ The following are supported transaction types:
 * SetRegularKey
 * SignerListSet.
 
+{% hint style="warning" %}
+
+Tickets _**are not accepted**_ in **any** Burn Transactions and would lead to the Burn Transaction being invalid for minting. To protect from spam, transactions must be validated with real, natural sequence number.
+
+{% endhint %}
+
 Note that, other transaction types are not currently supported and cannot be used to mint on HooksV3. (However this may soon change.)
 
 All three transactions types can be used for minting. This means the _**Fee**_ burned by the Burn Transaction is subsequently minted on HooksV3 after a successful `Import`.
