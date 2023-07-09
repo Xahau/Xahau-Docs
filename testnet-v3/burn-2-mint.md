@@ -69,7 +69,7 @@ The following are supported transaction types:
 
 {% hint style="warning" %}
 
-Tickets _**are not accepted**_ in **any** Burn Transactions and would lead to the Burn Transaction being invalid for minting. To protect from spam, transactions must be validated with real, natural sequence number.
+Tickets _**are not accepted**_ in **any** Burn Transactions and would lead to a Burn Transaction being invalid for minting. To protect against spam, transactions must be validated with a real, natural sequence number.
 
 {% endhint %}
 
