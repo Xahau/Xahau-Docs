@@ -8,9 +8,9 @@ description: >-
 
 ## Main differences
 
-1. Hooks enabled networks allow getting network definitions dynamically. Allowing clients to adapt to available transaction types, ledger objects, properties & value types. When implemented correctly, this means signing and encoding libraries don't have to be updated when the network adds transaction/object types/properties. **The libraries below implement this, and will handle this for you.**
+1. Hooks enabled networks allow getting network definitions dynamically. Allowing clients to adapt to available transaction types, ledger objects, properties & value types. When implemented correctly, this means signing and encoding libraries don't have to be updated when the network adds transaction/object types/properties. <mark style="color:blue;">**The libraries below implement this, and will handle this for you.**</mark>
 2. Hooks enabled networks require a **NetworkID** with every transaction, to prevent transaction replay on another chain. The **NetworkID** will also be returned by a `server_info` RPC command in the `network_id` field (e.g. **`21338`** for Hooks V3 testnet)
-3. Transactions on a Hooks enabled network may need higher fees to deliver a transaction to another account, based on the Hooks that will be executed sending out of the sending account, and receiving on the destination account. A reasonable fee to satisfy the Hooks execution can be dynamically fetched from a node by issuing the `fee` command while providing a transaction as `tx_blob`. **The libraries below implement this, and will handle this for you.**
+3. Transactions on a Hooks enabled network may need higher fees to deliver a transaction to another account, based on the Hooks that will be executed sending out of the sending account, and receiving on the destination account. A reasonable fee to satisfy the Hooks execution can be dynamically fetched from a node by issuing the `fee` command while providing a transaction as `tx_blob`. <mark style="color:blue;">**The libraries below implement this, and will handle this for you.**</mark>
 
 ## Javascript/Typescript
 
@@ -18,7 +18,7 @@ The [**npm package `xrpl-accountlib`**](https://www.npmjs.com/package/xrpl-accou
 
 The [**npm package `xrpl-client`**](https://www.npmjs.com/package/xrpl-client) integrates nicely with `xrpl-accountlib` (and comes as a dependency) to dynamically fetch the aforementioned network definitions, account values, and helps you to submit the transaction.
 
-### Sample
+### Code Sample
 
 ```javascript
 import {
