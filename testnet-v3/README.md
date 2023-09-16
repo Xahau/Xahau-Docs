@@ -1,16 +1,17 @@
 ---
 description: >-
-  The Hooks Testnet V3 is the current testnet with the Hooks amendment and other
-  Hooks sidechain specific features enabled.
+  The Xahau Testnet is the current Testnet with the Hooks amendment and other
+  Hooks sidechain specific features enabled (Xahau testnet was formerly known as
+  Hooks Testnet V3)
 cover: ../.gitbook/assets/cdn.feather.webp
 coverY: 0
 ---
 
-# Testnet V3
+# Xahau Testnet
 
-The Hooks V3 Testnet can be used to test & build all Hooks features, run Smart Contracts on an XRP Ledger Protocol chain & interact with the new network features.
+The Xahau testnet (formerly: "Hooks V3 Testnet") can be used to test & build all Hooks features, run Smart Contracts on an XRP Ledger Protocol chain & interact with the new network features.
 
 {% hint style="info" %}
-**The Hooks V3 Testnet can be considered a Side Chain of the XRP Ledger Testnet.**
+**The Xahau Testnet can be considered a Side Chain of the XRP Ledger Testnet.**
 {% endhint %}
 
