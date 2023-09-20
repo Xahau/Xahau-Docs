@@ -27,7 +27,7 @@ import {
   signAndSubmit,
 } from "xrpl-accountlib"
 
-const wss = 'wss://hooks-testnet-v3.xrpl-labs.com/'
+const wss = 'wss://xahau-test.net'
 const account = derive.familySeed("s...")
 
 const networkInfo = await utils.txNetworkAndAccountValues(wss, account)
