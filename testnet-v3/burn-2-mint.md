@@ -4,7 +4,7 @@ description: >-
   users to self-supply their own liquidity as needed for their own purposes.
 ---
 
-# Burn 2 Mint
+# Burn 2 Mint (B2M)
 
 ## Burn2Mint Technical Manual (Hooks V3 Testnet)
 
@@ -13,7 +13,7 @@ This process is deliberately non-trivial and is not designed for end users.\
 \
 **Burn2Mint is intended for use by liquidity providers only.**
 
-_**This is a warning that will appear on the production version of this document. You may disregard it because you are burning free testnet XRP in this instance.**_
+**This is a warning that will appear on the production version of this document. You may disregard it because you are burning free testnet XRP in this instance.**
 {% endhint %}
 
 Burn2Mint is a low-level inter-chain primitive and is intended for enterprise users to self-supply their own liquidity as needed for their own purposes. Running your own nodes and performing this operation yourself on your own nodes means you and you alone bear responsibility for the outcome of the procedure.
@@ -24,18 +24,17 @@ If you are not comfortable with taking these technical risks, or do not understa
 
 ### Setup
 
-To perform B2M, *two* XRPL protocol nodes should be operated by the user:
+To perform B2M, _two_ XRPL protocol nodes should be operated by the user:
 
 1. **Burn Node**, comprising:
    * A modified Rippled instance (modified to record XPOPs)
-   * Universal linux binary here: [https://yidczxh.dlvr.cloud/pob](https://yidczxh.dlvr.cloud/pob)
+   * Universal linux binary here: [https://tvntezq.dlvr.cloud/rippled\_with\_xpop](https://tvntezq.dlvr.cloud/rippled\_with\_xpop)
    * [https://github.com/RichardAH/rippled/tree/proof-of-burn](https://github.com/RichardAH/rippled/tree/proof-of-burn)
    * Running a with a rippled.cfg that has:
      * an **\[xpop\_dir]** stanza specifying an output directory for generated XPOPs.
      * a **\[network\_id]** stanza specifying network\_id: 1
        * (in production this would be network 0)
-     *   a `validators.txt` containing:\
-
+     *   a `validators.txt` containing:\\
 
          ```
          [validator_list_sites]
@@ -43,8 +42,6 @@ To perform B2M, *two* XRPL protocol nodes should be operated by the user:
          [validator_list_keys]
          ED264807102805220DA0F312E71FC2C69E1552C9C5790F6C25E3729DEB573D5860
          ```
-
-
 2. **Mint Node**
    * In this test scenario you will connect directly to the V3 hooks testnet, you do not need to run your own node. In the production scenario you will need to run a Mint node, which is just a stock node for the target network. This is because public nodes will probably opt out of accepting Import transactions due to legal risk.
      * Connect to **wss://hooks-testnet-v3.xrpl-labs.com**
@@ -68,9 +65,7 @@ The following are supported transaction types:
 * SignerListSet.
 
 {% hint style="warning" %}
-
 Tickets _**are not accepted**_ in **any** Burn Transactions and would lead to a Burn Transaction being invalid for minting. To protect against spam, transactions must be validated with a real, natural sequence number.
-
 {% endhint %}
 
 Note that, other transaction types are not currently supported and cannot be used to mint on HooksV3. (However this may soon change.)
@@ -103,7 +98,7 @@ The Burn Node watches closed ledgers for transactions containing the **Operation
 
 Wait for the ledger to close, then browse through the xpop\_dir for the Burn Transaction's XPOP according to its TXID. The file contains a JSON document, which is the XPOP that you'll be relaying to the destination XRPL chain (HooksV3).
 
-Take the raw contents of this file and encode it as HEX. This will become the contents of the **Blob* field in the `Import` transaction.
+Take the raw contents of this file and encode it as HEX. This will become the contents of the \*_Blob_ field in the `Import` transaction.
 
 ### Mint Transaction
 
