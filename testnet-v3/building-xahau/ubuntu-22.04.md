@@ -1,6 +1,8 @@
 # Ubuntu - 22.04
 
-Revise this
+{% hint style="warning" %}
+**Revise this**
+{% endhint %}
 
 | Dependency | Working Version |
 | ---------- | --------------- |
