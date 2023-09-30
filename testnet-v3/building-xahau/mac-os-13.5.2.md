@@ -30,7 +30,6 @@ export PROTOBUF_VERSION=3.20.0
 # Set environment variables
 export DEP_DIR=~/dependencies
 export BOOST_FOLDER_NAME="boost_$(echo "$BOOST_VERSION" | sed 's/\./_/g')"
-export BOOST_DIR="$DEP_DIR/$BOOST_FOLDER_NAME"
 export BOOST_ROOT="$DEP_DIR/$BOOST_FOLDER_NAME"
 export BOOST_LIBRARY_DIRS="$BOOST_ROOT/libs"
 export BOOST_INCLUDE_DIR="$BOOST_ROOT/boost"
@@ -85,9 +84,9 @@ Install Boost
 
 ```
 cd $DEP_DIR
-wget https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VERSION/source/$BOOST_DIR.tar.gz
-tar -xvzf $BOOST_DIR.tar.gz
-cd $BOOST_DIR
+wget https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VERSION/source/$BOOST_FOLDER_NAME.tar.gz
+tar -xvzf $BOOST_FOLDER_NAME.tar.gz
+cd $BOOST_FOLDER_NAME
 ./bootstrap.sh
 ./b2 -j$(sysctl -n hw.logicalcpu)
 ```

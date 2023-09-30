@@ -104,9 +104,9 @@ Install Boost
 
 ```
 cd $DEP_DIR
-wget https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VERSION/source/$BOOST_DIR.tar.gz
-tar -xvzf $BOOST_DIR.tar.gz
-cd $BOOST_DIR
+wget https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VERSION/source/$BOOST_FOLDER_NAME.tar.gz
+tar -xvzf $BOOST_FOLDER_NAME.tar.gz
+cd $BOOST_FOLDER_NAME
 ./bootstrap.sh
 ./b2 -j$(nproc)
 ```
