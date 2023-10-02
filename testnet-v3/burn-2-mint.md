@@ -20,7 +20,7 @@ Burn2Mint is a low-level inter-chain primitive and is intended for enterprise us
 
 The generation & collection of XPOPs fundamentally relies on collecting validation messages on the overlay network, which are ephemeral by nature. If your nodes are not reliably connected, or if your hardware, network connection or operating system fail at the wrong point in time, then the XPOP for a Burn Transaction might not be generated or might not be generated correctly. This can lead to loss of funds as the Burn Transaction's XPOP was not captured in time and it’s possible the validation messages are lost forever making a Mint Transaction impossible despite a successful Burn Transaction.
 
-If you are not comfortable with taking these technical risks, or do not understand what you are doing, or are not an enterprise user, then please source your liquidity via other friendly friendly alternatives.
+If you are not comfortable with taking these technical risks, or do not understand what you are doing, or are not an enterprise user, then please source your liquidity via other friendly alternatives.
 
 ### Setup
 
