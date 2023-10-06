@@ -31,11 +31,13 @@ _(Added by the \[URIToken amendment]\[].)_
 
 
 
-{% hint style="info" %}
-[Query Example Tx](http://localhost:4000/tx?binary=false\&id=example\_URITokenBurn\&transaction=C53ECF838647FA5A4C780377025FEC7999AB4182590510CA461444B207AB74A9)
-{% endhint %}
-
-<table><thead><tr><th width="173">Field</th><th width="150">JSON Type</th><th>[Internal Type][]</th><th>Description</th></tr></thead><tbody><tr><td><code>Account</code></td><td>String</td><td>AccountID</td><td>The address of the account that will own the minted URIToken.</td></tr><tr><td><code>URI</code></td><td>String</td><td>String</td><td>The URI associated with the minted URIToken.</td></tr><tr><td><code>Digest</code></td><td>String</td><td>Hash256</td><td><em>(Optional)</em> The digest of the URIToken.</td></tr><tr><td><code>Destination</code></td><td>String</td><td>AccountID</td><td><em>(Optional)</em> The address of the account that can buy the minted URIToken.</td></tr><tr><td><code>Amount</code></td><td>[Currency Amount][]</td><td>Amount</td><td><em>(Optional)</em> The amount of currency the account wants to receive in exchange for the URIToken.</td></tr></tbody></table>
+| Field         | JSON Type             | \[Internal Type]\[] | Description                                                                                    |
+| ------------- | --------------------- | ------------------- | ---------------------------------------------------------------------------------------------- |
+| `Account`     | String                | AccountID           | The address of the account that will own the minted URIToken.                                  |
+| `URI`         | String                | String              | The URI associated with the minted URIToken.                                                   |
+| `Digest`      | String                | Hash256             | _(Optional)_ The digest of the URIToken.                                                       |
+| `Destination` | String                | AccountID           | _(Optional)_ The address of the account that can buy the minted URIToken.                      |
+| `Amount`      | \[Currency Amount]\[] | Amount              | _(Optional)_ The amount of currency the account wants to receive in exchange for the URIToken. |
 
 ### Special Transaction Cost
 

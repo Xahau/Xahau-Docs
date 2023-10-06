@@ -26,10 +26,6 @@ _(Added by the \[Checks amendment]\[].)_
 }
 ```
 
-{% hint style="info" %}
-[Query Example Tx](http://localhost:4000/tx?binary=false\&id=example\_URITokenBurn\&transaction=C53ECF838647FA5A4C780377025FEC7999AB4182590510CA461444B207AB74A9)
-{% endhint %}
-
 | Field            | JSON Type             | \[Internal Type]\[] | Description                                                                                                                                                                                                                                                                                                 |
 | ---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Destination`    | String                | AccountID           | The unique address of the account that can cash the Check.                                                                                                                                                                                                                                                  |

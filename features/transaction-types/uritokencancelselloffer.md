@@ -22,13 +22,12 @@ _(Added by the \[URIToken amendment]\[].)_
 
 
 
-{% hint style="info" %}
-[Query Example Tx](http://localhost:4000/tx?binary=false\&id=example\_URITokenBurn\&transaction=C53ECF838647FA5A4C780377025FEC7999AB4182590510CA461444B207AB74A9)
-{% endhint %}
-
 ### Fields
 
-<table><thead><tr><th width="166">Field</th><th width="114">JSON Type</th><th width="177">[Internal Type][]</th><th>Description</th></tr></thead><tbody><tr><td><code>Account</code></td><td>String</td><td>AccountID</td><td>The address of the account that owns the sell offer to cancel.</td></tr><tr><td><code>URITokenID</code></td><td>String</td><td>Hash256</td><td>The ID of the URIToken to cancel the sell offer.</td></tr></tbody></table>
+| Field        | JSON Type | \[Internal Type]\[] | Description                                                    |
+| ------------ | --------- | ------------------- | -------------------------------------------------------------- |
+| `Account`    | String    | AccountID           | The address of the account that owns the sell offer to cancel. |
+| `URITokenID` | String    | Hash256             | The ID of the URIToken to cancel the sell offer.               |
 
 ### Error Cases
 

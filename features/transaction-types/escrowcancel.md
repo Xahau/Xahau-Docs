@@ -19,10 +19,6 @@ _Added by the \[Escrow amendment]\[]._
 }
 ```
 
-{% hint style="info" %}
-[Query Example Tx](http://localhost:4000/tx?binary=false\&id=example\_URITokenBurn\&transaction=C53ECF838647FA5A4C780377025FEC7999AB4182590510CA461444B207AB74A9)
-{% endhint %}
-
 ### Fields
 
 | Field           | JSON Type | \[Internal Type]\[] | Description                                                                                                  |

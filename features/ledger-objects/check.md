@@ -1,7 +1,5 @@
 # Check
 
-## Check
-
 [\[Source\]](https://github.com/ripple/rippled/blob/master/src/ripple/protocol/impl/LedgerFormats.cpp#L157-L170)
 
 _(Added by the \[Checks amendment]\[].)_
@@ -52,12 +50,8 @@ A `Check` object has the following fields:
 
 ### Check ID Format
 
-[\[Source\]](https://github.com/ripple/rippled/blob/master/src/ripple/protocol/impl/Indexes.cpp#L193-L200)
-
 The ID of a `Check` object is the \[SHA-512Half]\[] of the following values, concatenated in order:
 
 * The Check space key (`0x0043`)
 * The AccountID of the sender of the \[CheckCreate transaction]\[] that created the `Check` object
 * The `Sequence` number of the \[CheckCreate transaction]\[] that created the `Check` object. If the CheckCreate transaction used a Ticket, use the `TicketSequence` value instead.
-
-See the tutorial showing how to Send a Check.

@@ -12,7 +12,7 @@ When a payment channel expires, at first it remains on the ledger, because only 
 
 For an example of using payment channels, see the Payment Channels Tutorial.
 
-### Example \{{currentpage.name\}} JSON
+### Example JSON
 
 ```json
 {
@@ -36,7 +36,7 @@ For an example of using payment channels, see the Payment Channels Tutorial.
 }
 ```
 
-### \{{currentpage.name\}} Fields
+### Fields
 
 A `PayChannel` object has the following fields:
 

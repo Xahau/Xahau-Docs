@@ -59,8 +59,6 @@ The "previous history" `LedgerHashes` objects act as a [skip list](https://en.wi
 
 ### LedgerHashes ID Formats
 
-[\[Source\]](https://github.com/ripple/rippled/blob/master/src/ripple/protocol/impl/Indexes.cpp#L26-L42)
-
 There are two formats for `LedgerHashes` object IDs, depending on whether the object is a "recent history" sub-type or a "previous history" sub-type.
 
 The **"recent history"** `LedgerHashes` object has an ID that is the \[SHA-512Half]\[] of the `LedgerHashes` space key (`0x0073`). In other words, the "recent history" always has the ID `B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B`.

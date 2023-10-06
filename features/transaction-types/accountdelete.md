@@ -7,7 +7,7 @@ description: >-
 
 # AccountDelete
 
-\[[Source](https://github.com/Xahau/xahaud/blob/dev/src/ripple/app/tx/impl/URIToken.cpp)]
+\[[Source](https://github.com/Xahau/xahaud/blob/dev/src/ripple/app/tx/impl/DeleteAccount.cpp)]
 
 _Added by the DeletableAccounts amendment_
 
@@ -25,11 +25,10 @@ _Added by the DeletableAccounts amendment_
 }
 ```
 
-{% hint style="info" %}
-[Query Example Tx](http://localhost:4000/tx?binary=false\&id=example\_URITokenBurn\&transaction=C53ECF838647FA5A4C780377025FEC7999AB4182590510CA461444B207AB74A9)
-{% endhint %}
-
-<table><thead><tr><th width="196">Field</th><th width="138">JSON Type</th><th width="150">[Internal Type][]</th><th>Description</th></tr></thead><tbody><tr><td><code>Destination</code></td><td>String - [Address][]</td><td>AccountID</td><td>The address of an account to receive any leftover XRP after deleting the sending account. Must be a funded account in the ledger, and must not be the sending account.</td></tr><tr><td><code>DestinationTag</code></td><td>Number</td><td>UInt32</td><td><em>(Optional)</em> Arbitrary destination tag that identifies a hosted recipient or other information for the recipient of the deleted account's leftover XRP.</td></tr></tbody></table>
+| Field            | JSON Type              | \[Internal Type]\[] | Description                                                                                                                                                            |
+| ---------------- | ---------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Destination`    | String - \[Address]\[] | AccountID           | The address of an account to receive any leftover XRP after deleting the sending account. Must be a funded account in the ledger, and must not be the sending account. |
+| `DestinationTag` | Number                 | UInt32              | _(Optional)_ Arbitrary destination tag that identifies a hosted recipient or other information for the recipient of the deleted account's leftover XRP.                |
 
 ### Special Transaction Cost
 

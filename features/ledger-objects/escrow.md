@@ -33,7 +33,7 @@ An `Escrow` object is associated with two addresses:
 }
 ```
 
-### \{{currentpage.name\}} Fields
+### Fields
 
 An `Escrow` object has the following fields:
 

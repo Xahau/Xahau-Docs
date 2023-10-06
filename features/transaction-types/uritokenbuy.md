@@ -27,11 +27,12 @@ _(Added by the \[URIToken amendment]\[].)_
 }
 ```
 
-{% hint style="info" %}
-[Query Example Tx](http://localhost:4000/tx?binary=false\&id=example\_URITokenBurn\&transaction=C53ECF838647FA5A4C780377025FEC7999AB4182590510CA461444B207AB74A9)
-{% endhint %}
-
-<table><thead><tr><th width="167">Field</th><th width="174">JSON Type</th><th width="180">[Internal Type][]</th><th>Description</th></tr></thead><tbody><tr><td><code>Account</code></td><td>String</td><td>AccountID</td><td>The address of the buyer's account.</td></tr><tr><td><code>URITokenID</code></td><td>String</td><td>Hash256</td><td>The unique identifier of the URIToken to be bought.</td></tr><tr><td><code>Amount</code></td><td>[Currency Amount][]</td><td>Amount</td><td>The amount of currency to pay for the URIToken.</td></tr><tr><td><code>Destination</code></td><td>String</td><td>AccountID</td><td><em>(Optional)</em> The address of the account to receive the URIToken. If omitted, the URIToken is sent to the buyer's account.</td></tr></tbody></table>
+| Field         | JSON Type             | \[Internal Type]\[] | Description                                                                                                               |
+| ------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `Account`     | String                | AccountID           | The address of the buyer's account.                                                                                       |
+| `URITokenID`  | String                | Hash256             | The unique identifier of the URIToken to be bought.                                                                       |
+| `Amount`      | \[Currency Amount]\[] | Amount              | The amount of currency to pay for the URIToken.                                                                           |
+| `Destination` | String                | AccountID           | _(Optional)_ The address of the account to receive the URIToken. If omitted, the URIToken is sent to the buyer's account. |
 
 ### Special Transaction Cost
 

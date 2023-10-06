@@ -2,10 +2,10 @@
 
 ### Transaction Types
 
-{% content-ref url="../transaction-types/claimreward-hook.md" %}
-[claimreward-hook.md](../transaction-types/claimreward-hook.md)
+{% content-ref url="../transaction-types/claimreward.md" %}
+[claimreward.md](../transaction-types/claimreward.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/genesismint-hook.md" %}
-[genesismint-hook.md](../transaction-types/genesismint-hook.md)
+{% content-ref url="../transaction-types/genesismint-emitted-txn.md" %}
+[genesismint-emitted-txn.md](../transaction-types/genesismint-emitted-txn.md)
 {% endcontent-ref %}
