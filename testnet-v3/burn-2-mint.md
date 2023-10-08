@@ -9,11 +9,9 @@ description: >-
 ## Burn2Mint Technical Manual (Hooks V3 Testnet)
 
 {% hint style="warning" %}
-This process is deliberately non-trivial and is not designed for end users.\
-\
-**Burn2Mint is intended for use by liquidity providers only.**
+**This process is deliberately non-trivial and is not designed for end users.** Mistakes result in a burn not being able to turned into a mint.
 
-**This is a warning that will appear on the production version of this document. You may disregard it because you are burning free testnet XRP in this instance.**
+This is a warning that will appear on the production version of this document. You may disregard it because you are burning free testnet XRP in this instance.
 {% endhint %}
 
 Burn2Mint is a low-level inter-chain primitive and is intended for enterprise users to self-supply their own liquidity as needed for their own purposes. Running your own nodes and performing this operation yourself on your own nodes means you and you alone bear responsibility for the outcome of the procedure.
@@ -74,6 +72,12 @@ You can easily fetch/create xPOPs from a node using the repo above using this NP
 * In this test scenario you will connect directly to the Xahau, you do not need to run your own node. In the production scenario you will need to run a Mint node, which is just a stock node for the target network. This is because public nodes will probably opt out of accepting Import transactions due to legal risk.
   * Connect to **wss://xahau-test.net**
   * Or download download/run: [**https://github.com/Xahau/Xahau-Testnet-Docker**](https://github.com/Xahau/Xahau-Testnet-Docker)
+
+## Sample (nodejs)
+
+This example creates a testnet account, burns 10 XRP & then imports this on Xahau Testnet, using the xPOP fetched using the tools mentioned above.
+
+{% embed url="https://gist.github.com/WietseWind/cd8a7a8c88f218fe7b768f59a665685d" %}
 
 ## Technical Summary on B2M's procedure
 
