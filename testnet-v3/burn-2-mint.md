@@ -26,33 +26,60 @@ If you are not comfortable with taking these technical risks, or do not understa
 
 To perform B2M, _two_ XRPL protocol nodes should be operated by the user:
 
-1. **Burn Node**, comprising:
-   * A modified Rippled instance (modified to record XPOPs)
-   * Universal linux binary here: [https://tvntezq.dlvr.cloud/rippled\_with\_xpop](https://tvntezq.dlvr.cloud/rippled\_with\_xpop)
-   * [https://github.com/RichardAH/rippled/tree/proof-of-burn](https://github.com/RichardAH/rippled/tree/proof-of-burn)
-   * Running a with a rippled.cfg that has:
-     * an **\[xpop\_dir]** stanza specifying an output directory for generated XPOPs.
-     * a **\[network\_id]** stanza specifying network\_id: 1
-       * (in production this would be network 0)
-     *   a `validators.txt` containing:\\
+1. **Obtain xPOP from burn**
 
-         ```
-         [validator_list_sites]
-         https://vl.altnet.rippletest.net
-         [validator_list_keys]
-         ED264807102805220DA0F312E71FC2C69E1552C9C5790F6C25E3729DEB573D5860
-         ```
-2. **Mint Node**
-   * In this test scenario you will connect directly to the V3 hooks testnet, you do not need to run your own node. In the production scenario you will need to run a Mint node, which is just a stock node for the target network. This is because public nodes will probably opt out of accepting Import transactions due to legal risk.
-     * Connect to **wss://hooks-testnet-v3.xrpl-labs.com**
-     * Or download [https://hooksv3d.xrpl-labs.com/hooksv3d.tar](https://hooksv3d.xrpl-labs.com/hooksv3d.tar)
-       * And run with a config as described in [https://xumm.notion.site/Hooks-V3-staging-net-info-518fa261c5cd49d2bcb89a5b9e7bef05](https://www.notion.so/Hooks-V3-staging-net-info-518fa261c5cd49d2bcb89a5b9e7bef05?pvs=21)
+{% tabs %}
+{% tab title="xPOP Collector & Server (easier)" %}
+Run this (e.g. using Docker Compose, see repo Docs)\
+[**https://github.com/Xahau/Validation-Ledger-Tx-Store-to-xPOP**](https://github.com/Xahau/Validation-Ledger-Tx-Store-to-xPOP)
+
+* The service listens for XRPL validation messages, closed ledgers, and transactions.
+* It stores this data in an organized file system.
+* It is essential for generating xPOPs, as XRPL validation messages are ephemeral; without storing them, a transaction burn can't be turned into a mint.
+* **How it Works**:
+  * A watcher connects to multiple XRPL nodes and listens for specific data.
+  * The captured data is then saved, organized, and used to generate xPOPs
+
+Simply fetch the xPOP now from:\
+`http[s]://{your-host}:{your-port}/xpop/{tx-hash}`
+
+You can easily fetch/create xPOPs from a node using the repo above using this NPM package:
+
+[**https://www.npmjs.com/package/xpop**](https://www.npmjs.com/package/xpop)
+{% endtab %}
+
+{% tab title="or: dedicated "Burning Node"" %}
+**Burn Node**, comprising:
+
+* A modified Rippled instance (modified to record XPOPs)
+* Universal linux binary here: [https://tvntezq.dlvr.cloud/rippled\_with\_xpop](https://tvntezq.dlvr.cloud/rippled\_with\_xpop)
+* [https://github.com/RichardAH/rippled/tree/proof-of-burn](https://github.com/RichardAH/rippled/tree/proof-of-burn)
+* Running a with a rippled.cfg that has:
+  * an **\[xpop\_dir]** stanza specifying an output directory for generated XPOPs.
+  * a **\[network\_id]** stanza specifying network\_id: 1
+    * (in production this would be network 0)
+  *   a `validators.txt` containing:\\
+
+      ```
+      [validator_list_sites]
+      https://vl.altnet.rippletest.net
+      [validator_list_keys]
+      ED264807102805220DA0F312E71FC2C69E1552C9C5790F6C25E3729DEB573D5860
+      ```
+{% endtab %}
+{% endtabs %}
+
+2. **Mint**
+
+* In this test scenario you will connect directly to the Xahau, you do not need to run your own node. In the production scenario you will need to run a Mint node, which is just a stock node for the target network. This is because public nodes will probably opt out of accepting Import transactions due to legal risk.
+  * Connect to **wss://xahau-test.net**
+  * Or download download/run: [**https://github.com/Xahau/Xahau-Testnet-Docker**](https://github.com/Xahau/Xahau-Testnet-Docker)
 
 ## Technical Summary on B2M's procedure
 
 #### New Transaction Type: `Import`
 
-HooksV3 (_network\_id=21338_) introduces a new transaction type called _**Import**_, which accepts an XPOP from the Ripple testnet chain (_network\_id=1_) and provides for a “burn-to-mint” unidirectional value transfer and key / account synchronisation.
+Xahau Testnet (_network\_id=21338_) introduces a new transaction type called _**Import**_, which accepts an XPOP from the Ripple testnet chain (_network\_id=1_) and provides for a “burn-to-mint” unidirectional value transfer and key / account synchronisation.
 
 ### Burn Transaction
 
@@ -68,11 +95,11 @@ The following are supported transaction types:
 Tickets _**are not accepted**_ in **any** Burn Transactions and would lead to a Burn Transaction being invalid for minting. To protect against spam, transactions must be validated with a real, natural sequence number.
 {% endhint %}
 
-Note that, other transaction types are not currently supported and cannot be used to mint on HooksV3. (However this may soon change.)
+Note that, other transaction types are not currently supported and cannot be used to mint on Xahau Testnet. (However this may change).
 
-All three transactions types can be used for minting. This means the _**Fee**_ burned by the Burn Transaction is subsequently minted on HooksV3 after a successful `Import`.
+All three transactions types can be used for minting. This means the _**Fee**_ burned by the Burn Transaction is subsequently minted on Xahau Testnet after a successful `Import`.
 
-If `SetRegularKey` or `SignerListSet` is used, then key synchronisation occurs according to the standard rules of the transaction type. If `AccountSet` is used, then no key synchronisation occurs on the destination XRPL chain (HooksV3).
+If `SetRegularKey` or `SignerListSet` is used, then key synchronisation occurs according to the standard rules of the transaction type. If `AccountSet` is used, then no key synchronisation occurs on the destination XRPL chain (Xahau Testnet).
 
 A field called _**OperationLimit**_ must be present on the Burn Transaction to be the destination chain’s Network ID. This field is to prevent replay attacks on other B2M-integrated chains.
 
@@ -135,7 +162,7 @@ Encode and sign the transaction appropriately, yielding a signed transaction blo
 
 If you are not running your own Mint node:
 
-* Connect to **wss://hooks-testnet-v3.xrpl-labs.com**
+* Connect to **wss://xahau-testn.et**
 * Submit the transaction to the node:
 
 ```json
