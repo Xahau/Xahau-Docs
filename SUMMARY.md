@@ -84,3 +84,8 @@
   * [TEL Codes](features/transaction-results/tel-codes.md)
   * [TEF Codes](features/transaction-results/tef-codes.md)
   * [TEC Codes](features/transaction-results/tec-codes.md)
+
+## Technical
+
+* [Balance Adjustments](technical/balance-adjustments.md)
+* [Governance Game](technical/governance-game.md)
