@@ -4,3 +4,52 @@ description: How the Governance Game works
 
 # Governance Game
 
+### Overview
+
+The Xahau Governance Game allows up to 400 stakeholders to democratically participate in the management of the Xahau network via the Governance Hook, which is installed on the Genesis Account.
+
+### Layer 1
+
+The game consists of a "Layer 1" table at which there are 20 seats. Each seat may be filled by a Xahau account (r-address) or be empty. When a seat is filled, it is said that a member of the table sits there.
+
+To play the game, the members of the table cast votes. The votes are for one of three types of topic:
+
+* Seat topics
+* Hook topics
+* Reward topics.
+
+Seat topics are S00 through S19 and represent a vote for who (if anyone) currently sits in that seat. A vote of 80% is sufficient to action a change. The voting process is continuous with the final vote that crosses the threshold actioning the change.
+
+Hook topics are H0 through H9 and represent which Hooks, including the Governance Hook itself, are installed on the table's account. These topics require 100% of the members seated at that table to agree before a change can be made. This allows the Governance Game to be updated and for more genesis account features to be added over time.
+
+Reward topics are RR and RD which stand for Reward-Rate and Reward-Delay, respectively. These topics also require 100% of the members at the table to agree in order to action a change. These parameters affect the BalanceAdjustments system: how much each active user on the network can claim and how often.
+
+### Layer 2
+
+The members who fill seats on the Layer 1 table are Xahau accounts (r-addresses). The governance game is designed to be structurally recursive, such that one of these accounts may itself be a table consisting of a further 20 seats. This is called a Layer 2 table, and the seats are Layer 2 seats.
+
+Within a Layer 2 table the same seat voting and hook voting topics exist, with the same voting rules as the Layer 1 table. This allows a table to govern its own membership and the hooks that run there.
+
+In addition to these topics a Layer 2 table may also, by 51% vote, raise a vote to the Layer 1 table. This is a vote on behalf of the r-address that the Layer 2 table exists on, and counts as a single vote at the Layer 1 table.
+
+The Layer 2 table vote may fall below 51% in which case the vote originally raised to the Layer 1 table is retracted.
+
+Layer 2 tables can only vote on Reward topics via a vote raised to Layer 1.
+
+In summary Layer 2 members can vote for:
+
+* Seats and Hooks for their own table, and
+* Seats, Hooks and Reward topics for the L1 table via the Layer 1 seat their Layer 2 table resides in.
+
+### Constraints
+
+* Any table may have at fewest 2 members and at most 20 members.
+* A single r-address can only occupy one seat at a given table, but may occupy one seat at each of many different tables.
+* The Governance Game is not designed to recurse beyond two layers. There's no technical infeasibility in implementing a Layer 3 table, but the current Governance Hook does not support it.
+
+### Technical Specification
+
+TBC
+
+
+
