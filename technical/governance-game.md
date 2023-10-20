@@ -32,7 +32,7 @@ Within a Layer 2 table the same seat voting and hook voting topics exist, with t
 
 In addition to these topics a Layer 2 table may also, by 51% vote, raise a vote to the Layer 1 table. This is a vote on behalf of the r-address that the Layer 2 table exists on, and counts as a single vote at the Layer 1 table.
 
-The Layer 2 table vote may fall below 51% in which case the vote originally raised to the Layer 1 table is retracted.
+The Layer 2 table vote may fall below 51% in which case the vote originally raised to the Layer 1 table is **not** retracted. Only a new (different) vote attaining 51% can change the table's vote at Layer 1.
 
 Layer 2 tables can only vote on Reward topics via a vote raised to Layer 1.
 
