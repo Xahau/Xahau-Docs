@@ -57,11 +57,13 @@ Validator rewards are an incentive for running a validator on the network. The r
 
 Rewards are ad-hoc and based on Xahau users' Balance Adjustments. When a user performs a Balance Adjustment, an amount equal to their adjustment divided by 20 is sent to the r-address of each of the active validators that meet the above criteria.
 
-### Technical Specification
+## Technical Specification
 
-The Governance Hook is installed on the genesis account by the XahauGenesis amendment several ledgers after ledger 1 on a new network.
+The Governance Hook is installed on the genesis account by the XahauGenesis amendment several ledgers after ledger 1 on a new network. This is the L1 table. To create an L2 table install the Hook on a different account then seat that account at the L1 table.
 
-When the Hook is installed, it is installed with a series of HookParameters. These specify the initial composition of the Layer 1 table.
+### Governance Hook Parameters
+
+When the Governance Hook is installed, it is installed with a set of HookParameters. These specify the initial composition of the table.
 
 Each HookParameter has a 3 byte name consisting of either 3 Ascii characters or 2 Ascii characters and an identifier as below. LE = Little Endian.
 
@@ -81,6 +83,8 @@ Parameter Value: Initial seat #1's member's 20 byte Account ID.
 ```
 
 To kick-off the game an Invoke transaction must be sent to the Hook. This may be sent by any account. No Blob or HookParameters are required. This Invoke transaction triggers the Hook for the first time and prompts it to create state entries for each of the initial seats, reward rate and reward delay.
+
+### Governance Hook State
 
 The Hook State of the Governance Hook is stored in the zero namespace: `0000000000000000000000000000000000000000000000000000000000000000.`
 
@@ -135,4 +139,56 @@ Counter key is 32 bytes comprising:
      0's for padding
      vote data or left-truncated vote data
 ```
+
+### Governance Hook Transactions
+
+The Governance Hook is interacted with by its members using ttINVOKE transactions. In addition to this the Hook may also emit its own ttINVOKE transactions if it is a L2 table raising a vote to the L1 table.
+
+A vote transaction contains a HookParameters array at the top level of the transaction:
+
+```
+{
+    Account: <member's account>,
+    TransactionType: Invoke,
+    NetworkID: 21337,
+    Destination: <table's account>,
+    HookParameters:
+    [
+        {
+            HookParameter:
+            {
+                HookParameterName: "4C",     // L - the target layer
+                HookParameterValue: "01",    // 01 for L1 table, 02 for L2 table
+                                             // note: this is the table the vote is
+                                             // intended for, not the table you're at
+                                             // i.e. for a L2 table you can vote on
+                                             // your own membership or on L1's
+            }
+        },
+        {
+             HookParameter:
+             {
+                 HookParameterName: "54",    // T - topic type
+                 HookParameterValue: "4801", // H [0x00-0x09] or 
+                                             // S [0x00-0x13] or
+                                             // RR or RD
+             }
+        },
+        {
+             HookParameter:
+             {
+                 HookParameterName: "56",    // V - vote data
+                 HookParameterValue: <32 or 20 or 8 bytes of vote data>
+             }
+         }
+    ]
+}
+    
+```
+
+### Clearing a Vote
+
+There is no way to "delete a vote" per se, you can change your vote back to reflect the current position instead. So for example if no one sits at seat 8 and you have voted for account A to sit there, and then you change your mind, you can make a vote to vacate seat 8 (even though it's already vacant) thus aligning your vote with the current state of the seat. To do this you vote with all 0's in the vote data, to the same length as the vote topic normally requires. So for a seat vote this is 20 bytes of 0.
+
+
 
