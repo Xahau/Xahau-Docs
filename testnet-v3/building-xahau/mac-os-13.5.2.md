@@ -1,9 +1,5 @@
 # Mac OS - 13.5.2
 
-{% hint style="warning" %}
-**Revise this**
-{% endhint %}
-
 | Dependency  | Working Version |
 | ----------- | --------------- |
 | Apple Clang | 14.0.3          |

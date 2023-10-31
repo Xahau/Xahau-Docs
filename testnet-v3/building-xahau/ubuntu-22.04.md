@@ -1,9 +1,5 @@
 # Ubuntu - 22.04
 
-{% hint style="warning" %}
-**Revise this**
-{% endhint %}
-
 | Dependency | Working Version |
 | ---------- | --------------- |
 | GCC / G++  | 14.0.3          |
@@ -24,6 +20,7 @@ Either run this in the terminal or add to your `~/.bashrc` file.
 # Set versions
 export UBUNTU_VERSION=jammy
 export LLVM_VERSION=14
+export CMAKE_VERSION=3.23.1
 export BOOST_VERSION=1.77.0
 export WASMEDGE_VERSION=0.11.2
 export PROTOBUF_VERSION=3.20.0

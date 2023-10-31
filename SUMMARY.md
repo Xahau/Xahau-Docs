@@ -5,6 +5,7 @@
   * [Responsible Disclosure](security-audit/responsible-disclosure.md)
 * [Transaction Signing](transaction-signing.md)
 * [Xahau Testnet](testnet-v3/README.md)
+  * [Versioning Process](testnet-v3/versioning-process.md)
   * [Building Xahau](testnet-v3/building-xahau/README.md)
     * [Ubuntu - 22.04](testnet-v3/building-xahau/ubuntu-22.04.md)
     * [Mac OS - 13.5.2](testnet-v3/building-xahau/mac-os-13.5.2.md)
@@ -88,4 +89,6 @@
 ## Technical
 
 * [Balance Adjustments](technical/balance-adjustments.md)
-* [Governance Game](technical/governance-game.md)
+* [Governance Game](technical/governance-game/README.md)
+  * [L2 Distribution Hook](technical/governance-game/l2-distribution-hook.md)
+  * [Converting to an L2](technical/governance-game/converting-to-an-l2.md)
