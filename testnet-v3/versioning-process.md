@@ -1,36 +1,36 @@
 # Versioning Process
 
-This document outlines the versioning process we use in our GitHub repository. We use a three-branch workflow: `develop`, `candidate`, and `release`. This process ensures that all new features and fixes are thoroughly tested before they are released.
+This document outlines the versioning process we use in our GitHub repository. We use a three-branch workflow: `dev`, `candidate`, and `release`. This process ensures that all new features and fixes are thoroughly tested before they are released.
 
 ### Dev Branch
 
-The develop branch is the main branch for ongoing development. All new features, bug fixes, and improvements are merged into this branch. This is the most active branch and it's where developers should base their work.
+The dev branch is the main branch for ongoing development. All new features, bug fixes, and improvements are merged into this branch. This is the most active branch and it's where developers should base their work.
 
-To contribute to the develop branch, follow these steps:
+To contribute to the dev branch, follow these steps:
 
 1. Fork the repository to your own GitHub account.
 2. Clone the forked repository to your local machine.
 3. Create a new branch for your feature or bug fix.
 4. Make your changes and commit them to your branch.
 5. Push your branch to your forked repository on GitHub.
-6. Create a pull request from your branch to the develop branch in the main repository.
+6. Create a pull request from your branch to the dev branch in the main repository.
 
 {% hint style="warning" %}
-All merges into develop branch must be squashed
+All merges into dev branch must be squashed
 {% endhint %}
 
-Code maintainers will review your pull request and provide feedback. Once the code is approved, it will be merged into the develop branch.
+Code maintainers will review your pull request and provide feedback. Once the code is approved, it will be merged into the dev branch.
 
 ### Candidate Branch
 
-Once the features in the `develop` branch are ready for testing, they are merged into the `candidate` branch. This branch serves as a staging area for code that is almost ready for release.
+Once the features in the `dev` branch are ready for testing, they are merged into the `candidate` branch. This branch serves as a staging area for code that is almost ready for release.
 
-The code in the `candidate` branch is thoroughly tested. Any bugs or issues that are found are fixed in the `develop` branch and then merged back into the `candidate` branch.
+The code in the `candidate` branch is thoroughly tested. Any bugs or issues that are found are fixed in the `dev` branch and then merged back into the `candidate` branch.
 
 The `candidate` branch is typically in this testing phase for about 2 weeks. However, this period can be longer or shorter depending on the urgency of the fixes or the size of the new features.
 
-1. Create a new PR from the `develop` branch to the `candidate` branch with a name like "Proposed".
-2. Update the "High Level Overview of Change" to include the Pull Requests from `develop`. Update the "Context of Change" to include any additional notes about the PR's
+1. Create a new PR from the `dev` branch to the `candidate` branch with a name like "Proposed".
+2. Update the "High Level Overview of Change" to include the Pull Requests from `dev`. Update the "Context of Change" to include any additional notes about the PR's
 3. Merge the pull request into the release branch.
 
 {% hint style="warning" %}
