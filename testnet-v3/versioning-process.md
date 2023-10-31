@@ -2,7 +2,7 @@
 
 This document outlines the versioning process we use in our GitHub repository. We use a three-branch workflow: `develop`, `candidate`, and `release`. This process ensures that all new features and fixes are thoroughly tested before they are released.
 
-### Develop Branch
+### Dev Branch
 
 The develop branch is the main branch for ongoing development. All new features, bug fixes, and improvements are merged into this branch. This is the most active branch and it's where developers should base their work.
 
@@ -24,8 +24,6 @@ Code maintainers will review your pull request and provide feedback. Once the co
 ### Candidate Branch
 
 Once the features in the `develop` branch are ready for testing, they are merged into the `candidate` branch. This branch serves as a staging area for code that is almost ready for release.
-
-The `candidate` branch is not just a placeholder, it's a fully functional testing environment. We build a custom Local Area Network (LAN) on this branch to benchmark test all functions. Profiling metrics are also run on this branch to ensure optimal performance and efficiency.
 
 The code in the `candidate` branch is thoroughly tested. Any bugs or issues that are found are fixed in the `develop` branch and then merged back into the `candidate` branch.
 
