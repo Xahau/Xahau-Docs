@@ -31,7 +31,7 @@ The code in the `candidate` branch is thoroughly tested. Any bugs or issues that
 
 The `candidate` branch is typically in this testing phase for about 2 weeks. However, this period can be longer or shorter depending on the urgency of the fixes or the size of the new features.
 
-1. Create a new PR from the `develop` branch to the `candidate` branch with a name like "Proposed MM/DD/YYYY" (replace MM/DD/YYYY with the current date).
+1. Create a new PR from the `develop` branch to the `candidate` branch with a name like "Proposed".
 2. Update the "High Level Overview of Change" to include the Pull Requests from `develop`. Update the "Context of Change" to include any additional notes about the PR's
 3. Merge the pull request into the release branch.
 
@@ -51,7 +51,7 @@ In the `release` branch, a binary is built and published at https://build.xahau.
 
 To release the code, follow these steps:
 
-1. Create a new pull request from the candidate branch to the release branch with a name like "Release MM/DD/YYYY" (replace MM/DD/YYYY with the current date).
+1. Create a new pull request from the candidate branch to the release branch with a name like "Release".
 2. Review the changes and ensure that all tests have passed.
 3. Merge the pull request into the release branch.
 
