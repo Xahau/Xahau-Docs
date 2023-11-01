@@ -9,7 +9,7 @@ coverY: 0
 
 # Xahau Testnet
 
-The Xahau testnet (formerly: "Hooks V3 Testnet") can be used to test & build all Hooks features, run Smart Contracts on an XRP Ledger Protocol chain & interact with the new network features.
+The Xahau testnet (formerly: "Hooks V3 Testnet") can be used to test and build all Hooks features, run Smart Contracts on an XRP Ledger Protocol chain, and interact with the new network features.
 
 {% hint style="info" %}
 **The Xahau Testnet can be considered a Side Chain of the XRP Ledger Testnet.**

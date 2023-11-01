@@ -1,10 +1,16 @@
+---
+description: >-
+  This document outlines our versioning workflow on GitHub, to streamline the
+  development, testing, and deployment of new features and fixes.
+---
+
 # Versioning Process
 
-This document outlines the versioning process we use in our GitHub repository. We use a three-branch workflow: `dev`, `candidate`, and `release`. This process ensures that all new features and fixes are thoroughly tested before they are released.
+This document outlines the versioning process we use in our GitHub repository. We use a three-branch workflow: `dev`, `candidate`, and `release`. This process ensures that all new features and fixes are thoroughly tested before release.
 
 ### Dev Branch
 
-The dev branch is the main branch for ongoing development. All new features, bug fixes, and improvements are merged into this branch. This is the most active branch and it's where developers should base their work.
+The dev branch is the main branch for ongoing development. All new features, bug fixes, and improvements are merged into this branch. This is the most active branch, and it's where developers should base their work.
 
 To contribute to the dev branch, follow these steps:
 
@@ -16,7 +22,7 @@ To contribute to the dev branch, follow these steps:
 6. Create a pull request from your branch to the dev branch in the main repository.
 
 {% hint style="warning" %}
-All merges into dev branch must be squashed
+All merges into the dev branch must be squashed
 {% endhint %}
 
 Code maintainers will review your pull request and provide feedback. Once the code is approved, it will be merged into the dev branch.
@@ -25,11 +31,11 @@ Code maintainers will review your pull request and provide feedback. Once the co
 
 Once the features in the `dev` branch are ready for testing, they are merged into the `candidate` branch. This branch serves as a staging area for code that is almost ready for release.
 
-The code in the `candidate` branch is thoroughly tested. Any bugs or issues that are found are fixed in the `dev` branch and then merged back into the `candidate` branch.
+The code in the `candidate` branch is thoroughly tested. Any bugs or issues found are fixed in the `dev` branch and then merged back into the `candidate` branch.
 
-The `candidate` branch is typically in this testing phase for about 2 weeks. However, this period can be longer or shorter depending on the urgency of the fixes or the size of the new features.
+The `candidate` branch is typically in this testing phase for about 2 weeks. However, this period can be longer or shorter, depending on the urgency of the fixes or the size of the new features.
 
-1. Create a new PR from the `dev` branch to the `candidate` branch with a name like "Proposed".
+1. Create a new PR from the `dev` branch to the `candidate` branch with a name like "Proposed."
 2. Update the "High Level Overview of Change" to include the Pull Requests from `dev`. Update the "Context of Change" to include any additional notes about the PR's
 3. Merge the pull request into the release branch.
 
@@ -54,10 +60,10 @@ To release the code, follow these steps:
 3. Merge the pull request into the release branch.
 
 {% hint style="warning" %}
-All merges into release branch must be done with \`git merge --ff-only dev\`
+All merges into the release branch must be done with \`git merge --ff-only dev\`
 {% endhint %}
 
 ### Summary
 
-This three-branch workflow ensures that all code is thoroughly tested before it is released. It allows us to catch and fix issues before they reach production, and it provides a clear path for moving code from development to release. The use of a custom LAN for testing and profiling metrics ensures that our code is not only functional, but also efficient and performant.
+This three-branch workflow ensures that all code is thoroughly tested before release. It allows us to catch and fix issues before they reach production, and it provides a clear path for moving code from development to release. The use of a custom LAN for testing and profiling metrics ensures that our code is not only functional but also efficient and performant.
 

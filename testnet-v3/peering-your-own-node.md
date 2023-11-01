@@ -6,9 +6,9 @@ description: >-
 
 # Peering: connect to Xahau Testnet
 
-## Docker
+### Connecting to the Xahau Testnet with Docker
 
-To connect to the Xahau Testnet (Hooks V3 testnet) you can use this docker container:
+To connect to the Xahau Testnet (Hooks V3 testnet) you can use this Docker container:
 
 {% embed url="https://github.com/Xahau/Xahau-Testnet-Docker/" %}
 
@@ -29,14 +29,14 @@ To connect to the Xahau Testnet (Hooks V3 testnet) you can use this docker conta
 
 
 
-### Connect Xumm to V3
+### Integrating Xumm with Hooks V3
 
 <figure><img src="../.gitbook/assets/image.png" alt="" width="145"><figcaption></figcaption></figure>
 
-To connect Xumm to the Hooks V3 staging net scan this QR with the QR scanner in Xumm to add the endpoint (above) to the Xumm node list.
+To connect Xumm to the Hooks V3 staging net, scan this QR with the QR scanner in Xumm to add the endpoint (above) to the Xumm node list.
 
-### Network future
+### Network Future
 
 While the Hooks V3 staging net primarily exists to allow developers to test the Hooks amendment, the Hooks V3 staging net is feature complete: all amendments are enabled on this network & the network is publicly accessible (WebSocket, rippled peering).
 
-While there is no indication at this point that there’s insufficient capacity to support Hooks & XLS20 testing, XRPL Labs will increase network capacity & more [network capacity](https://twitter.com/alloynetworks/status/1533867084928761857) has [been pledged](https://twitter.com/nbougalis/status/1533885609894465536) (and three parties operating the staging network is enough: this keeps it easy to roll out updates, fixes, etc.)
+While there is no indication at this point that there’s insufficient capacity to support Hooks & XLS20 testing, XRPL Labs will increase network capacity & more [network capacity](https://twitter.com/alloynetworks/status/1533867084928761857) has [been pledged](https://twitter.com/nbougalis/status/1533885609894465536) (and three parties operating the staging network is enough: this keeps it easy to roll out updates, fixes, etc).
