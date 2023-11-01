@@ -50,7 +50,7 @@ Showcasing the potential of Hooks with these concrete examples, each illustratin
 * **Carbon-Offset Hook**: Each transaction triggers an additional transfer of 1% of the amount to a carbon offset account managed by a trusted non-governmental organization (NGO) using the money for a good cause. This feature can be used as a base for building applications that contribute to environmental sustainability with every transaction made.
 * **Firewall Hook**: By filtering incoming and outgoing transactions. The Firewall Hook can block malicious transactions originating from known scam accounts or containing suspicious memos. By retrieving an updated blocklist from a Hook on a different account, the firewall maintains a robust defense against fraud without the need for manual intervention. Additionally, implementing spending limits to deny high-value unauthorized withdrawals could be a crucial feature for financial applications.
 
-## **Distinguishing Hooks from Ethereum Virtual Machine (EVM)**
+### **Distinguishing Hooks from Ethereum Virtual Machine (EVM)**
 
 XRPL Hooks and the EVM allow developers to build and deploy custom logic and automation within their platforms. However, some key differences between these two technologies set them apart.&#x20;
 
@@ -58,10 +58,16 @@ XRPL Hooks and the EVM allow developers to build and deploy custom logic and aut
 * **Execution Efficiency**: Hooks utilize WebAssembly (WASM), outperforming the bytecode used by the EVM in terms of speed and efficiency.
 * **Predictable Execution Time**: XRPL Hooks use guards to ensure maximum execution time is well-bounded and known ahead of time, improving efficiency.
 
-### Alternatives to Hooks on the XRPL <a href="#alternatives-to-hooks-on-the-xrpl" id="alternatives-to-hooks-on-the-xrpl"></a>
+### Alternatives to Hooks on the XRPL
 
-Ripple and Peersyst announced that an EVM-compatible sidechain is now live [on the company’s devnet](https://xrpl.org/evm-sidechains.html). A sidechain is an independent ledger with its own consensus algorithm and transaction types and rules. It acts as its own blockchain.The EVM sidechain is an alternative to Hooks that adds a type of smart contract functionality to the ecosystem.However, sidechains operate on Layer 2, so any smart contracts running on the sidechain are not directly integrated into the XRPL.In order to use the smart contract functionality of the sidechain, XRP first has to be swapped onto the sidechain, then later swapped back. This means the transaction essentially gets processed twice. Once on the sidechain, then again on the XRPL, meaning Layer 2 smart contracts cannot influence the flow.Hooks can decide if a transaction is allowed in the first place. Layer 2 can make a retroactive decision, but the initial transaction has already happened.Hooks are more closely integrated with XRPL, operating directly on Layer 1 of the XRPL, so they are more tightly integrated with the underlying blockchain technology than the EVM-Compatible Sidechain to take advantage of the specific features and capabilities of the XRPL platform.Hooks are implemented using WebAssembly, designed for high-performance environments such as edge computing.
+Ripple and Peersyst announced that an EVM-compatible sidechain is now live [on the company's devnet](https://opensource.ripple.com/docs/evm-sidechain/intro-to-evm-sidechain/). This sidechain functions as an autonomous blockchain, complete with its unique consensus protocol and transaction rules. The EVM sidechain is an alternative to Hooks, adding smart contract functionality to the ecosystem.&#x20;
 
-### Hooks will expand the on-ledger functionality and help XRPL grow <a href="#hooks-will-expand-the-on-ledger-functionality-and-help-xrpl-grow" id="hooks-will-expand-the-on-ledger-functionality-and-help-xrpl-grow"></a>
+However, it's essential to note that EVM sidechain contracts function on Layer 2, which requires a two-step process where XRP is transitioned onto the sidechain for contract execution and then back to the main ledger. Once on the sidechain, then again on the XRPL, meaning Layer 2 smart contracts cannot influence the flow. Hooks can decide if a transaction is allowed in the first place. Layer 2 can make a retroactive decision, but the initial transaction has already happened.
 
-Hooks will bring native smart contract functionality to the XRPL, allowing the development of custom applications tailored to the specific needs and requirements of the account holder, opening up whole new domains of functionality, as the possibilities with Hooks are almost unlimited.As the XRPL continues to grow, there is no doubt that Hooks will play a significant role in driving further innovation and adoption of the platform by retail and enterprise users.
+Hooks are more closely integrated with XRPL, operating directly on Layer 1 of the XRPL, so they are more tightly integrated with the underlying blockchain technology than the EVM-compatible sidechain to take advantage of the specific features and capabilities of the XRPL platform. With the inherent scalability and performance of WebAssembly, Hooks are optimal to enhance XRPL's functionality.
+
+### Hooks Will Expand the On-ledger Functionality and Help XRPL Grow
+
+Hooks add native smart contract capabilities to the XRPL, enabling the crafting of custom applications that meet the unique needs of users, bringing new functionalities, and opening up whole new domains of functionality. With Hooks, the possibilities are virtually unlimited.
+
+As the XRPL continues to grow, there is no doubt that Hooks will play a significant role in driving further innovation and adoption of the platform by retail and enterprise users.
