@@ -1,46 +1,62 @@
 ---
-description: 'Hooks: bringing (composability) Smart Contracts to the XRP Ledger Protocol'
+description: >-
+  Introducing Hooks: Enhancing XRP Ledger Protocol with Smart Contract
+  Functionality
 cover: .gitbook/assets/cdn.feather.webp
 coverY: 0
 ---
 
-# Hooks
+# 🪝 Hooks
 
 {% hint style="info" %}
 Hooks are small, efficient WebAssembly modules designed specifically for the XRPL. They could be referred to as **Smart Contracts for the XRP Ledger Protocol**.
 
-Hooks can be written in any language (compilable to WebAssembly) and most business logic and most smart contract concepts can be implemented in a hook.
+Hooks can be written in any language (compilable with WebAssembly), and most business logic and smart contract concepts can be implemented in a hook.
 
 [**Development by XRPL Labs**](https://xrpl-labs.com/#team)
 {% endhint %}
 
 ### What are Hooks? <a href="#what-are-hooks" id="what-are-hooks"></a>
 
-Hooks allow the creation of customized logic and automation within the XRPL, making transactions smarter and more convenient.These small, efficient modules add custom on-ledger functionality, such as creating custom triggers for specific events on the ledger. These triggers can be used to send on-ledger actions or execute other actions in response to the specified event.Hooks are currently only available on the [XRPL Labs public Hooks testnet,](https://hooks-testnet-v2.xrpl-labs.com/) as the feature is under development.&#x20;
+Hooks allow the creation of customized logic and automation within the XRPL, making transactions smarter and more convenient. These small, efficient modules add custom on-ledger functionality, such as creating custom triggers for specific events on the ledger.&#x20;
+
+These triggers can be used to send on-ledger actions or execute other actions in response to the specified event. Hooks are currently only available on the [XRPL Labs public Hooks testnet,](https://hooks-testnet-v2.xrpl-labs.com/) as the feature is under development.
 
 > _There is a_ [_Hooks Builder site_](https://hooks.xrpl.org/) _where you can develop, test, debug, and deploy your own Hooks on testnet in your browser, using our examples or building your own from scratch._
 
-### Why are Hooks a big deal? <a href="#why-are-hooks-a-big-deal" id="why-are-hooks-a-big-deal"></a>
+### Why are Hooks a Big Deal? <a href="#why-are-hooks-a-big-deal" id="why-are-hooks-a-big-deal"></a>
 
-&#x20;Simply put, Hooks add smart contract functionality to the XRPL. They give you the freedom to build and deploy your applications with functionality tailored to your specific needs and requirements. They can be used to implement most business logic and smart contract ideas.Once a hook is set up on an account, it can allow you to:
+Simply put, Hooks add a robust smart contract functionality to the XRPL, empowering you to construct and deploy applications with bespoke functionalities aligning with your specific needs and requirements.
+
+Hooks provide a versatile platform as they can be used for implementing a broad spectrum of business logic and smart contract paradigms. Once a hook is set up on an account, it enables you to do the following:
 
 * Block or allow transactions to and from the account.
 * Change and keep track of the hook’s internal state and logic to inform programmatic choices.
-* Send out new transactions on the account’s behalf.
+* Autonomously initiate new transactions on the account’s behalf.
 
-Hooks can be written in C or any other language and then compiled into WebAssembly.
+Hooks can be written in C or any other preferred language and then compiled into WebAssembly.
 
 <figure><img src="https://cdn.feather.blog/?src=https%3A%2F%2Fusenotioncms.com%2Fproxy%2Fblock%2Fd315cbec-a4e7-4345-ba48-07d936239181%252F02a28a46-80d0-4e64-a96d-33497950a60f%252Fimage_(7).png&#x26;optimizer=image" alt="Using Hooks Builder, you can develop, test, debug and deploy your own Hooks on our testnet, using our examples or building your own from scratch." height="100%"><figcaption></figcaption></figure>
 
-Using Hooks Builder, you can develop, test, debug and deploy your own Hooks on our testnet, using our examples or building your own from scratch.
+The Hooks Builder serves as an integrated development environment, facilitating the crafting, testing, debugging, and deployment of your Hooks on our testnet.
 
-### Some examples of specific Hooks <a href="#some-examples-of-specific-hooks" id="some-examples-of-specific-hooks"></a>
+Whether you're utilizing our examples or building from scratch, Hooks Builder provides a helpful environment for honing and deploying your smart contract solutions.
 
-&#x20;Auto-Savings Hook Automatically transfer a set amount of XRP into a separate savings account on the ledger. This could be done regularly, such as daily, weekly, or monthly, to help the person save a portion of their XRP and build up their savings.Carbon-Offset Hook When sending funds, an extra transaction is sent out for 1% of the amount spent. This transaction is sent to a carbon offset account run by a non-governmental organization (NGO), which will use the money to plant trees.Firewall Hook Malicious small transactions containing memos or outgoing payments to confirmed scam accounts are blocked. The hook can retrieve a blocklist from a different hook installed on a different account. This means the user does not need to update their firewall to remain safe. Additionally, the user can impose spending limits to prevent high amounts from being withdrawn.
+### Some Examples of specific Hooks and Use Cases <a href="#some-examples-of-specific-hooks" id="some-examples-of-specific-hooks"></a>
 
-### How do Hooks differ from an Ethereum Virtual Machine (EVM)? <a href="#how-do-hooks-differ-from-an-ethereum-virtual-machine-evm" id="how-do-hooks-differ-from-an-ethereum-virtual-machine-evm"></a>
+Showcasing the potential of Hooks with these concrete examples, each illustrating a unique application of smart contract functionality on the XRPL:
 
-XRPL Hooks and the EVM both allow developers to build and deploy custom logic and automation within their respective platforms. However, some key differences between these two technologies set them apart.One of the main differences between Hooks and EVM is the platform they are designed to work with. Hooks are specifically designed to work within the XRP Ledger, while EVM smart contracts only work with Ethereum-based blockchains.Hooks are more efficient because they use WebAssembly (WASM), which is faster and more efficient than the bytecode used by the Ethereum Virtual Machine.Additionally, XRPL Hooks use guards to ensure that maximum execution time is well-bounded and known ahead of time, which helps to improve efficiency.
+* **Auto-Savings Hook**: Automate savings by configuring a Hook to transfer a set amount of XRP to a separate savings account on the ledger. This could be done to help save a portion of XRP and build up savings at specified intervals—daily, weekly, or monthly. This recurring transfer mechanism can be a base for developing personal finance applications or subscription-based models.
+* **Carbon-Offset Hook**: Each transaction triggers an additional transfer of 1% of the amount to a carbon offset account managed by a trusted non-governmental organization (NGO) using the money for a good cause. This feature can be used as a base for building applications that contribute to environmental sustainability with every transaction made.
+* **Firewall Hook**: By filtering incoming and outgoing transactions. The Firewall Hook can block malicious transactions originating from known scam accounts or containing suspicious memos. By retrieving an updated blocklist from a Hook on a different account, the firewall maintains a robust defense against fraud without the need for manual intervention. Additionally, implementing spending limits to deny high-value unauthorized withdrawals could be a crucial feature for financial applications.
+
+## **Distinguishing Hooks from Ethereum Virtual Machine (EVM)**
+
+XRPL Hooks and the EVM allow developers to build and deploy custom logic and automation within their platforms. However, some key differences between these two technologies set them apart.&#x20;
+
+* **Platform Compatibility**: Hooks are tailored for the XRP Ledger, while EVM smart contracts are designed for Ethereum-based blockchains.
+* **Execution Efficiency**: Hooks utilize WebAssembly (WASM), outperforming the bytecode used by the EVM in terms of speed and efficiency.
+* **Predictable Execution Time**: XRPL Hooks use guards to ensure maximum execution time is well-bounded and known ahead of time, improving efficiency.
 
 ### Alternatives to Hooks on the XRPL <a href="#alternatives-to-hooks-on-the-xrpl" id="alternatives-to-hooks-on-the-xrpl"></a>
 

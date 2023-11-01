@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Hooks](README.md)
+* [🪝 Hooks](README.md)
 * [Security Audit](security-audit/README.md)
   * [Responsible Disclosure](security-audit/responsible-disclosure.md)
 * [Transaction Signing](transaction-signing.md)
