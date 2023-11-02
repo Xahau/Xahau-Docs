@@ -10,7 +10,7 @@ A `URIToken` object describes a URI token, which can be used to represent a uniq
 
 ```json
 {
-  "Account": "rUn84CUYbNjRoTQ6mSW7BVJPSVJNLb1QLo",
+  "Owner": "rUn84CUYbNjRoTQ6mSW7BVJPSVJNLb1QLo",
   "OwnerNode": "0000000000000000",
   "Issuer": "rfkE1aSy9G8Upk4JssnwBxhEv5p4mn2KTy",
   "URI": "https://example.com/resource",
@@ -30,7 +30,7 @@ A `URIToken` object has the following fields:
 
 | Field               | JSON Type | \[Internal Type]\[] | Required? | Description                                                                                                                   |
 | ------------------- | --------- | ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `Account`           | String    | Account             | Yes       | The owner of the URI Token.                                                                                                   |
+| `Owner`             | String    | Account             | Yes       | The owner of the URI Token.                                                                                                   |
 | `OwnerNode`         | String    | UInt64              | Yes       | A hint indicating which page of the owner's directory links to this object, in case the directory consists of multiple pages. |
 | `Issuer`            | String    | Account             | Yes       | The issuer of the URI Token.                                                                                                  |
 | `URI`               | String    | VL                  | Yes       | The URI represented by this token.                                                                                            |
