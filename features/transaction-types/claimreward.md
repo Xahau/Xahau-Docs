@@ -31,7 +31,7 @@ _(Added by the \[BalanceRewards amendment]\[].)_
 
 ### ClaimReward Flags
 
-Transactions of the OfferCreate type support additional values in the `Flags` field, as follows:
+Transactions of the ClaimReward type support additional values in the `Flags` field, as follows:
 
 | Flag Name  | Hex Value    | Decimal Value | Description                                                                                                                                                                                                           |
 | ---------- | ------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
