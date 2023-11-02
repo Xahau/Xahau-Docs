@@ -31,6 +31,7 @@
   * [Hook](features/ledger-objects/hook.md)
   * [Hook State](features/ledger-objects/hook-state.md)
   * [Hook Definition](features/ledger-objects/hook-definition.md)
+  * [Import VL Sequence](features/ledger-objects/import-vl-sequence.md)
   * [Ledger Hashes](features/ledger-objects/ledger-hashes.md)
   * [Negative UNL](features/ledger-objects/negative-unl.md)
   * [Offer](features/ledger-objects/offer.md)

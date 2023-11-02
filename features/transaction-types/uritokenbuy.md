@@ -18,7 +18,6 @@ _(Added by the \[URIToken amendment]\[].)_
     "TransactionType": "URITokenBuy",
     "Account": "rWYkbWkCeg8dP6rXALnjgZSjjLyih5NXm",
     "URITokenID": "C1AE6DDDEEC05CF2978C0BAD6FE27362498DGS691DC749DCDD3B95992978C0BA",
-    "Destination": "rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe",
     "Amount": {
       "issuer": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
       "currency": "USD",
@@ -27,12 +26,11 @@ _(Added by the \[URIToken amendment]\[].)_
 }
 ```
 
-| Field         | JSON Type             | \[Internal Type]\[] | Description                                                                                                               |
-| ------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `Account`     | String                | AccountID           | The address of the buyer's account.                                                                                       |
-| `URITokenID`  | String                | Hash256             | The unique identifier of the URIToken to be bought.                                                                       |
-| `Amount`      | \[Currency Amount]\[] | Amount              | The amount of currency to pay for the URIToken.                                                                           |
-| `Destination` | String                | AccountID           | _(Optional)_ The address of the account to receive the URIToken. If omitted, the URIToken is sent to the buyer's account. |
+| Field        | JSON Type             | \[Internal Type]\[] | Description                                         |
+| ------------ | --------------------- | ------------------- | --------------------------------------------------- |
+| `Account`    | String                | AccountID           | The address of the buyer's account.                 |
+| `URITokenID` | String                | Hash256             | The unique identifier of the URIToken to be bought. |
+| `Amount`     | \[Currency Amount]\[] | Amount              | The amount of currency to pay for the URIToken.     |
 
 ### Special Transaction Cost
 
@@ -42,11 +40,11 @@ The URITokenBuy transaction has a standard transaction cost, which is the minimu
 
 Besides errors that can occur for all transactions, URITokenBuy transactions can result in the following transaction result codes:
 
-| Error Code          | Description                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------- |
-| `tecNO_DST`         | Occurs if the destination account does not exist.                                                       |
-| `tecDST_TAG_NEEDED` | Occurs if the destination account requires a destination tag, but the transaction does not include one. |
-| `tecNO_PERMISSION`  | Occurs if the destination account requires deposit authorization and the buyer is not preauthorized.    |
-| `terNO_ACCOUNT`     | Occurs if the buyer's account does not exist.                                                           |
-| `tecDIR_FULL`       | Occurs if the owner directory of the buyer's account is full and cannot accommodate the new URIToken.   |
-| `tesSUCCESS`        | Indicates a successful transaction.                                                                     |
+| Error Code                         | Description                                                                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `tecCANT_ACCEPT_OWN_NFTOKEN_OFFER` | Occurs if the owner of the token is the one claiming the offer.                                                              |
+| `tecDST_TAG_NEEDED`                | Occurs if the destination account requires a destination tag, but the transaction does not include one.                      |
+| `tecNO_PERMISSION`                 | Occurs if the seller does not have the token listed for sale or the token `Destination` is not the account buying the token. |
+| `temBAD_CURRENCY`                  | Occurs when the buying currency does not match the offer currency.                                                           |
+| `tecINSUFFICIENT_PAYMENT`          | Occurs when the buy amount is less than the offer amount.                                                                    |
+| `tecINSUFFICIENT_FUNDS`            | Occurs when the buyer doesn't have sufficient funds including the `Fee` to purchase the token.                               |

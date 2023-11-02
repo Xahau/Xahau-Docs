@@ -53,5 +53,4 @@ A `HookDefinition` object has the following fields:
 The ID of a `HookDefinition` object is the \[SHA-512Half]\[] of the following values, concatenated in order:
 
 * The HookDefinition space key (`0x0044`)
-* The AccountID of the account that the hook is attached to
 * The `HookHash` of the hook

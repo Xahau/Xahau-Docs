@@ -33,6 +33,6 @@ _(Added by the \[URIToken amendment]\[].)_
 
 Besides errors that can occur for all transactions, \{{currentpage.name\}} transactions can result in the following transaction result codes:
 
-| Error Code    | Description                                        |
-| ------------- | -------------------------------------------------- |
-| `tecNO_ENTRY` | Occurs if the specified sell offer does not exist. |
+| Error Code         | Description                                                             |
+| ------------------ | ----------------------------------------------------------------------- |
+| `tecNO_PERMISSION` | Occurs when the account executing the tx is not the owner of the token. |

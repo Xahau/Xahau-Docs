@@ -18,17 +18,14 @@ The URITokenBurn transaction is used to burn a URIToken in the XRP Ledger. Burni
 {
     "TransactionType": "URITokenBurn",
     "Account": "rWYkbWkCeg8dP6rXALnjgZSjjLyih5NXm",
-    "URI": "https://example.com/token/12345",
-    "Fee": "2000000",
-    "Sequence": 2470665,
-    "Flags": 2147483648
+    "URITokenID": "C1AE6DDDEEC05CF2978C0BAD6FE27362498DGS691DC749DCDD3B95992978C0BA",
 }
 ```
 
-| Field     | JSON Type | \[Internal Type]\[] | Description                                                     |
-| --------- | --------- | ------------------- | --------------------------------------------------------------- |
-| `Account` | String    | AccountID           | The address of the account that owns the URIToken to be burned. |
-| `URI`     | String    | VL                  | The URI of the URIToken to be burned.                           |
+| Field        | JSON Type | \[Internal Type]\[] | Description                                                     |
+| ------------ | --------- | ------------------- | --------------------------------------------------------------- |
+| `Account`    | String    | AccountID           | The address of the account that owns the URIToken to be burned. |
+| `URITokenID` | String    | Hash256             | The ID of the URIToken to burn.                                 |
 
 ### Special Transaction Cost
 
@@ -38,6 +35,7 @@ The URITokenBurn transaction does not have any special transaction cost requirem
 
 Besides errors that can occur for all transactions, URITokenBurn transactions can result in the following transaction result codes:
 
-| Error Code      | Description                                                   |
-| --------------- | ------------------------------------------------------------- |
-| `terNO_ACCOUNT` | Occurs if the account sending the transaction does not exist. |
+| Error Code         | Description                                                       |
+| ------------------ | ----------------------------------------------------------------- |
+| `tecNO_PERMISSION` | Occurs if the account does not have permission to burn the token. |
+

@@ -46,5 +46,5 @@ A `URIToken` object has the following fields:
 The ID of a `URIToken` object is the \[SHA-512Half]\[] of the following values, concatenated in order:
 
 * The URI Token space key (`0x0055`)
-* The AccountID of the owner of the URI Token
+* The AccountID of the issuer of the URI Token
 * The URI represented by the URI Token

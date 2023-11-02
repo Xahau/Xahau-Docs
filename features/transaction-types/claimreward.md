@@ -29,6 +29,14 @@ _(Added by the \[BalanceRewards amendment]\[].)_
 | `Flags`   | Number    | UInt32              | _(Optional)_ Can have flag 1 set to opt-out of rewards.         |
 | `Issuer`  | String    | AccountID           | _(Optional)_ The address of the account that issued the reward. |
 
+### ClaimReward Flags
+
+Transactions of the OfferCreate type support additional values in the `Flags` field, as follows:
+
+| Flag Name  | Hex Value    | Decimal Value | Description                                                                                                                                                                                                           |
+| ---------- | ------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tfOptOut` | `0x00000001` | 1             | The `isOptOut` flag in the ClaimReward code is used to opt-out an account from rewards by removing reward-related fields from the account object in the ledger if the `sfFlags` field in the transaction is set to 1. |
+
 ### Special Transaction Cost
 
 The ClaimReward transaction has a standard transaction cost, which is the minimum transaction cost required for all transactions.

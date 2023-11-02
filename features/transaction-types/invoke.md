@@ -24,7 +24,7 @@ _(Added by the \[Hooks amendment]\[].)_
 | Field         | JSON Type | \[Internal Type]\[] | Description                                                                                        |
 | ------------- | --------- | ------------------- | -------------------------------------------------------------------------------------------------- |
 | `Account`     | String    | AccountID           | The address of the account that is invoking the hook.                                              |
-| `Blob`        | String    | String              | _(Optional)_ A blob of data that is passed to the hook.                                            |
+| `Blob`        | String    | Blob                | _(Optional)_ A blob of data that is passed to the hook.                                            |
 | `Destination` | String    | AccountID           | _(Optional)_ The address of the account that is the target of the hook.                            |
 | `InvoiceID`   | String    | Hash256             | _(Optional)_ Arbitrary 256-bit hash representing a specific reason or identifier for this payment. |
 

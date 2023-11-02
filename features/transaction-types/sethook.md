@@ -86,11 +86,11 @@ The following fields are used in the hook object:
 | `HookHash`       | String    | Hash256       | The hash of the hook.                     |
 | `CreateCode`     | String    | Blob          | The WebAssembly code for the hook.        |
 | `HookGrants`     | Array     | Array         | The grants associated with the hook.      |
-| `HookNamespace`  | String    | String        | The namespace of the hook.                |
+| `HookNamespace`  | String    | Hash256       | The namespace of the hook.                |
 | `HookParameters` | Array     | Array         | The parameters of the hook.               |
-| `HookOn`         | String    | String        | The event on which the hook is triggered. |
-| `HookApiVersion` | Number    | Unsigned 16   | The API version of the hook.              |
-| `Flags`          | Number    | Unsigned 32   | Additional flags for the hook.            |
+| `HookOn`         | String    | Hash256       | The event on which the hook is triggered. |
+| `HookApiVersion` | Number    | UInt16        | The API version of the hook.              |
+| `Flags`          | Number    | UInt32        | Additional flags for the hook.            |
 
 ### Flags
 
@@ -106,11 +106,11 @@ The `Flags` field in the hook object specifies additional flags for the hook. Th
 
 The `HookGrants` field is an array of objects that specify the grants associated with the hook. Each grant object has the following fields:
 
-| Field        | JSON Type | Internal Type | Description                                        |
-| ------------ | --------- | ------------- | -------------------------------------------------- |
-| `Type`       | String    | String        | The type of the grant.                             |
-| `Account`    | String    | AccountID     | The address of the account that is granted access. |
-| `Permission` | String    | String        | The permission granted to the account.             |
+| Field       | JSON Type | Internal Type | Description                                        |
+| ----------- | --------- | ------------- | -------------------------------------------------- |
+| `HookHash`  | String    | Hash256       | The hook to apply the grant to.                    |
+| `Authorize` | String    | AccountID     | The address of the account that is granted access. |
+| `Flags`     | Number    | Uint32        | Flags                                              |
 
 ### Hook Parameters
 
@@ -118,5 +118,22 @@ The `HookParameters` field is an array of objects that specify the parameters of
 
 | Field   | JSON Type | Internal Type | Description                 |
 | ------- | --------- | ------------- | --------------------------- |
-| `Name`  | String    | String        | The name of the parameter.  |
-| `Value` | String    | String        | The value of the parameter. |
+| `Name`  | String    | Blob          | The name of the parameter.  |
+| `Value` | String    | Blob          | The value of the parameter. |
+
+### Hook Executions
+
+When Hooks execute they leave behind information about the status of that execution. This appears in the Originating Transaction metadata as an `sfHookExecutions` block. This block contains the following fields:
+
+| Field                  | JSON Type | Internal Type | Description                                                                                                                                                  |
+| ---------------------- | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `HookAccount`          | String    | AccountID     | The account the Hook ran on.                                                                                                                                 |
+| `HookEmitCount`        | Number    | UInt16        | The total number of Emitted Transactions produced by the Hook.                                                                                               |
+| `HookExecutionIndex`   | Number    | UInt16        | The SHA512H of the Hook at the time it was executed.                                                                                                         |
+| `HookHash`             | String    | Hash256       | The value of the parameter.                                                                                                                                  |
+| `HookInstructionCount` | String    | UInt64        | The total number of webassembly instructions that were executed when the Hook ran.                                                                           |
+| `HookResult`           | Number    | UInt8         | <p>Hooks can end in three ways: <code>accept</code>, <code>rollback</code> and <code>error</code>.<br>This is <em>not</em> the same as sfHookReturnCode!</p> |
+| `HookReturnCode`       | String    | UInt64        | The integer returned as the third parameter of `accept` or `rollback`.                                                                                       |
+| `HookReturnString`     | String    | Blob          | The string returned in the first two parameters of `accept` or `rollback`, if any.                                                                           |
+| `HookStateChangeCount` | Number    | UInt16        | The number of Hook State changes the Hook made during execution.                                                                                             |
+

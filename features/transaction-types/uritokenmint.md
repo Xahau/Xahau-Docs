@@ -47,8 +47,9 @@ The URIToken Mint transaction has a standard transaction cost, which is the mini
 
 Besides errors that can occur for all transactions, URIToken Mint transactions can result in the following transaction result codes:
 
-| Error Code      | Description                                                                      |
-| --------------- | -------------------------------------------------------------------------------- |
-| `tecDUPLICATE`  | Occurs if a URIToken with the same URI already exists.                           |
-| `tecDIR_FULL`   | Occurs if the owner's directory is full and cannot accommodate the new URIToken. |
-| `terNO_ACCOUNT` | Occurs if the sending account does not exist.                                    |
+| Error Code        | Description                                                                      |
+| ----------------- | -------------------------------------------------------------------------------- |
+| `tecDUPLICATE`    | Occurs if a URIToken with the same URI already exists.                           |
+| `tecDIR_FULL`     | Occurs if the owner's directory is full and cannot accommodate the new URIToken. |
+| `temINVALID_FLAG` | Occurs when the user specified an incorrect `Flag`.                              |
+| `terNO_ACCOUNT`   | Occurs if the sending account does not exist.                                    |

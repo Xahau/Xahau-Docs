@@ -74,6 +74,8 @@ fAccountRoot objects can have the following flag values:
 | `lsfPasswordSpent`                | `0x00010000` | 65536         | (None)                            | This account has used its free SetRegularKey transaction.                                                                                                                         |
 | `lsfRequireAuth`                  | `0x00040000` | 262144        | `asfRequireAuth`                  | This account must individually approve other users for those users to hold this account's tokens.                                                                                 |
 | `lsfRequireDestTag`               | `0x00020000` | 131072        | `asfRequireDest`                  | Requires incoming payments to specify a Destination Tag.                                                                                                                          |
+| `lsfTshCollect`                   | `0x02000000` | 33554432      | `asfTshCollect`                   | The TSH pays for the execution of their own Hook Chain.                                                                                                                           |
+| `lsfURITokenIssuer`               | `0x04000000` | 67108864      | `asfURITokenIssuer`               | This account cannot be deleted after it has issued a URIToken.                                                                                                                    |
 
 ### AccountRoot ID Format
 
