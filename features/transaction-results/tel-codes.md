@@ -1,6 +1,6 @@
 # TEL Codes
 
-These codes indicate an error in the local server processing the transaction; it is possible that another server with a different configuration or load level could process the transaction successfully. They have numerical values in the range -399 to -300. The exact code for any given error is subject to change, so don't rely on it.
+These codes indicate an error in the local server processing the transaction; it is possible that another server with a different configuration or load level could process the transaction successfully. They have numerical values in the range of -399 to -300. The exact code for any given error is subject to change, so don't rely on it.
 
 **Caution:** Transactions with `tel` codes are not applied to ledgers and cannot cause any changes to the XRP Ledger state. However, these transactions may be automatically cached and retried later. Transactions that provisionally failed may still succeed or fail with a different code after being reapplied. For more information, see Finality of Results and Reliable Transaction Submission.
 

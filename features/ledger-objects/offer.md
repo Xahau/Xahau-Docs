@@ -4,7 +4,7 @@
 
 The `Offer` ledger entry describes an Offer to exchange currencies in the XRP Ledger's decentralized exchange. (In finance, this is more traditionally known as an _order_.) An \[OfferCreate transaction]\[] only creates an `Offer` entry in the ledger when the Offer cannot be fully executed immediately by consuming other Offers already in the ledger.
 
-An Offer can become unfunded through other activities in the network, while remaining in the ledger. When processing transactions, the network automatically prunes any unfunded Offers that those transactions come across. (Otherwise, unfunded Offers remain, because _only_ transactions can change the ledger state.)
+An Offer can become unfunded through other activities in the network while remaining in the ledger. When processing transactions, the network automatically prunes any unfunded Offers that those transactions come across. (Otherwise, unfunded Offers remain because _only_ transactions can change the ledger state.)
 
 ### Example JSON
 
@@ -50,7 +50,7 @@ An `Offer` object has the following fields:
 
 ### Offer Flags
 
-There are several options which can be either enabled or disabled when an \[OfferCreate transaction]\[] creates an offer object. In the ledger, flags are represented as binary values that can be combined with bitwise-or operations. The bit values for the flags in the ledger are different than the values used to enable or disable those flags in a transaction. Ledger flags have names that begin with **`lsf`**.
+There are several options that can be either enabled or disabled when an \[OfferCreate transaction]\[] creates an offer object. In the ledger, flags are represented as binary values that can be combined with bitwise-or operations. The bit values for the flags in the ledger are different than the values used to enable or disable those flags in a transaction. Ledger flags have names that begin with **`lsf`**.
 
 `Offer` objects can have the following flag values:
 

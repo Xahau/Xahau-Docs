@@ -8,7 +8,7 @@ The `PayChannel` object type represents a payment channel. Payment channels enab
 
 The \[PaymentChannelCreate transaction]\[] type creates a `PayChannel` object. The \[PaymentChannelFund]\[] and \[PaymentChannelClaim transaction]\[] types modify existing `PayChannel` objects.
 
-When a payment channel expires, at first it remains on the ledger, because only new transactions can modify ledger contents. Transaction processing automatically closes a payment channel when any transaction accesses it after the expiration. To close an expired channel and return the unspent XRP to the owner, some address must send a new PaymentChannelClaim or PaymentChannelFund transaction accessing the channel.
+When a payment channel expires, at first it remains on the ledger, because only new transactions can modify ledger contents. Transaction processing automatically closes a payment channel when any transaction accesses it after the expiration. To close an expired channel and return the unspent XRP to the owner, some addresses must send a new PaymentChannelClaim or PaymentChannelFund transaction accessing the channel.
 
 For an example of using payment channels, see the Payment Channels Tutorial.
 

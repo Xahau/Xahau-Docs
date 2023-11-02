@@ -2,7 +2,7 @@
 
 [\[Source\]](https://github.com/ripple/rippled/blob/master/src/ripple/protocol/TER.h)
 
-The `rippled` server summarizes transaction results with result codes, which appear in fields such as `engine_result` and `meta.TransactionResult`. These codes are grouped into several categories of with different prefixes:
+The `rippled` server summarizes transaction results with result codes, which appear in fields such as `engine_result` and `meta.TransactionResult`. These codes are grouped into several categories with different prefixes:
 
 | Category              | Prefix | Description                                                                                                                                                                                                   |
 | --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,15 +15,15 @@ The `rippled` server summarizes transaction results with result codes, which app
 
 The `rippled` server automatically retries failed transactions. It is important not to assume that a transaction has completely failed based on a tentative failure result. A transaction may later succeed unless its success or failure is final.
 
-**Warning:** Transactions' provisional result codes may differ than their final result. Transactions that provisionally succeeded may eventually fail and transactions that provisionally failed may eventually succeed. Transactions that provisionally failed may also eventually fail with a different code. See finality of results for how to know when a transaction's result is final.
+**Warning:** Transactions' provisional result codes may differ from their final result. Transactions that provisionally succeeded may eventually fail and transactions that provisionally failed may eventually succeed. Transactions that provisionally failed may also eventually fail with a different code. See the finality of results for how to know when a transaction's result is final.
 
-The distinction between a local error (`tel`) and a malformed transaction (`tem`) is a matter of protocol-level rules. For example, the protocol sets no limit on the maximum number of paths that can be included in a transaction. However, a server may define a finite limit of paths it can process. If two different servers are configured differently, then one of them may return a `tel` error for a transaction with many paths, while the other server could successfully process the transaction. If enough servers are able to process the transaction that it survives consensus, then it can still be included in a validated ledger.
+The distinction between a local error (`tel`) and a malformed transaction (`tem`) is a matter of protocol-level rules. For example, the protocol sets no limit on the maximum number of paths that can be included in a transaction. However, a server may define a finite limit of paths it can process. If two different servers are configured differently, then one of them may return a `tel` error for a transaction with many paths, while the other server could successfully process the transaction. If enough servers are able to process the transaction so that it survives consensus, then it can still be included in a validated ledger.
 
 By contrast, a `tem` error implies that no server anywhere can apply the transaction, regardless of settings. Either the transaction breaks the rules of the protocol, it is unacceptably ambiguous, or it is completely nonsensical. The only way a malformed transaction could become valid is through changes in the protocol; for example, if a new feature is adopted, then transactions using that feature could be considered malformed by servers that are running older software which predates that feature.
 
 ### Immediate Response
 
-The response from the \[submit method]\[] contains a provisional result from the `rippled` server indicating what happened during local processing of the transaction.
+The response from the \[submit method]\[] contains a provisional result from the `rippled` server indicating what happened during the local processing of the transaction.
 
 The response from `submit` contains the following fields:
 

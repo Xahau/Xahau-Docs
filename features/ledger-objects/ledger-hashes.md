@@ -53,7 +53,7 @@ Using the "recent history" `LedgerHashes` object of a given ledger, you can get 
 
 The "previous history" `LedgerHashes` entries collectively contain the hash of every 256th ledger version (also called "flag ledgers") in the full history of the ledger. When the child of a flag ledger closes, the flag ledger's hash is added to the `Hashes` array of the newest "previous history" `LedgerHashes` object. Every 65536 ledgers, `rippled` creates a new `LedgerHashes` object, so that each "previous history" object has the hashes of 256 flag ledgers.
 
-**Note:** The oldest "previous history" `LedgerHashes` object contains only 255 entries because the genesis ledger has ledger index 1, not 0.
+**Note:** The oldest "previous history" `LedgerHashes` object contains only 255 entries because the genesis ledger has a ledger index of 1, not 0.
 
 The "previous history" `LedgerHashes` objects act as a [skip list](https://en.wikipedia.org/wiki/Skip\_list) so you can get the hash of any historical flag ledger from its index. From there, you can use that flag ledger's "recent history" object to get the hash of any other ledger.
 

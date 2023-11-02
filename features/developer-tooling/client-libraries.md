@@ -1,6 +1,6 @@
 # Client Libraries
 
-These client libraries simplify some of the common work of accessing and processing XAH Ledger data, and present it in a form that matches with the native conventions of their respective programming languages.
+These client libraries simplify some of the common work of accessing and processing XAH Ledger data and present it in a form that matches the native conventions of their respective programming languages.
 
 For other programming languages, you can access the XAH Ledger through the HTTP APIs.
 

@@ -1,8 +1,8 @@
 # TER Codes
 
-These codes indicate that the transaction failed, but it could apply successfully in the future, usually if some other hypothetical transaction applies first. They have numerical values in the range -99 to -1. The exact code for any given error is subject to change, so don't rely on it.
+These codes indicate that the transaction failed, but it could apply successfully in the future, usually if some other hypothetical transaction applies first. They have numerical values in the range of -99 to -1. The exact code for any given error is subject to change, so don't rely on it.
 
-**Caution:** Transactions with `ter` codes are not applied the current ledger and cannot cause any changes to the XRP Ledger state. However, a transaction that provisionally failed may still succeed or fail with a different code after being automatically reapplied. For more information, see Finality of Results and Reliable Transaction Submission.
+**Caution:** Transactions with `ter` codes are not applied to the current ledger and cannot cause any changes to the XRP Ledger state. However, a transaction that provisionally failed may still succeed or fail with a different code after being automatically reapplied. For more information, see Finality of Results and Reliable Transaction Submission.
 
 | Code             | Explanation                                                                                                                                                                                                                      |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -12,7 +12,7 @@ They are uniquely identified by the hash of their issuer and Uniform Resource Id
 
 Only one object per URI per account can exist on the ledger.
 
-The Issuer can set a flag to enable burning of the object in the future. Each owner's reserve is locked up as well upon ownership of the URIToken.
+The Issuer can set a flag to enable the burning of the object in the future. Each owner's reserve is locked up as well upon ownership of the URIToken.
 
 They include the transaction types; `mint`, `burn`, `buy`, `create sell offer`, and `cancel sell offer`. Additionally, when minting a URIToken, users can choose whether or not to include a SHA-512 Half hash of the URI's contents to ensure data integrity.
 

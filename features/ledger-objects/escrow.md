@@ -4,7 +4,9 @@
 
 _(Added by the \[Escrow amendment]\[].)_
 
-The `Escrow` object type represents a held payment of XRP waiting to be executed or canceled. An \[EscrowCreate transaction]\[] creates an `Escrow` object in the ledger. A successful \[EscrowFinish]\[] or \[EscrowCancel]\[] transaction deletes the object. If the `Escrow` object has a [_crypto-condition_](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02), the payment can only succeed if an EscrowFinish transaction provides the corresponding _fulfillment_ that satisfies the condition. (The only supported crypto-condition type is [PREIMAGE-SHA-256](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02#section-8.1).) If the `Escrow` object has a `FinishAfter` time, the held payment can only execute after that time.
+The `Escrow` object type represents a held payment of XRP waiting to be executed or canceled. An \[EscrowCreate transaction]\[] creates an `Escrow` object in the ledger. A successful \[EscrowFinish]\[] or \[EscrowCancel]\[] transaction deletes the object.&#x20;
+
+If the `Escrow` object has a [_crypto-condition_](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02), the payment can only succeed if an EscrowFinish transaction provides the corresponding _fulfillment_ that satisfies the condition. (The only supported crypto-condition type is [PREIMAGE-SHA-256](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02#section-8.1).) If the `Escrow` object has a `FinishAfter` time, the held payment can only execute after that time.
 
 An `Escrow` object is associated with two addresses:
 

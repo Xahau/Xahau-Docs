@@ -2,7 +2,7 @@
 
 These codes indicate that the transaction failed, but it was applied to a ledger to apply the transaction cost. They have numerical values in the range 100 to 199. It is recommended to use the text code, not the numeric value.
 
-Transactions with `tec` codes destroy the XRP paid as a transaction cost, and consume a sequence number. For the most part, the transactions take no other action, but there are some exceptions. For example, a transaction that results in `tecOVERSIZE` still cleans up some unfunded offers. Always look at the transaction metadata to see precisely what a transaction did.
+Transactions with `tec` codes destroy the XRP paid as a transaction cost and consume a sequence number. For the most part, the transactions take no other action, but there are some exceptions. For example, a transaction that results in `tecOVERSIZE` still cleans up some unfunded offers. Always look at the transaction metadata to see precisely what a transaction did.
 
 **Caution:** A transaction that provisionally failed with a `tec` code may still succeed or fail with a different code after being reapplied. The result is final when it appears in a validated ledger version. For more information, see Finality of Results and Reliable Transaction Submission.
 
