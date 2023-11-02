@@ -2,6 +2,8 @@
 description: >-
   The Governance Game is an innovative governance mechanism within the Xahau
   ecosystem to ensure a community-centric approach towards decision-making.
+cover: ../../.gitbook/assets/Blogheader - Xahau Governance.png
+coverY: 36
 ---
 
 # Governance Game
