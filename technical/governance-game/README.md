@@ -1,55 +1,57 @@
 ---
-description: How the Governance Game works
+description: >-
+  The Governance Game is an innovative governance mechanism within the Xahau
+  ecosystem to ensure a community-centric approach towards decision-making.
 ---
 
 # Governance Game
 
 ### Overview
 
-The Xahau Governance Game allows up to 400 stakeholders to democratically participate in the management of the Xahau network via the Governance Hook, which is installed on the Genesis Account.
+The Xahau Governance Game allows up to 400 stakeholders to democratically participate in the management of the Xahau network via the Governance Hook installed on the Genesis Account.
 
 ### Layer 1
 
-The game consists of a "Layer 1" table at which there are 20 seats. Each seat may be filled by a Xahau account (r-address) or be empty. When a seat is filled, it is said that a member of the table sits there.
+The game consists of a "Layer 1" table at which there are 20 seats. A Xahau account (r-address) may fill each seat, or it may be empty. When a seat is filled, it is said that a member of the table sits there.
 
-To play the game, the members of the table cast votes. The votes are for one of three types of topic:
+To play the game, the members of the table cast votes. The votes are for one of three types of topics:
 
 * Seat topics
 * Hook topics
 * Reward topics.
 
-Seat topics are S00 through S19 and represent a vote for who (if anyone) currently sits in that seat. A vote of 80% is sufficient to action a change. The voting process is continuous with the final vote that crosses the threshold actioning the change.
+Seat topics are S00 through S19 and represent a vote for who (if anyone) currently sits in that seat. A vote of 80% is sufficient to make a change. The voting process is continuous, with the final vote that crosses the threshold actioning the change.
 
-Hook topics are H0 through H9 and represent which Hooks, including the Governance Hook itself, are installed on the table's account. These topics require 100% of the members seated at that table to agree before a change can be made. This allows the Governance Game to be updated and for more genesis account features to be added over time.
+Hook topics are H0 through H9 and represent which Hooks, including the Governance Hook itself, are installed on the table's account. These topics require 100% of the members seated at that table to agree before a change can be made. This allows the Governance Game to be updated and for more Genesis account features to be added over time.
 
-Reward topics are RR and RD which stand for Reward-Rate and Reward-Delay, respectively. These topics also require 100% of the members at the table to agree in order to action a change. These parameters affect the BalanceAdjustments system: how much each active user on the network can claim and how often.
+Reward topics are RR and RD, which stand for Reward-Rate and Reward-Delay, respectively. These topics also require 100% of the members at the table to agree in order to make a change. These parameters affect the BalanceAdjustments system: how much each active user on the network can claim and how often.
 
 ### Layer 2
 
-The members who fill seats on the Layer 1 table are Xahau accounts (r-addresses). The governance game is designed to be structurally recursive, such that one of these accounts may itself be a table consisting of a further 20 seats. This is called a Layer 2 table, and the seats are Layer 2 seats.
+The members who fill seats on the Layer 1 table are Xahau accounts (r-addresses). The governance game is designed to be structurally recursive, such that one of these accounts may itself be a table consisting of another 20 seats. This is called a Layer 2 table, and the seats are Layer 2 seats.
 
-Within a Layer 2 table the same seat voting and hook voting topics exist, with the same voting rules as the Layer 1 table. This allows a table to govern its own membership and the hooks that run there.
+Within a Layer 2 table, the same seat voting and hook voting topics exist, with the same voting rules as the Layer 1 table. This allows a table to govern its own membership and the hooks that run there.
 
-In addition to these topics a Layer 2 table may also, by 51% vote, raise a vote to the Layer 1 table. This is a vote on behalf of the r-address that the Layer 2 table exists on, and counts as a single vote at the Layer 1 table.
+In addition to these topics, a Layer 2 table may also, by a 51% vote, raise a vote to the Layer 1 table. This is a vote on behalf of the r-address that the Layer 2 table exists on and counts as a single vote at the Layer 1 table.
 
-The Layer 2 table vote may fall below 51% in which case the vote originally raised to the Layer 1 table is **not** retracted. Only a new (different) vote attaining 51% can change the table's vote at Layer 1.
+The Layer 2 table vote may fall below 51%, in which case the vote originally raised to the Layer 1 table is **not** retracted. Only a new (different) vote attaining 51% can change the table's vote at Layer 1.
 
 Layer 2 tables can only vote on Reward topics via a vote raised to Layer 1.
 
-In summary Layer 2 members can vote for:
+In summary, Layer 2 members can vote for:
 
 * Seats and Hooks for their own table, and
-* Seats, Hooks and Reward topics for the L1 table via the Layer 1 seat their Layer 2 table resides in.
+* Seats, Hooks, and Reward topics for the L1 table via the Layer 1 seat their Layer 2 table resides in.
 
 ### Game Constraints
 
-* Any table may have at fewest 2 members and at most 20 members.
-* A single r-address can only occupy one seat at a given table, but may occupy one seat at each of many different tables.
+* Any table may have at least 2 members and at most 20 members.
+* A single r-address can only occupy one seat at a given table but may occupy one seat at each of many different tables.
 * The Governance Game is not designed to recurse beyond two layers. There's no technical infeasibility in implementing a Layer 3 table, but the current Governance Hook does not support it.
 
 ### Validator Rewards
 
-Validator rewards are an incentive for running a validator on the network. The rewards are generated by the network and granted to the intersection of Layer 1 members and active UNL validators. To qualify for validator rewards within a given block of 256 ledgers the following must be true:
+Validator rewards are an incentive for running a validator on the network. The rewards are generated by the network and granted to the intersection of Layer 1 members and active UNL validators. To qualify for validator rewards within a given block of 256 ledgers, the following must be true:
 
 * The validator is on the Xahau UNL.
 * The validator validates successfully in the eyes of other UNL validators.
@@ -59,13 +61,13 @@ Rewards are ad-hoc and based on Xahau users' Balance Adjustments. When a user pe
 
 ## Technical Specification
 
-The Governance Hook is installed on the genesis account by the XahauGenesis amendment several ledgers after ledger 1 on a new network. This is the L1 table. To create an L2 table install the Hook on a different account then seat that account at the L1 table.
+The Governance Hook is installed on the genesis account by the XahauGenesis amendment several ledgers after ledger 1 on a new network. This is the L1 table. To create an L2 table, install the Hook on a different account, then seat that account at the L1 table.
 
 ### Governance Hook Parameters
 
 When the Governance Hook is installed, it is installed with a set of HookParameters. These specify the initial composition of the table.
 
-Each HookParameter has a 3 byte name consisting of either 3 Ascii characters or 2 Ascii characters and an identifier as below. LE = Little Endian.
+Each HookParameter has a 3-byte name consisting of either 3 Ascii characters or 2 Ascii characters and an identifier as below. LE = Little Endian.
 
 ```
 Parameter Name: {'I', 'R', 'R'}
@@ -82,13 +84,13 @@ Parameter Value: Initial seat #1's member's 20 byte Account ID.
 
 ```
 
-To kick-off the game an Invoke transaction must be sent to the Hook. This may be sent by any account. No Blob or HookParameters are required. This Invoke transaction triggers the Hook for the first time and prompts it to create state entries for each of the initial seats, reward rate and reward delay.
+To kick-off the game, an Invoke transaction must be sent to the Hook. This may be sent by any account. No Blob or HookParameters are required. This Invoke transaction triggers the Hook for the first time and prompts it to create state entries for each initial seat, reward rate, and reward delay.
 
 ### Governance Hook State
 
 The Hook State of the Governance Hook is stored in the zero namespace: `0000000000000000000000000000000000000000000000000000000000000000.`
 
-There are several types of state entry. The first is what are referred to as forward and reverse member keys. These map each seat number to the member who sits there, and each member to the seat they sit at.
+There are several types of state entry. The first is what are referred to as forward and reverse member keys. These map each seat number to the member who sits there and each member to the seat they sit at.
 
 ```
 Key: 0x0000000000000000000000000000000000000000000000000000000000000005
@@ -98,7 +100,7 @@ Key: <20 byte AccountID of the member at seat 3>
 Val: 0x03
 ```
 
-Next there are some singleton state entires. Member Count, Reward Rate and Reward Delay, respectively:
+Next, there are some singleton state entries. Member Count, Reward Rate, and Reward Delay, respectively:
 
 ```
 Key in Ascii: MC
@@ -128,7 +130,7 @@ Vote data:
     20 byte Account ID or 8 byte XFL
 ```
 
-When a vote is cast it increments a vote counter state entry. This counter keeps track of how many votes there currently are for this topic-data pair, and allows the Hook to action the vote when voting crosses the required threshold. The counter state is as follows:
+When a vote is cast, it increments a vote counter-state entry. This counter keeps track of how many votes there currently are for this topic-data pair and allows the Hook to action the vote when voting crosses the required threshold. The counter state is as follows:
 
 ```
 Counter key is 32 bytes comprising:
@@ -142,7 +144,7 @@ Counter key is 32 bytes comprising:
 
 ### Governance Hook Transactions
 
-The Governance Hook is interacted with by its members using ttINVOKE transactions. In addition to this the Hook may also emit its own ttINVOKE transactions if it is a L2 table raising a vote to the L1 table.
+The Governance Hook is interacted with by its members using ttINVOKE transactions. In addition to this, the Hook may also emit its own ttINVOKE transactions if it is an L2 table raising a vote to the L1 table.
 
 A vote transaction contains a HookParameters array at the top level of the transaction:
 
@@ -188,7 +190,11 @@ A vote transaction contains a HookParameters array at the top level of the trans
 
 ### Clearing a Vote
 
-There is no way to "delete a vote" per se, you can change your vote back to reflect the current position instead. So for example if no one sits at seat 8 and you have voted for account A to sit there, and then you change your mind, you can make a vote to vacate seat 8 (even though it's already vacant) thus aligning your vote with the current state of the seat. To do this you vote with all 0's in the vote data, to the same length as the vote topic normally requires. So for a seat vote this is 20 bytes of 0.
+There is no way to "delete a vote" per se. You can change your vote back to reflect the current position instead.&#x20;
+
+So, for example, if no one sits at seat 8 and you have voted for account A to sit there, and then you change your mind, you can make a vote to vacate seat 8 (even though it's already vacant) thus aligning your vote with the current state of the seat.&#x20;
+
+To do this, you vote with all 0's in the vote data, to the same length as the vote topic normally requires. So, for a seat vote, this is 20 bytes of 0.
 
 
 
