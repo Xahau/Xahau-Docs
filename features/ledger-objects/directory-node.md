@@ -61,7 +61,7 @@ _Owner Directory_
 | `Indexes`           | Array     | Vector256           | Yes       | The contents of this Directory: an array of IDs of other objects.                                                                                                                                                          |
 | `IndexNext`         | Number    | UInt64              | No        | If this Directory consists of multiple pages, this ID links to the next object in the chain, wrapping around at the end.                                                                                                   |
 | `IndexPrevious`     | Number    | UInt64              | No        | If this Directory consists of multiple pages, this ID links to the previous object in the chain, wrapping around at the beginning.                                                                                         |
-| NFTokenID           | String    | Hash256             | No        | Unused                                                                                                                                                                                                                     |
+| `NFTokenID`         | String    | Hash256             | No        | Unused                                                                                                                                                                                                                     |
 
 ### Directory ID Formats
 

@@ -54,10 +54,7 @@ There are several options that can be either enabled or disabled when an \[Offer
 
 `Offer` objects can have the following flag values:
 
-| Flag Name    | Hex Value    | Decimal Value | Corresponding OfferCreate Flag | Description                                                                                                                                                                                                                |
-| ------------ | ------------ | ------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `lsfPassive` | `0x00010000` | 65536         | `tfPassive`                    | The object was placed as a passive Offer. This has no effect on the object in the ledger.                                                                                                                                  |
-| `lsfSell`    | `0x00020000` | 131072        | `tfSell`                       | The object was placed as a sell Offer. This has no effect on the object in the ledger (because `tfSell` only matters if you get a better rate than you asked for, which cannot happen after the object enters the ledger). |
+<table data-header-hidden><thead><tr><th width="135"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Flag Name</td><td>Hex Value</td><td>Decimal Value</td><td>Corresponding OfferCreate Flag</td><td>Description</td></tr><tr><td><code>lsfPassive</code></td><td><code>0x00010000</code></td><td>65536</td><td><code>tfPassive</code></td><td>The object was placed as a passive Offer. This has no effect on the object in the ledger.</td></tr><tr><td><code>lsfSell</code></td><td><code>0x00020000</code></td><td>131072</td><td><code>tfSell</code></td><td>The object was placed as a sell Offer. This has no effect on the object in the ledger (because <code>tfSell</code> only matters if you get a better rate than you asked for, which cannot happen after the object enters the ledger).</td></tr></tbody></table>
 
 ### Offer ID Format
 

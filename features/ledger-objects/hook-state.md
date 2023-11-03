@@ -38,3 +38,4 @@ The ID of a `HookState` object is the \[SHA-512Half]\[] of the following values,
 * The HookState space key (`0x0076`)
 * The AccountID of the account that owns the hook
 * The `HookStateKey` of the `HookState` object
+* The `HookNamespace` of the hook.

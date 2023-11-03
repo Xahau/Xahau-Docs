@@ -44,10 +44,24 @@ A `Hook` object has the following fields:
 | `Hooks`             | Array     | Array               | Yes       | An array of hook objects. Each object has the following fields: `HookHash`, `CreateCode`, `HookGrants`, `HookNamespace`, `HookParameters`, `HookOn`, `HookApiVersion`, `Flags`. |
 | `LedgerEntryType`   | String    | UInt16              | Yes       | The value `0x0043`, mapped to the string `Hook`, indicates that this object is a Hook object.                                                                                   |
 
+### Hook Fields
+
+The following fields are used in the hook object:
+
+| Field            | JSON Type | Internal Type | Description                               |
+| ---------------- | --------- | ------------- | ----------------------------------------- |
+| `HookHash`       | String    | Hash256       | The hash of the hook.                     |
+| `CreateCode`     | String    | Blob          | The WebAssembly code for the hook.        |
+| `HookGrants`     | Array     | Array         | The grants associated with the hook.      |
+| `HookNamespace`  | String    | Hash256       | The namespace of the hook.                |
+| `HookParameters` | Array     | Array         | The parameters of the hook.               |
+| `HookOn`         | String    | Hash256       | The event on which the hook is triggered. |
+| `HookApiVersion` | Number    | UInt16        | The API version of the hook.              |
+| `Flags`          | Number    | UInt32        | Additional flags for the hook.            |
+
 #### Hook ID Format
 
 The ID of a `Hook` object is the \[SHA-512Half]\[] of the following values, concatenated in order:
 
 * The Hook space key (`0x0048`)
 * The AccountID of the sender of the \[SetHook transaction]\[] that created the `Hook` object
-* The `Sequence` number of the \[SetHook transaction]\[] that created the `Hook` object. If the HookCreate transaction used a Ticket, use the `TicketSequence` value instead.
