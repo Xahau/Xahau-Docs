@@ -49,19 +49,19 @@ _Owner Directory_
 
 ### Fields
 
-| Name                | JSON Type | \[Internal Type]\[] | Required? | Description                                                                                                                        |
-| ------------------- | --------- | ------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `Owner`             | String    | AccountID           | No        | (Owner Directories only) The address of the account that owns the objects in this directory.                                       |
-| `TakerGetsCurrency` | String    | Hash160             | No        | (Offer Directories only) The currency code of the `TakerGets` amount from the offers in this directory.                            |
-| `TakerGetsIssuer`   | String    | Hash160             | No        | (Offer Directories only) The issuer of the `TakerGets` amount from the offers in this directory.                                   |
-| `TakerPaysCurrency` | String    | Hash160             | No        | (Offer Directories only) The currency code of the `TakerPays` amount from the offers in this directory.                            |
-| `TakerPaysIssuer`   | String    | Hash160             | No        | (Offer Directories only) The issuer of the `TakerPays` amount from the offers in this directory.                                   |
-| `ExchangeRate`      | String    | UInt64              | No        | (Offer Directories only) **DEPRECATED**. Do not use.                                                                               |
-| `ReferenceCount`    | String    | UInt64              | No        |                                                                                                                                    |
-| `Indexes`           | Array     | Vector256           | Yes       | The contents of this Directory: an array of IDs of other objects.                                                                  |
-| `IndexNext`         | Number    | UInt64              | No        | If this Directory consists of multiple pages, this ID links to the next object in the chain, wrapping around at the end.           |
-| `IndexPrevious`     | Number    | UInt64              | No        | If this Directory consists of multiple pages, this ID links to the previous object in the chain, wrapping around at the beginning. |
-| NFTokenID           | String    | Hash256             | No        | Unused                                                                                                                             |
+| Name                | JSON Type | \[Internal Type]\[] | Required? | Description                                                                                                                                                                                                                |
+| ------------------- | --------- | ------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Owner`             | String    | AccountID           | No        | (Owner Directories only) The address of the account that owns the objects in this directory.                                                                                                                               |
+| `TakerGetsCurrency` | String    | Hash160             | No        | (Offer Directories only) The currency code of the `TakerGets` amount from the offers in this directory.                                                                                                                    |
+| `TakerGetsIssuer`   | String    | Hash160             | No        | (Offer Directories only) The issuer of the `TakerGets` amount from the offers in this directory.                                                                                                                           |
+| `TakerPaysCurrency` | String    | Hash160             | No        | (Offer Directories only) The currency code of the `TakerPays` amount from the offers in this directory.                                                                                                                    |
+| `TakerPaysIssuer`   | String    | Hash160             | No        | (Offer Directories only) The issuer of the `TakerPays` amount from the offers in this directory.                                                                                                                           |
+| `ExchangeRate`      | String    | UInt64              | No        | (Offer Directories only) **DEPRECATED**. Do not use.                                                                                                                                                                       |
+| `ReferenceCount`    | String    | UInt64              | No        | Reference counting in the ledger reduces storage burden and fees by allowing multiple installations of the same Hook to point to the same object on the ledger, only removing it when no accounts have the Hook installed. |
+| `Indexes`           | Array     | Vector256           | Yes       | The contents of this Directory: an array of IDs of other objects.                                                                                                                                                          |
+| `IndexNext`         | Number    | UInt64              | No        | If this Directory consists of multiple pages, this ID links to the next object in the chain, wrapping around at the end.                                                                                                   |
+| `IndexPrevious`     | Number    | UInt64              | No        | If this Directory consists of multiple pages, this ID links to the previous object in the chain, wrapping around at the beginning.                                                                                         |
+| NFTokenID           | String    | Hash256             | No        | Unused                                                                                                                                                                                                                     |
 
 ### Directory ID Formats
 

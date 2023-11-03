@@ -37,6 +37,7 @@ The `FeeSettings` object has the following fields:
 | `ReserveIncrement`      | Number    | UInt32              | Yes       | The incremental owner reserve for owning objects, as drops of XRP.                                                                               |
 | `XahauActivationLgrSeq` | Number    | UInt32              | No        | The ledger index where Xahau genesis was activated.                                                                                              |
 | `AccountCount`          | Number    | UInt32              | No        | The number of accounts created on the Xahau network.                                                                                             |
+| `NetworkID`             | Number    | UInt32              | No        | The ID of the network                                                                                                                            |
 
 **Warning:** The JSON format for this ledger object type is unusual. The `BaseFee`, `ReserveBase`, and `ReserveIncrement` indicate drops of XRP but _**not**_ in the usual format for \[specifying XRP]\[Currency Amount].
 
@@ -51,6 +52,7 @@ If the _\[XRPFees amendment]\[]_ is enabled, the `FeeSettings` object has these 
 | `ReserveIncrementDrops` | String    | Amount              | Yes       | The incremental owner reserve for owning objects, as drops of XRP.                                                                              |
 | `XahauActivationLgrSeq` | Number    | UInt32              | No        | The ledger index where Xahau genesis was activated.                                                                                             |
 | `AccountCount`          | Number    | UInt32              | No        | The number of accounts created on the Xahau network.                                                                                            |
+| `NetworkID`             | Number    | UInt32              | No        |                                                                                                                                                 |
 
 ### FeeSettings ID Format
 

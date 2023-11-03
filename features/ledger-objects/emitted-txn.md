@@ -50,11 +50,11 @@ The `EmittedTxn` object also contains all the fields of the original transaction
 
 An `EmitDetails` object has the following fields:
 
-| Field             | JSON Type | \[Internal Type]\[] | Required? | Description |
-| ----------------- | --------- | ------------------- | --------- | ----------- |
-| `EmitGeneration`  | Number    | UInt32              | Yes       |             |
-| `EmitBurden`      | String    | UInt64              | Yes       |             |
-| `EmitParentTxnID` | String    | Hash256             | Yes       |             |
-| `EmitNonce`       | String    | Hash256             | Yes       |             |
-| `EmitCallback`    | String    | AccountID           | No        |             |
-| `EmitHookHash`    | String    | Hash256             | Yes       |             |
+| Field             | JSON Type | \[Internal Type]\[] | Required? | Description                                                                                                                                                                                                                                                                     |
+| ----------------- | --------- | ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `EmitGeneration`  | Number    | UInt32              | Yes       | This field keeps track of a chain of emitted transactions that in turn cause other transactions to be emitted.                                                                                                                                                                  |
+| `EmitBurden`      | String    | UInt64              | Yes       | This field is a heuristic for detecting forkbombs. Fees are based on burden and will increase exponentially when a chain reaction is started to prevent the network becoming overun by self-reinforcing emitted transactions.                                                   |
+| `EmitParentTxnID` | String    | Hash256             | Yes       | The Hook Execution that emitted the transaction is connected to the Originating Transaction. Therefore this field is always required for the efficient tracing of behaviour.                                                                                                    |
+| `EmitNonce`       | String    | Hash256             | Yes       | Emitted Transactions would be identical with the same fields and therefore have identical transaction hashes if a nonce were not used. However every node on the network needs to agree on the nonce, so a special Hook API to produce a deterministic nonce is made available. |
+| `EmitCallback`    | String    | AccountID           | No        | This field is used by xrpld when it needs to intitate a callback, such that it knows which Hook and account to initate the callback on. Callbacks happen when an emitted transaction is accepted into a ledger.                                                                 |
+| `EmitHookHash`    | String    | Hash256             | Yes       | The SHA512H of the Hook at the time it was executed.                                                                                                                                                                                                                            |
