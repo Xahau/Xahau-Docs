@@ -24,8 +24,8 @@ A `UNLReport` object has the following fields:
 | ----------------- | --------- | ------------------- | --------- | --------------------------------------------------------------------------------------------------------------------- |
 | `LedgerEntryType` | String    | UInt16              | Yes       | The value `0x0049`, mapped to the string `UNLReport`, indicates that this object is a UNLReport object.               |
 | `Flags`           | Number    | UInt32              | Yes       | A bit-map of boolean flags. No flags are defined for the `ImportVLSequence` object type, so this value is always `0`. |
-| `ImportSequence`  | Number    | UInt32              | Yes       |                                                                                                                       |
-| `PublicKey`       | String    | Blob                | Yes       |                                                                                                                       |
+| `ImportSequence`  | Number    | UInt32              | Yes       | The current import sequence number from the XRP Ledger.                                                               |
+| `PublicKey`       | String    | Blob                | Yes       | The `PublicKey` on the validator list from the XRP Ledger.                                                            |
 
 #### Import VL Sequence ID Format
 
