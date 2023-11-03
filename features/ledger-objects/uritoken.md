@@ -13,7 +13,7 @@ A `URIToken` object describes a URI token, which can be used to represent a uniq
   "Owner": "rUn84CUYbNjRoTQ6mSW7BVJPSVJNLb1QLo",
   "OwnerNode": "0000000000000000",
   "Issuer": "rfkE1aSy9G8Upk4JssnwBxhEv5p4mn2KTy",
-  "URI": "https://example.com/resource",
+  "URI": "DEADBEEF",
   "Digest": "46060241FABCF692D4D934BA2A6C4427CD4279083E38C77CBE642243E43BE291",
   "Amount": "100000000",
   "Destination": "rUn84CUYbNjRoTQ6mSW7BVJPSVJNLb1QLo",

@@ -39,14 +39,22 @@ A `UNLReport` object has the following fields:
 | `ImportVLKeys`      | Array     | Array               | No        | An array of objects, each representing a validator key that has been imported. Each object has a `PublicKey` field and an optional `Account` field. |
 | `ActiveValidators`  | Array     | Array               | No        | An array of objects, each representing an active validator. Each object has a `PublicKey` field and an optional `Account` field.                    |
 
-### ImportVLKey
+### UNLReport ID Format
+
+The `UNLReport` object ID is the hash of the `UNLReport` space key (`0x0052`) only. This means that the ID of the `UNLReport` object in a ledger is always:
+
+```
+61E32E7A24A238F1C619D5F9DDCC41A94B33B66C0163F7EFCC8A19C9FD6F28DC
+```
+
+### ImportVLKey Fields
 
 | Field       | JSON Type | \[Internal Type]\[] | Required? | Description                                                                     |
 | ----------- | --------- | ------------------- | --------- | ------------------------------------------------------------------------------- |
 | `PublicKey` | String    | VL                  | Yes       | The public key of the imported validator.                                       |
 | `Account`   | String    | Account             | No        | The account associated with the imported validator key. This field is optional. |
 
-### ActiveValidator
+### ActiveValidator Fields
 
 | Field       | JSON Type | \[Internal Type]\[] | Required? | Description                                                               |
 | ----------- | --------- | ------------------- | --------- | ------------------------------------------------------------------------- |

@@ -45,3 +45,16 @@ An `EmittedTxn` object has the following fields:
 | `SigningPubKey`   | String    | Blob                | Yes       | The public key that signs the transaction.                                                                                                                                                                                                               |
 
 The `EmittedTxn` object also contains all the fields of the original transaction.
+
+### EmitDetails Fields
+
+An `EmitDetails` object has the following fields:
+
+| Field             | JSON Type | \[Internal Type]\[] | Required? | Description |
+| ----------------- | --------- | ------------------- | --------- | ----------- |
+| `EmitGeneration`  | Number    | UInt32              | Yes       |             |
+| `EmitBurden`      | String    | UInt64              | Yes       |             |
+| `EmitParentTxnID` | String    | Hash256             | Yes       |             |
+| `EmitNonce`       | String    | Hash256             | Yes       |             |
+| `EmitCallback`    | String    | AccountID           | No        |             |
+| `EmitHookHash`    | String    | Hash256             | Yes       |             |

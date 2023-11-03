@@ -17,6 +17,7 @@ Example `FeeSettings` object:
    "ReserveBase": 20000000,
    "ReserveIncrement": 5000000,
    "XahauActivationLgrSeq": 0,
+   "NetworkID": 21337,
    "AccountCount": 0,
    "index": "4BC50C9B0D8515D3EAAE1E74B29A95804346C491EE1A95BF25E4AAB854A6A651"
 }

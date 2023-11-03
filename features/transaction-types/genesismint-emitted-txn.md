@@ -53,12 +53,7 @@ The GenesisMint transaction has a standard transaction cost, which is the minimu
 
 Besides errors that can occur for all transactions, the GenesisMint transaction can result in the following transaction result codes:
 
-| Error Code            | Description                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------ |
-| `temDISABLED`         | Occurs if the "Hooks" or "XahauGenesis" amendments are not enabled.                        |
-| `temMALFORMED`        | Occurs if the transaction is malformed, such as missing required fields or invalid values. |
-| `tecINTERNAL`         | Occurs if an internal error is encountered during the execution of the transaction.        |
-| `tecNO_ACCOUNT`       | Occurs if the genesis account does not exist.                                              |
-| `tecOVERSIZE`         | Occurs if the number of destinations exceeds the maximum limit of 512.                     |
-| `tecUNFUNDED`         | Occurs if the genesis account does not have enough XRP to cover the minted amounts.        |
-| `tecUNFUNDED_PAYMENT` | Occurs if the destination account does not have enough XRP to receive the minted amounts.  |
+| Error Code     | Description                                                                                |
+| -------------- | ------------------------------------------------------------------------------------------ |
+| `temDISABLED`  | Occurs if the "Hooks" or "XahauGenesis" amendments are not enabled.                        |
+| `temMALFORMED` | Occurs if the transaction is malformed, such as missing required fields or invalid values. |

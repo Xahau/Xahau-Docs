@@ -55,6 +55,7 @@ An `Escrow` object has the following fields:
 | `PreviousTxnID`     | String    | Hash256             | Yes       | The identifying hash of the transaction that most recently modified this object.                                                                                                                                                                                                |
 | `PreviousTxnLgrSeq` | Number    | UInt32              | Yes       | The \[index of the ledger]\[Ledger Index] that contains the transaction that most recently modified this object.                                                                                                                                                                |
 | `SourceTag`         | Number    | UInt32              | No        | An arbitrary tag to further specify the source for this held payment, such as a hosted recipient at the owner's address.                                                                                                                                                        |
+| `TransferRate`      | Number    | UInt32              | No        |                                                                                                                                                                                                                                                                                 |
 
 ### Escrow ID Format
 
