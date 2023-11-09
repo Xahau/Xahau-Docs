@@ -2,14 +2,14 @@
 
 ### Transaction Types
 
-{% content-ref url="../transaction-types/checkcreate.md" %}
-[checkcreate.md](../transaction-types/checkcreate.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/checkcreate.md" %}
+[checkcreate.md](../../technical/protocol-reference/transactions/transaction-types/checkcreate.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/checkcancel.md" %}
-[checkcancel.md](../transaction-types/checkcancel.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/checkcancel.md" %}
+[checkcancel.md](../../technical/protocol-reference/transactions/transaction-types/checkcancel.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/checkcash.md" %}
-[checkcash.md](../transaction-types/checkcash.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/checkcash.md" %}
+[checkcash.md](../../technical/protocol-reference/transactions/transaction-types/checkcash.md)
 {% endcontent-ref %}

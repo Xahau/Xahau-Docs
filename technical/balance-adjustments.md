@@ -66,7 +66,7 @@ Unless:
 
 The average balance statistics exist as a collection of three new fields on the AccountRoot object. These are:
 
-<table><thead><tr><th width="240">Field</th><th width="95.33333333333331">Type</th><th>Explanation</th></tr></thead><tbody><tr><td>sfRewardAccumulator</td><td>UINT64</td><td>The area under of the balance-time graph for your account since last ClaimReward transaction.</td></tr><tr><td>sfRewardLgrFirst</td><td>UINT32</td><td>The ledger number of the last ClaimReward transaction.</td></tr><tr><td>sfRewardLgrLast</td><td>UINT32</td><td>The ledger sequence number of the last transaction in or out of your account.</td></tr></tbody></table>
+<table><thead><tr><th width="240">Field</th><th width="95.33333333333331">Type</th><th>Explanation</th></tr></thead><tbody><tr><td><code>sfRewardAccumulator</code></td><td>UINT64</td><td>The area under of the balance-time graph for your account since last ClaimReward transaction.</td></tr><tr><td><code>sfRewardLgrFirst</code></td><td>UINT32</td><td>The ledger number of the last ClaimReward transaction.</td></tr><tr><td><code>sfRewardLgrLast</code></td><td>UINT32</td><td>The ledger sequence number of the last transaction in or out of your account.</td></tr><tr><td><code>sfRewardTime</code></td><td>UINT32</td><td>The ledger time the last reward was claimed.</td></tr></tbody></table>
 
 
 

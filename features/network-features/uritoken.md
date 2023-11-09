@@ -18,22 +18,22 @@ They include the transaction types; `mint`, `burn`, `buy`, `create sell offer`, 
 
 ### Transaction Types
 
-{% content-ref url="../transaction-types/uritokenmint.md" %}
-[uritokenmint.md](../transaction-types/uritokenmint.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/uritokenmint.md" %}
+[uritokenmint.md](../../technical/protocol-reference/transactions/transaction-types/uritokenmint.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/uritokenburn.md" %}
-[uritokenburn.md](../transaction-types/uritokenburn.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/uritokenburn.md" %}
+[uritokenburn.md](../../technical/protocol-reference/transactions/transaction-types/uritokenburn.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/uritokencreateselloffer.md" %}
-[uritokencreateselloffer.md](../transaction-types/uritokencreateselloffer.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/uritokencreateselloffer.md" %}
+[uritokencreateselloffer.md](../../technical/protocol-reference/transactions/transaction-types/uritokencreateselloffer.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/uritokencancelselloffer.md" %}
-[uritokencancelselloffer.md](../transaction-types/uritokencancelselloffer.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/uritokencancelselloffer.md" %}
+[uritokencancelselloffer.md](../../technical/protocol-reference/transactions/transaction-types/uritokencancelselloffer.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/uritokenbuy.md" %}
-[uritokenbuy.md](../transaction-types/uritokenbuy.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/uritokenbuy.md" %}
+[uritokenbuy.md](../../technical/protocol-reference/transactions/transaction-types/uritokenbuy.md)
 {% endcontent-ref %}

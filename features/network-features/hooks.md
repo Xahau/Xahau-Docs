@@ -4,10 +4,10 @@
 
 
 
-{% content-ref url="../transaction-types/sethook.md" %}
-[sethook.md](../transaction-types/sethook.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/sethook.md" %}
+[sethook.md](../../technical/protocol-reference/transactions/transaction-types/sethook.md)
 {% endcontent-ref %}
 
-{% content-ref url="../transaction-types/invoke.md" %}
-[invoke.md](../transaction-types/invoke.md)
+{% content-ref url="../../technical/protocol-reference/transactions/transaction-types/invoke.md" %}
+[invoke.md](../../technical/protocol-reference/transactions/transaction-types/invoke.md)
 {% endcontent-ref %}
