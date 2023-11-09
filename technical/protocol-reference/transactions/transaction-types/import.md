@@ -1,6 +1,6 @@
 ---
 description: >-
-  Import is a new transaction which accepts an XPOP from the Ripple testnet
+  Import is a new transaction which accepts an XPOP from the Ripple
   chain (network_id=1) and provides account synchronisation.
 ---
 
