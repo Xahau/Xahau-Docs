@@ -1,7 +1,7 @@
 ---
 description: >-
-  Import is a new transaction which accepts an XPOP from the XRPL Mainnet ("Ripple")
-  chain (network_id=0) and provides account synchronisation.
+  Import is a new transaction which accepts an XPOP from the XRPL Mainnet
+  chain (network_id=0) or Testnet (network_id=1) and provides account synchronisation.
 ---
 
 # Import
