@@ -1,8 +1,7 @@
 # Table of contents
 
-* [🪝 Hooks](README.md)
-* [Security Audits](security-audit/README.md)
-  * [Responsible Disclosure](security-audit/responsible-disclosure.md)
+* [🪝 Xahau Documentation](README.md)
+* [🪝 Hooks](readme-1.md)
 
 ## Features
 
@@ -114,3 +113,8 @@
 * [Governance Game](technical/governance-game.md)
 * [Burn 2 Mint (B2M)](technical/burn-2-mint.md)
 * [Versioning Process](technical/versioning-process.md)
+
+## Compliance
+
+* [Security Audits](compliance/security-audit/README.md)
+  * [Responsible Disclosure](compliance/security-audit/responsible-disclosure.md)

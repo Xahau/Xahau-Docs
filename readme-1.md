@@ -1,4 +1,12 @@
-# Network Features
+---
+description: >-
+  Introducing Hooks: Enhancing XRP Ledger Protocol with Smart Contract
+  Functionality
+cover: .gitbook/assets/cdn.feather.webp
+coverY: 0
+---
+
+# 🪝 Hooks
 
 
 

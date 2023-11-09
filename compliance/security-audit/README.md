@@ -1,10 +1,10 @@
 ---
 description: Hooks Have Passed a Rigorous Security Audit.
-cover: ../.gitbook/assets/cdn.feather-1.webp
+cover: ../../.gitbook/assets/cdn.feather-1.webp
 coverY: 0
 ---
 
-# Security Audit
+# Security Audits
 
 The Hooks amendment, integral to XRPL's smart contract infrastructure, has passed a detailed security audit by FYEO. The audit examined the Hooks framework implementation, including the Hook API, helper functions, and execution environment.&#x20;
 
