@@ -31,13 +31,13 @@ _(Added by the \[URIToken amendment]\[].)_
 
 
 
-| Field         | JSON Type             | \[Internal Type]\[] | Description                                                                                    |
-| ------------- | --------------------- | ------------------- | ---------------------------------------------------------------------------------------------- |
-| `Account`     | String                | AccountID           | The address of the account that will own the minted URIToken.                                  |
-| `URI`         | String                | String              | The URI associated with the minted URIToken.                                                   |
-| `Digest`      | String                | Hash256             | _(Optional)_ The digest of the URIToken.                                                       |
-| `Destination` | String                | AccountID           | _(Optional)_ The address of the account that can buy the minted URIToken.                      |
-| `Amount`      | \[Currency Amount]\[] | Amount              | _(Optional)_ The amount of currency the account wants to receive in exchange for the URIToken. |
+| Field         | JSON Type                                                                                                                          | \[Internal Type]\[] | Description                                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------- |
+| `Account`     | String                                                                                                                             | AccountID           | The address of the account that will own the minted URIToken.                                  |
+| `URI`         | String                                                                                                                             | String              | The URI associated with the minted URIToken.                                                   |
+| `Digest`      | String                                                                                                                             | Hash256             | _(Optional)_ The digest of the URIToken.                                                       |
+| `Destination` | String                                                                                                                             | AccountID           | _(Optional)_ The address of the account that can buy the minted URIToken.                      |
+| `Amount`      | [Currency Amount](https://docs.xahau.network/technical/protocol-reference/data-types/currency-formats#specifying-currency-amounts) | Amount              | _(Optional)_ The amount of currency the account wants to receive in exchange for the URIToken. |
 
 ### URITokenMint Flags
 

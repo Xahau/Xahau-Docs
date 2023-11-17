@@ -28,18 +28,18 @@ A `URIToken` object describes a URI token, which can be used to represent a uniq
 
 A `URIToken` object has the following fields:
 
-| Field               | JSON Type | \[Internal Type]\[] | Required? | Description                                                                                                                   |
-| ------------------- | --------- | ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `Owner`             | String    | Account             | Yes       | The owner of the URI Token.                                                                                                   |
-| `OwnerNode`         | String    | UInt64              | Yes       | A hint indicating which page of the owner's directory links to this object, in case the directory consists of multiple pages. |
-| `Issuer`            | String    | Account             | Yes       | The issuer of the URI Token.                                                                                                  |
-| `URI`               | String    | VL                  | Yes       | The URI represented by this token.                                                                                            |
-| `Digest`            | String    | Hash256             | No        | Arbitrary 256-bit hash provided by the owner as a specific identifier for this URI Token.                                     |
-| `Amount`            | String    | Amount              | No        | The amount of the URI Token.                                                                                                  |
-| `Destination`       | String    | Account             | No        | The intended recipient of the URI Token.                                                                                      |
-| `PreviousTxnID`     | String    | Hash256             | Yes       | The identifying hash of the transaction that most recently modified this object.                                              |
-| `PreviousTxnLgrSeq` | Number    | UInt32              | Yes       | The index of the ledger that contains the transaction that most recently modified this object.                                |
-| `LedgerEntryType`   | String    | UInt16              | Yes       | The value `0x0073`, mapped to the string `URIToken`, indicates that this object is a URI Token object.                        |
+| Field               | JSON Type        | \[Internal Type]\[] | Required? | Description                                                                                                                   |
+| ------------------- | ---------------- | ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `Owner`             | String           | Account             | Yes       | The owner of the URI Token.                                                                                                   |
+| `OwnerNode`         | String           | UInt64              | Yes       | A hint indicating which page of the owner's directory links to this object, in case the directory consists of multiple pages. |
+| `Issuer`            | String           | Account             | Yes       | The issuer of the URI Token.                                                                                                  |
+| `URI`               | String           | VL                  | Yes       | The URI represented by this token.                                                                                            |
+| `Digest`            | String           | Hash256             | No        | Arbitrary 256-bit hash provided by the owner as a specific identifier for this URI Token.                                     |
+| `Amount`            | String or Object | Amount              | No        | The amount of the URI Token.                                                                                                  |
+| `Destination`       | String           | Account             | No        | The intended recipient of the URI Token.                                                                                      |
+| `PreviousTxnID`     | String           | Hash256             | Yes       | The identifying hash of the transaction that most recently modified this object.                                              |
+| `PreviousTxnLgrSeq` | Number           | UInt32              | Yes       | The index of the ledger that contains the transaction that most recently modified this object.                                |
+| `LedgerEntryType`   | String           | UInt16              | Yes       | The value `0x0073`, mapped to the string `URIToken`, indicates that this object is a URI Token object.                        |
 
 ### URIToken Flags
 

@@ -6,7 +6,7 @@ description: >-
 
 # Connect to Xahau Mainnet
 
-## Docker
+### Connecting to the Xahau Mainnet with Docker
 
 To connect to the Xahau Mainnet you can use this docker container:
 

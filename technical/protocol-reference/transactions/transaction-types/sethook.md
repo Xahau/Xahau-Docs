@@ -67,7 +67,7 @@ To update an existing hook, include the `HookHash`, `HookGrants`, `HookNamespace
 
 **Delete**
 
-To delete an existing hook, include the `HookHash` field in the hook object. The `HookHash` field specifies the hash of the hook to be deleted.
+To delete an existing hook, include the `HookHash` field, set the `Flags` field to `hsfOVERRIDE` and set the `CreateCode` to "" in the hook object. The `HookHash` field specifies the hash of the hook to be deleted.
 
 **Namespace Delete**
 

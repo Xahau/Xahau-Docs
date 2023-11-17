@@ -1,5 +1,4 @@
 ---
-description: Hooks Have Passed a Rigorous Security Audit.
 cover: ../../.gitbook/assets/cdn.feather-1.webp
 coverY: 0
 ---
@@ -18,10 +17,12 @@ Developers now have robust tools for creating and deploying custom logic, access
 
 The audit's successful completion is not just a milestone but a cornerstone for the ongoing security and sustainability of the Hooks network.
 
-With all identified vulnerabilities addressed, the Hooks amendment is set to drive innovation securely on XRPL.
+With all identified vulnerabilities addressed, the Hooks amendment is set to drive innovation securely on Xahau.
 
 {% hint style="info" %}
 ### The full security audit can be found [**here**](https://xrpl-labs.com/static/misc/Security%20Assessment%20of%20the%20XRP%20Labs%20Hooks%20Amendment%20v1.0.pdf).&#x20;
 {% endhint %}
 
-To a brighter, more innovative future with the XRP Ledger Protocol!
+
+
+To a brighter, more innovative future with Xahau!

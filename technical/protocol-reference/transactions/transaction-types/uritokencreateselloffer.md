@@ -28,12 +28,12 @@ _(Added by the \[URIToken amendment]\[].)_
 
 ### Fields
 
-| Field         | JSON Type             | \[Internal Type]\[] | Description                                                                       |
-| ------------- | --------------------- | ------------------- | --------------------------------------------------------------------------------- |
-| `Account`     | String                | AccountID           | The address of the account creating the sell offer.                               |
-| `URITokenID`  | String                | Hash256             | The ID of the URIToken being sold.                                                |
-| `Destination` | String                | AccountID           | _(Optional)_ The address of the account to receive the sell offer.                |
-| `Amount`      | \[Currency Amount]\[] | Amount              | The amount of currency the account wants to receive in exchange for the URIToken. |
+| Field         | JSON Type                                                                                                                          | \[Internal Type]\[] | Description                                                                       |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------- |
+| `Account`     | String                                                                                                                             | AccountID           | The address of the account creating the sell offer.                               |
+| `URITokenID`  | String                                                                                                                             | Hash256             | The ID of the URIToken being sold.                                                |
+| `Destination` | String                                                                                                                             | AccountID           | _(Optional)_ The address of the account to receive the sell offer.                |
+| `Amount`      | [Currency Amount](https://docs.xahau.network/technical/protocol-reference/data-types/currency-formats#specifying-currency-amounts) | Amount              | The amount of currency the account wants to receive in exchange for the URIToken. |
 
 ### Error Cases
 

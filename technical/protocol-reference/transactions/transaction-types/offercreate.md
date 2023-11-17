@@ -29,12 +29,12 @@ description: >-
 
 ### Fields
 
-| Field           | JSON Type             | \[Internal Type]\[] | Description                                                                                           |
-| --------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------------------------- |
-| `Expiration`    | Number                | UInt32              | _(Optional)_ Time after which the Offer is no longer active, in \[seconds since the Ripple Epoch]\[]. |
-| `OfferSequence` | Number                | UInt32              | _(Optional)_ An Offer to delete first, specified in the same way as \[OfferCancel]\[].                |
-| `TakerGets`     | \[Currency Amount]\[] | Amount              | The amount and type of currency being sold.                                                           |
-| `TakerPays`     | \[Currency Amount]\[] | Amount              | The amount and type of currency being bought.                                                         |
+| Field           | JSON Type                                                                                                                          | \[Internal Type]\[] | Description                                                                                           |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------- |
+| `Expiration`    | Number                                                                                                                             | UInt32              | _(Optional)_ Time after which the Offer is no longer active, in \[seconds since the Ripple Epoch]\[]. |
+| `OfferSequence` | Number                                                                                                                             | UInt32              | _(Optional)_ An Offer to delete first, specified in the same way as \[OfferCancel]\[].                |
+| `TakerGets`     | [Currency Amount](https://docs.xahau.network/technical/protocol-reference/data-types/currency-formats#specifying-currency-amounts) | Amount              | The amount and type of currency being sold.                                                           |
+| `TakerPays`     | [Currency Amount](https://docs.xahau.network/technical/protocol-reference/data-types/currency-formats#specifying-currency-amounts) | Amount              | The amount and type of currency being bought.                                                         |
 
 ### OfferCreate Flags
 

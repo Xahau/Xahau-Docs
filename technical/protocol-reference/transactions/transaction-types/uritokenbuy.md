@@ -26,11 +26,11 @@ _(Added by the \[URIToken amendment]\[].)_
 }
 ```
 
-| Field        | JSON Type             | \[Internal Type]\[] | Description                                         |
-| ------------ | --------------------- | ------------------- | --------------------------------------------------- |
-| `Account`    | String                | AccountID           | The address of the buyer's account.                 |
-| `URITokenID` | String                | Hash256             | The unique identifier of the URIToken to be bought. |
-| `Amount`     | \[Currency Amount]\[] | Amount              | The amount of currency to pay for the URIToken.     |
+| Field        | JSON Type                                                                                                                          | \[Internal Type]\[] | Description                                         |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------------------------- |
+| `Account`    | String                                                                                                                             | AccountID           | The address of the buyer's account.                 |
+| `URITokenID` | String                                                                                                                             | Hash256             | The unique identifier of the URIToken to be bought. |
+| `Amount`     | [Currency Amount](https://docs.xahau.network/technical/protocol-reference/data-types/currency-formats#specifying-currency-amounts) | Amount              | The amount of currency to pay for the URIToken.     |
 
 ### Special Transaction Cost
 
