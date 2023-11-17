@@ -20,6 +20,7 @@
   * [Payments](features/network-features/payments.md)
   * [URIToken](features/network-features/uritoken.md)
 * [Faucet & Explorers](features/faucet-and-explorer.md)
+* [Data API's](features/data-apis.md)
 
 ## Infrastructure
 
