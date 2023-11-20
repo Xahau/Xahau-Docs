@@ -5,6 +5,7 @@
 
 ## Features
 
+* [Public Nodes (RPC)](features/public-nodes-rpc.md)
 * [Amendments](features/amendments.md)
 * [Transaction Signing](features/transaction-signing.md)
 * [Developer Tooling](features/developer-tooling/README.md)
