@@ -7,7 +7,8 @@
 
 * [Public Nodes (RPC)](features/public-nodes-rpc.md)
 * [Amendments](features/amendments.md)
-* [Transaction Signing](features/transaction-signing.md)
+* [Transaction Signing](features/transaction-signing/README.md)
+  * [Transaction Fees](features/transaction-signing/transaction-fees.md)
 * [Developer Tooling](features/developer-tooling/README.md)
   * [Hook Tools](features/developer-tooling/hook-tools.md)
   * [Client Libraries](features/developer-tooling/client-libraries.md)
