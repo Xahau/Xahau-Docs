@@ -115,7 +115,7 @@ sudo make install
 `cd` or `mkdir` the directory root where you will clone the Xahau repository. For me thats `~/projects`
 
 ```
-git clone https://github.com/Xahau/xahau.git && cd xahau && git checkout dev
+git clone https://github.com/Xahau/xahaud.git && cd xahaud && git checkout dev
 ```
 
 ```shellscript
