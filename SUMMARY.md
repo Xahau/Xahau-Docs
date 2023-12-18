@@ -1,6 +1,7 @@
 # Table of contents
 
 * [🪝 Xahau Documentation](README.md)
+  * [What is Different?](readme/what-is-different.md)
 * [🪝 Hooks](readme-1.md)
 
 ## Features
@@ -121,3 +122,7 @@
 
 * [Security Audits](compliance/security-audit/README.md)
   * [Responsible Disclosure](compliance/security-audit/responsible-disclosure.md)
+
+## Support
+
+* [Help Us](support/help-us.md)

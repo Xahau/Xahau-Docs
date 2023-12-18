@@ -42,8 +42,8 @@ The `Import` transaction type is used to import transactions from other networks
 
 Please note that the process of importing for the issuer involves specific transaction types and requires careful configuration. Always ensure that the hooks are correctly set up and that the transactions are valid for the intended operations.
 
-These transaction types provide users with a comprehensive set of tools for managing their accounts on the Xahau network. As with all operations, users should ensure they understand the implications of each transaction type before use.
-
 {% content-ref url="../../technical/protocol-reference/transactions/transaction-types/import.md" %}
 [import.md](../../technical/protocol-reference/transactions/transaction-types/import.md)
 {% endcontent-ref %}
+
+These transaction types provide users with a comprehensive set of tools for managing their accounts on the Xahau network. As with all operations, users should ensure they understand the implications of each transaction type before use.
