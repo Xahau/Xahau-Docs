@@ -11,13 +11,23 @@ description: >-
 
 _(Added by the \[BalanceRewards amendment]\[].)_
 
-### Example
+### Opt-in + Claim
 
 ```json
 {
     "TransactionType": "ClaimReward",
     "Account": "rWYkbWkCeg8dP6rXALnjgZSjjLyih5NXm",
     "Issuer": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh"
+}
+```
+
+### Opt-out
+
+```json
+{
+    "TransactionType": "ClaimReward",
+    "Account": "rWYkbWkCeg8dP6rXALnjgZSjjLyih5NXm",
+    "Flags": 1
 }
 ```
 
