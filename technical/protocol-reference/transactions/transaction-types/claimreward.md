@@ -17,17 +17,17 @@ _(Added by the \[BalanceRewards amendment]\[].)_
 {
     "TransactionType": "ClaimReward",
     "Account": "rWYkbWkCeg8dP6rXALnjgZSjjLyih5NXm",
-    "Issuer": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn"
+    "Issuer": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh"
 }
 ```
 
 ### Fields
 
-| Field     | JSON Type | \[Internal Type]\[] | Description                                                     |
-| --------- | --------- | ------------------- | --------------------------------------------------------------- |
-| `Account` | String    | AccountID           | The address of the account that is claiming the reward.         |
-| `Flags`   | Number    | UInt32              | _(Optional)_ Can have flag 1 set to opt-out of rewards.         |
-| `Issuer`  | String    | AccountID           | _(Optional)_ The address of the account that issued the reward. |
+| Field     | JSON Type | \[Internal Type]\[] | Description                                             |
+| --------- | --------- | ------------------- | ------------------------------------------------------- |
+| `Account` | String    | AccountID           | The address of the account that is claiming the reward. |
+| `Flags`   | Number    | UInt32              | _(Optional)_ Can have flag 1 set to opt-out of rewards. |
+| `Issuer`  | String    | AccountID           | _(Optional)_ The genesis account.                       |
 
 ### ClaimReward Flags
 
