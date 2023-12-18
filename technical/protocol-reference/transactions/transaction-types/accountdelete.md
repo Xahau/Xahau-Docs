@@ -11,6 +11,10 @@ description: >-
 
 _Added by the DeletableAccounts amendment_
 
+{% hint style="danger" %}
+The _DeletableAccounts_ amendment is not enabled at this time.
+{% endhint %}
+
 ### Example
 
 ```json
