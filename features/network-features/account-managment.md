@@ -1,6 +1,8 @@
 # Account Managment
 
-The Account Management features in the Xahau network is a crucial component that allows users to manage their accounts effectively. This feature includes several transaction types that enable users to perform various operations on their accounts.
+The Account Management features in the Xahau network are a crucial component for users to manage their accounts effectively.
+
+This includes several transaction types that enable users to perform various operations on their accounts.
 
 ### Transaction Types
 
