@@ -55,7 +55,7 @@ To release the code, follow these steps:
 2. Delete the `candidate` branch.
 
 {% hint style="warning" %}
-All merges into the release branch must be done with \`git merge --ff-only dev\`
+All merges into the release branch must be done with \`git merge --ff-only candidate\`
 {% endhint %}
 
 ### Summary
