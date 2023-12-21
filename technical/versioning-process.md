@@ -27,21 +27,17 @@ All merges into the dev branch must be squashed
 
 Code maintainers will review your pull request and provide feedback. Once the code is approved, it will be merged into the dev branch.
 
-### Candidate Branch
+### Candidate Branches
 
-Once the features in the `dev` branch are ready for testing, they are merged into the `candidate` branch. This branch serves as a staging area for code that is almost ready for release.
+Once the features in the `dev` branch are ready for testing, they are merged into a `candidate` branch. This branch serves as a staging area for code that is almost ready for release.
 
 The code in the `candidate` branch is thoroughly tested. Any bugs or issues found are fixed in the `dev` branch and then merged back into the `candidate` branch.
 
 The `candidate` branch is typically in this testing phase for about 2 weeks. However, this period can be longer or shorter, depending on the urgency of the fixes or the size of the new features.
 
-1. Create a new PR from the `dev` branch to the `candidate` branch with a name like "Proposed."
-2. Update the "High Level Overview of Change" to include the Pull Requests from `dev`. Update the "Context of Change" to include any additional notes about the PR's
-3. Merge the pull request into the release branch.
-
-{% hint style="warning" %}
-All merges into candidate branch must be done with \`git merge --ff-only dev\`
-{% endhint %}
+1. Create a new branch `candidate` from `dev`.
+2. Create a PR from the `candidate` branch to the `release` branch with a name like "Proposed."
+3. Update the "High Level Overview of Change" to include the Pull Requests from `candidate`. Update the "Context of Change" to include any additional notes about the PR's
 
 ### Release Branch
 
@@ -55,9 +51,8 @@ In the `release` branch, a binary is built and published at https://build.xahau.
 
 To release the code, follow these steps:
 
-1. Create a new pull request from the candidate branch to the release branch with a name like "Release".
-2. Review the changes and ensure that all tests have passed.
-3. Merge the pull request into the release branch.
+1. Merge the `candidate` pull request into the release branch.
+2. Delete the `candidate` branch.
 
 {% hint style="warning" %}
 All merges into the release branch must be done with \`git merge --ff-only dev\`
