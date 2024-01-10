@@ -24,6 +24,7 @@
   * [URIToken](features/network-features/uritoken.md)
 * [Faucet & Explorers](features/faucet-and-explorer.md)
 * [Data API's](features/data-apis.md)
+* [Curated Tooling](features/curated-tooling.md)
 
 ## Infrastructure
 
