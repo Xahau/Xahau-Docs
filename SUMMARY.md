@@ -11,7 +11,7 @@
 * [Transaction Signing](features/transaction-signing/README.md)
   * [Transaction Fees](features/transaction-signing/transaction-fees.md)
 * [Developer Tooling](features/developer-tooling/README.md)
-  * [Hook Tools](features/developer-tooling/hook-tools.md)
+  * [Curated Tooling](features/developer-tooling/hook-tools.md)
   * [Client Libraries](features/developer-tooling/client-libraries.md)
 * [Network Features](features/network-features/README.md)
   * [Account Managment](features/network-features/account-managment.md)
@@ -24,7 +24,6 @@
   * [URIToken](features/network-features/uritoken.md)
 * [Faucet & Explorers](features/faucet-and-explorer.md)
 * [Data API's](features/data-apis.md)
-* [Curated Tooling](features/curated-tooling.md)
 
 ## Infrastructure
 
