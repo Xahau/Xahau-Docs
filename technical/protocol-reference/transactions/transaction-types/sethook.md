@@ -18,15 +18,17 @@ _(Added by the \[Hooks amendment]\[].)_
     "Flags": 0,
     "Hooks": [
 <strong>        {
-</strong>            "HookHash": "610F33B8EBF7EC795F822A454FB852156AEFE50BE0CB8326338A81CD74801864",
-            "CreateCode": "697066733A2F2F4445414442454546697066733A2F2F44454144424545467878",
-            "HookGrants": [],
-            "HookNamespace": "0000000000000000000000000000000000000000000000000000000000000000",
-            "HookParameters": [],
-            "HookOn": "0000000000000000000000000000000000000000000000000000000000000000",
-            "HookApiVersion": 0,
-            "Flags": 0
-        }
+</strong><strong>            "Hook": {
+</strong><strong>                "HookHash": "610F33B8EBF7EC795F822A454FB852156AEFE50BE0CB8326338A81CD74801864",
+</strong>                "CreateCode": "697066733A2F2F4445414442454546697066733A2F2F44454144424545467878",
+                "HookGrants": [],
+                "HookNamespace": "0000000000000000000000000000000000000000000000000000000000000000",
+                "HookParameters": [],
+                "HookOn": "0000000000000000000000000000000000000000000000000000000000000000",
+                "HookApiVersion": 0,
+                "Flags": 0
+<strong>            }
+</strong>        }
     ]
 }
 </code></pre>
