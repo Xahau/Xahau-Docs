@@ -85,7 +85,9 @@ deb http://apt.llvm.org/ llvm-toolchain-- main
 Install CMake
 
 ```
-cd $DEP_DIR && wget https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh && sudo sh cmake-$CMAKE_VERSION-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir
+cd $DEP_DIR && \
+wget https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh && \
+sudo sh cmake-$CMAKE_VERSION-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir
 ```
 
 Install Protobuf
@@ -104,7 +106,12 @@ sudo make install
 Install Boost
 
 ```
-cd $DEP_DIR && wget https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VERSION/source/$BOOST_FOLDER_NAME.tar.gz && tar -xvzf $BOOST_FOLDER_NAME.tar.gz && cd $BOOST_FOLDER_NAME && ./bootstrap.sh && ./b2 -j$(nproc)
+cd $DEP_DIR && \
+wget https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VERSION/source/$BOOST_FOLDER_NAME.tar.gz && \
+tar -xvzf $BOOST_FOLDER_NAME.tar.gz && \
+cd $BOOST_FOLDER_NAME && \
+./bootstrap.sh && \
+./b2 -j$(nproc)
 ```
 
 Install WasmEdge
@@ -124,7 +131,11 @@ sudo make install
 ### Clone the repository
 
 ```
-mkdir ~/projects && cd ~/projects && git clone https://github.com/Xahau/xahaud.git && cd xahaud && git checkout release
+mkdir ~/projects && \
+cd ~/projects && \
+git clone https://github.com/Xahau/xahaud.git && \
+cd xahaud && \
+git checkout release
 ```
 
 ### Build Xahaud
@@ -132,5 +143,8 @@ mkdir ~/projects && cd ~/projects && git clone https://github.com/Xahau/xahaud.g
 From the root `xahaud` directory:
 
 ```shellscript
-mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_DIR=$LLVM_DIR -DLLVM_LIBRARY_DIR=$LLVM_LIBRARY_DIR .. && cmake --build . --target rippled --parallel -j$(nproc)
+mkdir build && \
+cd build && \
+cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_DIR=$LLVM_DIR -DLLVM_LIBRARY_DIR=$LLVM_LIBRARY_DIR .. && \
+cmake --build . --target rippled --parallel -j$(nproc)
 ```
