@@ -12,7 +12,7 @@
 
 ### Set Build Env Variables
 
-First make a dependency directory. I like to use `~/dependencies` We will then set this in the env variables below.
+First make a dependency directory. I like to use `~/dependencies`&#x20;
 
 ```
 mkdir ~/dependencies
