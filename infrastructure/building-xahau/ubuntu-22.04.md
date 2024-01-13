@@ -70,10 +70,8 @@ apt install -y python3.9 python3-pip llvm-$LLVM_VERSION-dev liblld-$LLVM_VERSION
 ```
 
 {% hint style="warning" %}
-`E: The repository 'http://apt.llvm.org/ llvm-toolchain-- Release`
-{% endhint %}
-
 To Resolve the \``E: The repository 'http://apt.llvm.org/ llvm-toolchain-- Release` error:
+{% endhint %}
 
 ```
 sudo nano /etc/apt/sources.list
