@@ -29,8 +29,8 @@
 
 * [Node Requirements](infrastructure/node-requirements.md)
 * [Running a Node](infrastructure/peering/README.md)
-  * [Connect to Xahau Mainnet](infrastructure/peering/connect-to-xahau-mainnet.md)
-  * [Connect to Xahau Testnet](infrastructure/peering/peering-your-own-node.md)
+  * [Running a Mainnet Node](infrastructure/peering/connect-to-xahau-mainnet.md)
+  * [Running a Testnet Node](infrastructure/peering/peering-your-own-node.md)
 * [Building Xahau (Dev)](infrastructure/building-xahau/README.md)
   * [Ubuntu - 22.04](infrastructure/building-xahau/ubuntu-22.04.md)
   * [Mac OS - 13.5.2](infrastructure/building-xahau/mac-os-13.5.2.md)
