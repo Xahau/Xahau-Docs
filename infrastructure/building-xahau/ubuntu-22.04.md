@@ -135,7 +135,7 @@ mkdir ~/projects && \
 cd ~/projects && \
 git clone https://github.com/Xahau/xahaud.git && \
 cd xahaud && \
-git checkout release
+git checkout dev
 ```
 
 ### Build Xahaud
@@ -145,6 +145,6 @@ From the root `xahaud` directory:
 ```shellscript
 mkdir build && \
 cd build && \
-cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_DIR=$LLVM_DIR -DLLVM_LIBRARY_DIR=$LLVM_LIBRARY_DIR .. && \
+cmake -DCMAKE_BUILD_TYPE=Debug -DLLVM_DIR=$LLVM_DIR -DLLVM_LIBRARY_DIR=$LLVM_LIBRARY_DIR .. && \
 cmake --build . --target rippled --parallel -j$(nproc)
 ```
