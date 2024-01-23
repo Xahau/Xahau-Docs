@@ -8,7 +8,7 @@ description: Deliver XAH or IOU from a held payment to the recipient.
 
 _Added by the \[Escrow amendment]\[]._
 
-### Example
+### Finish with OfferSequence
 
 ```json
 {
@@ -21,14 +21,28 @@ _Added by the \[Escrow amendment]\[]._
 }
 ```
 
+### Finish with EscrowID
+
+```json
+{
+    "Account": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+    "TransactionType": "EscrowFinish",
+    "Owner": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+    "EscrowID": "49647F0D748DC3FE26BDACBC57F251AADEFFF391403EC9BF87C97F67E9977FB0",
+    "Condition": "A0258020E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855810100",
+    "Fulfillment": "A0028000"
+}
+```
+
 ### Fields
 
 | Field           | JSON Type | \[Internal Type]\[] | Description                                                                                                                                                                                         |
 | --------------- | --------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Owner`         | String    | AccountID           | Address of the source account that funded the held payment.                                                                                                                                         |
-| `OfferSequence` | Number    | UInt32              | Transaction sequence of \[EscrowCreate transaction]\[] that created the held payment to finish.                                                                                                     |
+| `OfferSequence` | Number    | UInt32              | _(Optional)_ Transaction sequence of \[EscrowCreate transaction]\[] that created the held payment to finish.                                                                                        |
 | `Condition`     | String    | Blob                | _(Optional)_ Hex value matching the previously-supplied [PREIMAGE-SHA-256 crypto-condition](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02#section-8.1) of the held payment.         |
 | `Fulfillment`   | String    | Blob                | _(Optional)_ Hex value of the [PREIMAGE-SHA-256 crypto-condition fulfillment](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02#section-8.1.4) matching the held payment's `Condition`. |
+| `EscrowID`      | String    | Hash256             | _(Optional)_ The ID of the Escrow ledger object to finish, as a 64-character hexadecimal string.                                                                                                    |
 
 Any account may submit an EscrowFinish transaction.
 

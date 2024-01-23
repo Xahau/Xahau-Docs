@@ -8,7 +8,7 @@ description: Return escrowed XAH or IOU to the sender.
 
 _Added by the \[Escrow amendment]\[]._
 
-### Example
+### Cancel Using OfferSequence
 
 ```json
 {
@@ -19,12 +19,24 @@ _Added by the \[Escrow amendment]\[]._
 }
 ```
 
+### Cancel Using EscrowID
+
+```json
+{
+    "Account": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+    "TransactionType": "EscrowCancel",
+    "Owner": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+    "EscrowID": "49647F0D748DC3FE26BDACBC57F251AADEFFF391403EC9BF87C97F67E9977FB0",
+}
+```
+
 ### Fields
 
-| Field           | JSON Type | \[Internal Type]\[] | Description                                                                                                  |
-| --------------- | --------- | ------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `Owner`         | String    | AccountID           | Address of the source account that funded the escrow payment.                                                |
-| `OfferSequence` | Number    | UInt32              | Transaction sequence (or Ticket number) of \[EscrowCreate transaction]\[] that created the escrow to cancel. |
+| Field           | JSON Type | \[Internal Type]\[] | Description                                                                                                               |
+| --------------- | --------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `Owner`         | String    | AccountID           | Address of the source account that funded the escrow payment.                                                             |
+| `OfferSequence` | Number    | UInt32              | _(Optional)_ Transaction sequence (or Ticket number) of \[EscrowCreate transaction]\[] that created the escrow to cancel. |
+| `EscrowID`      | String    | Hash256             | _(Optional)_ The ID of the Escrow ledger object to cancel, as a 64-character hexadecimal string.                          |
 
 Any account may submit an EscrowCancel transaction.
 
