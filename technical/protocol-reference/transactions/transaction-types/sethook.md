@@ -57,27 +57,251 @@ Besides errors that can occur for all transactions, SetHook transactions can res
 
 ### SetHook Operations
 
-The SetHook transaction supports the following operations:
+There are six possible operations: No Operation, Create, Update, Delete, Install and Namespace Delete
 
-**Install**
+Each operation is specified by the inclusion or omission of certain HookSet Object fields. This might seem confusing at first but by working through a few examples the reader should find it intuitive; Essentially HookSet operations are a type of **diff** between a specific Hook's _defaults_, _existing_ and newly specified fields.
 
-To install a new hook, include the `HookHash`, `CreateCode`, `HookGrants`, `HookNamespace`, `HookParameters`, `HookOn`, `HookApiVersion`, and `Flags` fields in the hook object. The `HookHash` field specifies the hash of the hook, the `CreateCode` field contains the WebAssembly code for the hook, the `HookGrants` field specifies the grants associated with the hook, the `HookNamespace` field specifies the namespace of the hook, the `HookParameters` field contains the parameters of the hook, the `HookOn` field specifies the event on which the hook is triggered, the `HookApiVersion` field specifies the API version of the hook, and the `Flags` field specifies additional flags for the hook.
+Achieving each type of operation is explained in a subsection below.
 
-**Update**
+### No Operation
 
-To update an existing hook, include the `HookHash`, `HookGrants`, `HookNamespace`, `HookParameters`, `HookOn`, `Flags` fields in the hook object. The `HookHash` field specifies the hash of the hook, the `HookGrants` field specifies the grants associated with the hook, the `HookNamespace` field specifies the namespace of the hook, the `HookParameters` field contains the parameters of the hook, the `HookOn` field specifies the event on which the hook is triggered, and the `Flags` field specifies additional flags for the hook.
+**Occurs when**:
 
-**Delete**
+* The HookSet Object is empty
 
-To delete an existing hook, include the `HookHash` field, set the `Flags` field to `hsfOVERRIDE` and set the `CreateCode` to "" in the hook object. The `HookHash` field specifies the hash of the hook to be deleted.
+**Behaviour**:
 
-**Namespace Delete**
+* No change of any kind is made.
 
-To delete an entire namespace of hooks, include the `HookNamespace` field and set the `Flags` field to `hsfNSDELETE` in the hook object. The `HookNamespace` field specifies the namespace to be deleted.
+**Example**:
 
-**No-op**
+JSON
 
-To perform a no-op operation, include an empty hook object in the `Hooks` array. This can be useful to group multiple SetHook operations in a single transaction.
+```json
+{ 
+    Account: "r4GDFMLGJUKMjNhhycgt2d5LXCdXzCYPoc",
+    TransactionType: "SetHook",
+    Fee: "2000000",
+    Hooks:
+    [        
+        {                        
+            Hook: {}
+        }
+    ]
+}
+```
+
+### Create Operation
+
+**Occurs when**:
+
+_All_ of the following conditions are met:
+
+* The Corresponding Hook does not exist _or_`FLAG_OVERRIDE` is specified.
+* `CreateCode` field is specified and is not blank and contains the valid web assembly bytecode for a valid Hook.
+* No instance of the same web assembly bytecode already exists on the XRPL. (If it does and all other requirements are met then interpret as an Install Operation — see below.)
+
+**Behaviour**:
+
+* A reference counted `HookDefinition` object is created on the XRPL containing the fields in the HookSet Object, with all specified fields (Namespace, Parameters, HookOn) becoming defaults (but not Grants.)
+* A `Hooks` array is created on the executing account, if it doesn't already exist. (This is the structure that contains the Corresponding Hooks.)
+* A `Hook` object is created at the Corresponding Hook position if one does not already exist.
+* The `Hook` object points at the `HookDefinition`.
+* The `Hook` object contains no fields except `HookHash` which points at the created `HookDefinition`.
+* If `hsfNSDELETE` flag is specified then any HookState entires in the destination namespace are deleted if they currently exist.
+
+**Example**:
+
+JSON
+
+```json
+{ 
+    Account: "r4GDFMLGJUKMjNhhycgt2d5LXCdXzCYPoc",
+    TransactionType: "SetHook",
+    Fee: "2000000",
+    Hooks:
+    [        
+        {                        
+            Hook: {                
+                CreateCode: fs.readFileSync('accept.wasm').toString('hex').toUpperCase(),
+                HookOn: '0000000000000000',
+                HookNamespace: addr.codec.sha256('accept').toString('hex').toUpperCase(),
+                HookApiVersion: 0
+            }
+        }
+    ]
+}
+```
+
+### Install Operation
+
+**Occurs when**:
+
+_All_ of the following conditions are met:
+
+* The Corresponding Hook does not exist _or_`FLAG_OVERRIDE` is specified.
+* `HookHash` field is specified and is not blank and contains the hash of a Hook that already exists as a `HookDefinition` on the ledger _or_ `CreateCode` field is specified and is not blank and contains the valid web assembly bytecode for a valid hook that already exists on the ledger as a `HookDefinition`.
+
+**Behaviour**:
+
+* The reference count of the `HookDefinition` object is incremented.
+* A `Hooks` array is created on the executing account, if it doesn't already exist. (This is the structure that contains the Corresponding Hooks.)
+* A `Hook` object is created at the Corresponding Hook position if one does not already exist.
+* The `Hook` object points at the `HookDefinition`.
+* The `Hook` object contains all the fields in the HookSet Object, except and unless:
+* A field or key-pair within a field is identical to the Hook Defaults set on the `HookDefinition`, in which case it is omitted due to defaults.
+* If `hsfNSDELETE` flag is specified then any HookState entires in the destination namespace are deleted if they currently exist.
+
+**Example**:
+
+JSON
+
+```json
+{ 
+    Account: "r4GDFMLGJUKMjNhhycgt2d5LXCdXzCYPoc",
+    TransactionType: "SetHook",
+    Fee: "2000000",
+    Hooks:
+    [        
+        {                        
+            Hook: {                
+                HookHash: "A5663784D04ED1B4408C6B97193464D27C9C3334AAF8BBB4FA5EB8E557FC4A2C",
+                HookOn: '0000000000000000',
+                HookNamespace: addr.codec.sha256('accept').toString('hex').toUpperCase(),
+            }
+        }
+    ]
+}
+```
+
+### Update Operation
+
+**Occurs when**:
+
+_All_ of the following conditions are met:
+
+* The Corresponding Hook exists.
+* `HookHash` is absent.
+* `CreateCode` is absent.
+* One or more of `HookNamespace`, `HookParameters` or `HookGrants` is present.
+
+**General Behaviour**:
+
+* The Corresponding Hook is updated in such a way that the desired changes are reflected in the Corresponding Hook.
+
+**Specific Behaviour**:
+
+If `HookNamespace` is specified and differs from the Corresponding Hook's Namespace:
+
+* the Corresponding Hook's `HookNamespace` is updated, and
+* if the `hsfNSDELETE` flag is specified all HookState entires in the old namespace are deleted.
+
+If `HookParameters` is specified, then for each entry:
+
+* If `HookParameterName` exists but `HookParameterValue` is absent and the Corresponding Hook's Parameters (either specifically or via defaults) contains this `HookParameterName` then the parameter is marked as deleted on the Corresponding Hook.
+* If `HookParameterName` exists and `HookParameterValue` exists then the Corresponding Hook's Parameters are modified to include the new or updated parameter.
+
+If `HookGrants` is specified then:
+
+* The Corresponding Hook's `HookGrants` array is replaced with the array.
+
+**Example**:
+
+JSON
+
+```json
+{ 
+    Account: "r4GDFMLGJUKMjNhhycgt2d5LXCdXzCYPoc",
+    TransactionType: "SetHook",
+    Fee: "2000000",
+    Hooks:
+    [        
+        {                        
+            Hook: {
+                HookNamespace: addr.codec.sha256('new_accept').toString('hex').toUpperCase(),
+            }
+        }
+    ]
+}
+```
+
+### Delete Operation
+
+**Occurs when**:
+
+_All_ of the following conditions are met:
+
+* The Corresponding Hook exists.
+* `hsfOVERRIDE` is specified.
+* optionally `hsfNSDELETE` is also specified.
+* `HookHash` is absent.
+* `CreateCode` is present but empty.
+
+**Behaviour**:
+
+* The reference count of the `HookDefinition` object is decremented.
+* If the reference count is now zero the `HookDefintion` is removed from the ledger.
+* The `Hook` object in the Corresponding Hook position is deleted, leaving an empty position.
+* If `hsfNSDELETE` is specified the namespace and all HookState entries are also deleted.
+
+**Example**:
+
+JSON
+
+```json
+{ 
+    Account: "r4GDFMLGJUKMjNhhycgt2d5LXCdXzCYPoc",
+    TransactionType: "SetHook",
+    Fee: "2000000",
+    Hooks:
+    [        
+        {                        
+            Hook: {
+                CreateCode: "",
+                Flags: 1,
+            }
+        }
+    ]
+}
+```
+
+### Namespace Reset
+
+**Occurs when**:
+
+_All_ of the following conditions are met:
+
+* `flags` is present and `hsfNSDELETE` is set. `hsfOVERRIDE` can optionally also be specified if the Hook at this position is to be deleted.
+* `HookNamespace` is specified.
+* `CreateCode` is absent.
+* `HookHash` is absent.
+* `HookGrants`, `HookParameters`, `HookOn` and `HookApiVersion` are absent.
+
+**Behaviour**:
+
+* If the Corresponding Hook exists, it remains, nothing happens to it.
+* All HookState objects and the HookState directory for the specified namespace are removed from the ledger.
+
+**Example**:
+
+JSON
+
+```json
+{ 
+    Account: "r4GDFMLGJUKMjNhhycgt2d5LXCdXzCYPoc",
+    TransactionType: "SetHook",
+    Fee: "2000000",
+    Hooks:
+    [        
+        {                        
+            Hook: {
+              	HookNamespace: addr.codec.sha256('accept').toString('hex').toUpperCase(),
+                Flags: 3,
+            }
+        }
+    ]
+}
+```
 
 ### Hook Fields
 
