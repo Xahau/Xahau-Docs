@@ -4,7 +4,7 @@ description: >-
   URIToken, transfer a list of URITokens and activate an account.
 ---
 
-# Remit
+# Remit 🔬
 
 {% hint style="warning" %}
 The Remit transaction pays all fees for _Account Activation, Trustlines and URIToken Reserves._
@@ -54,6 +54,9 @@ _(Added by the \[Remit amendment]\[].)_
 | `URITokenMint` | Object    | STObject            | _(Optional)_ A `MintURIToken` STObject containing the URIToken details you want to mint.                         |
 | `URITokenIDs`  | Array     | STArray             | _(Optional)_ An array of URITokenIDs to to be transferred to the `Destination`.                                  |
 | `Amounts`      | Array     | STArray             | _(Optional)_ An array of `AmountEntry` STObjects the account wants to send to the `Destination`.                 |
+| `Inform`       | String    | AccountID           | _(Optional)_ A unique address of an account that can have a hook installed and be informed when a remit occurs.  |
+| `Blob`         | String    | Blob                | _(Optional)_ Arbitrary hex value that can be added to the tx for use in Hooks.                                   |
+| `InvoiceID`    | String    | Hash256             | _(Optional)_ Arbitrary 256-bit hash representing a specific reason or identifier for this remit.                 |
 
 ### AmountEntry Fields
 
@@ -99,7 +102,7 @@ Besides errors that can occur for all transactions, Remit transactions can resul
 | `temINVALID_FLAG`              | Occurs if any flag is specific `tfFullyCanonicalSig`                                                                                               |
 | `temREDUNDANT`                 | Occurs if the Account is the same as the Destination                                                                                               |
 | `temMALFORMED (Inform & Blob)` | Occurs when; sfInform is same as " "source or destination. Blob was more than 128kib.                                                              |
-| `temMALFORMED (AmountEntry)`   | Occurs when; AmountEntry count exceeds `32`. Expected AmountEntry. Native Currency appears more than once. Issued Currency appears more than once. |
+| `temMALFORMED (AmountEntry)`   | Occurs when; AmountEntry count exceeds `32.` Expected AmountEntry. Native Currency appears more than once. Issued Currency appears more than once. |
 | `temMALFORMED (MintURIToken)`  | Occurs when; sfMintURIToken contains invalid field. URI was not provided. URI was too long/short. Invalid UTF8 inside MintURIToken.                |
 | `temMALFORMED (URITokenIDs)`   | Occurs when; URITokenIDs too short/long. Duplicate URITokenID.                                                                                     |
 | `temBAD_AMOUNT`                | Occurs when an Amount in the AmountEntry is invalid.                                                                                               |
