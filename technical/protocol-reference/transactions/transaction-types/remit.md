@@ -51,7 +51,7 @@ _(Added by the \[Remit amendment]\[].)_
 | -------------- | --------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `Account`      | String    | AccountID           | The address of the account that will activate the account, send the payment and/or mint/transfer the URIToken/s. |
 | `Destination`  | String    | AccountID           | The unique address of the account receiving the payment and/or URIToken/s.                                       |
-| `URITokenMint` | Object    | STObject            | _(Optional)_ A `MintURIToken` STObject containing the URIToken details you want to mint.                         |
+| `MintURIToken` | Object    | STObject            | _(Optional)_ A `MintURIToken` STObject containing the URIToken details you want to mint.                         |
 | `URITokenIDs`  | Array     | STArray             | _(Optional)_ An array of URITokenIDs to to be transferred to the `Destination`.                                  |
 | `Amounts`      | Array     | STArray             | _(Optional)_ An array of `AmountEntry` STObjects the account wants to send to the `Destination`.                 |
 | `Inform`       | String    | AccountID           | _(Optional)_ A unique address of an account that can have a hook installed and be informed when a remit occurs.  |
