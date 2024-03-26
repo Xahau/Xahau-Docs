@@ -14,6 +14,8 @@ description: >-
 * HTTP POST RPC
   * `https://xahau.network`
   * `https://xahau.org` (alias, some ad-blockers block .network)
+* Network Definitions (Binary Codec, ...)
+  * [`https://xahau.network/server_definitions.json`](https://xahau.network/server\_definitions.json)
 
 ## Testnet (network 21338)
 
@@ -21,3 +23,5 @@ description: >-
   * `wss://xahau-test.net`
 * HTTP POST RPC
   * `https://xahau-test.net`
+* Network Definitions (Binary Codec, ...)
+  * [`https://xahau-test.net/server_definitions.json`](https://xahau-test.net/server\_definitions.json)
