@@ -60,7 +60,7 @@
       * [PaymentChannelClaim](technical/protocol-reference/transactions/transaction-types/paymentchannelclaim.md)
       * [PaymentChannelCreate](technical/protocol-reference/transactions/transaction-types/paymentchannelcreate.md)
       * [PaymentChannelFund](technical/protocol-reference/transactions/transaction-types/paymentchannelfund.md)
-      * [Remit 🔬](technical/protocol-reference/transactions/transaction-types/remit.md)
+      * [Remit](technical/protocol-reference/transactions/transaction-types/remit.md)
       * [SetHook](technical/protocol-reference/transactions/transaction-types/sethook.md)
       * [SetRegularKey](technical/protocol-reference/transactions/transaction-types/setregularkey.md)
       * [SignerListSet](technical/protocol-reference/transactions/transaction-types/signerlistset.md)
