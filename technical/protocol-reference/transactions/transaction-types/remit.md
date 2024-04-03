@@ -47,7 +47,17 @@ _(Added by the \[Remit amendment]\[].)_
 }
 ```
 
-<table><thead><tr><th width="228">Field</th><th>JSON Type</th><th>[Internal Type][]</th><th>Description</th></tr></thead><tbody><tr><td><code>Account</code></td><td>String</td><td>AccountID</td><td>The address of the account that will activate the account, send the payment and/or mint/transfer the URIToken/s.</td></tr><tr><td><code>Destination</code></td><td>String</td><td>AccountID</td><td>The unique address of the account receiving the payment and/or URIToken/s.</td></tr><tr><td><code>DestinationTag</code></td><td>Number</td><td>UInt32</td><td><em>(Optional)</em> A DestinationTag for deposits to a shared custody account.</td></tr><tr><td><code>MintURIToken</code></td><td>Object</td><td>STObject</td><td><em>(Optional)</em> A <code>MintURIToken</code> STObject containing the URIToken details you want to mint.</td></tr><tr><td><code>URITokenIDs</code></td><td>Array</td><td>STArray</td><td><em>(Optional)</em> An array of URITokenIDs to to be transferred to the <code>Destination</code>.</td></tr><tr><td><code>Amounts</code></td><td>Array</td><td>STArray</td><td><em>(Optional)</em> An array of <code>AmountEntry</code> STObjects the account wants to send to the <code>Destination</code>.</td></tr><tr><td><code>Inform</code></td><td>String</td><td>AccountID</td><td><em>(Optional)</em> A unique address of an account that can have a hook installed and be informed when a remit occurs.</td></tr><tr><td><code>Blob</code></td><td>String</td><td>Blob</td><td><em>(Optional)</em> Arbitrary hex value that can be added to the tx for use in Hooks.</td></tr><tr><td><code>InvoiceID</code></td><td>String</td><td>Hash256</td><td><em>(Optional)</em> Arbitrary 256-bit hash representing a specific reason or identifier for this remit.</td></tr></tbody></table>
+| Field            | JSON Type | \[Internal Type]\[] | Description                                                                                                      |
+| ---------------- | --------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `Account`        | String    | AccountID           | The address of the account that will activate the account, send the payment and/or mint/transfer the URIToken/s. |
+| `Destination`    | String    | AccountID           | The unique address of the account receiving the payment and/or URIToken/s.                                       |
+| `DestinationTag` | Number    | UInt32              | _(Optional)_ A DestinationTag for deposits to a shared custody account.                                          |
+| `MintURIToken`   | Object    | STObject            | _(Optional)_ A `MintURIToken` STObject containing the URIToken details you want to mint on the `Destination`.    |
+| `URITokenIDs`    | Array     | STArray             | _(Optional)_ An array of URITokenIDs to to be transferred to the `Destination`. _Limit 32._                      |
+| `Amounts`        | Array     | STArray             | _(Optional)_ An array of `AmountEntry` STObjects the account wants to send to the `Destination`. _Limit 32._     |
+| `Inform`         | String    | AccountID           | _(Optional)_ A unique address of an account that can have a hook installed and be informed when a remit occurs.  |
+| `Blob`           | String    | Blob                | _(Optional)_ Arbitrary hex value that can be added to the tx for use in Hooks.                                   |
+| `InvoiceID`      | String    | Hash256             | _(Optional)_ Arbitrary 256-bit hash representing a specific reason or identifier for this remit.                 |
 
 ### AmountEntry Fields
 
