@@ -22,7 +22,7 @@ Hooks can be written in any language (compilable with WebAssembly), and most bus
 
 Hooks allow the creation of customized logic and automation within the XRPL, making transactions smarter and more convenient. These small, efficient modules add custom on-ledger functionality, such as creating custom triggers for specific events on the ledger.&#x20;
 
-These triggers can be used to send on-ledger actions or execute other actions in response to the specified event. Hooks are currently only available on the [XRPL Labs public Hooks testnet,](https://hooks-testnet-v2.xrpl-labs.com/) as the feature is under development.
+These triggers can be used to send on-ledger actions or execute other actions in response to the specified event. Hooks are currently available on the [Xahau network](https://xahau.network/).
 
 > _There is a_ [_Hooks Builder site_](https://hooks.xrpl.org/) _where you can develop, test, debug, and deploy your own Hooks on testnet in your browser, using our examples or building your own from scratch._
 
