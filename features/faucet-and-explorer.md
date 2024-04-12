@@ -13,7 +13,7 @@ The Xahau Faucet & Explorers can be found here:
   * **Bithomp:** [**https://test.xahauexplorer.com**](https://test.xahauexplorer.com)
   * **XRPLF:** [**https://explorer.xahau-test.net**](https://explorer.xahau-test.net)
   * **XRPL.org:** [**https://xahau-testnet.xrpl.org**](https://xahau-testnet.xrpl.org)
-  * **XRPLWin:** [**https://xahau-testnet.xrplwin.com/**](https://xahau-testnet.xrplwin.com/)
+  * **XRPLWin:** [**https://xahau-testnet.xrplwin.com**](https://xahau-testnet.xrplwin.com/)
 
 ## Mainnet
 
