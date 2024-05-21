@@ -6,6 +6,12 @@ description: >-
 
 # Burn 2 Mint (B2M)
 
+{% hint style="danger" %}
+Since the ZeroB2M amendment has been voted in at Xahau, Burn 2 Mint (B2M) is no longer available to mint new assets. B2M is still available, but just for **key synchonisation** or to activate an account based (for which the information & procedures below are still relevant)
+
+[https://xahscan.com/amendment/7CA0426E7F411D39BB014E57CD9E08F61DE1750F0D41FCD428D9FB80BB7596B0](https://xahscan.com/amendment/7CA0426E7F411D39BB014E57CD9E08F61DE1750F0D41FCD428D9FB80BB7596B0)
+{% endhint %}
+
 ## Burn2Mint Technical Manual (Xahau Testnet)
 
 {% hint style="warning" %}
