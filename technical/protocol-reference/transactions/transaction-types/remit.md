@@ -112,7 +112,7 @@ Besides errors that can occur for all transactions, Remit transactions can resul
 | `tecNO_PERMISSION`             | Occurs when `disallowIncomingRemit` is enabled on the `Destination`                                                                                |
 | `tecNO_PERMISSION`             | Occurs when the `Destination` has `DepositAuthorization` enabled.                                                                                  |
 | `tecDST_TAG_NEEDED`            | Occurs if the destination account requires a destination tag, but the transaction does not include one.                                            |
-| `tecDUPLICATE`                 | Occurs when the `MintURIToken` URI already exists.                                                                                                 |
+| `tecDUPLICATE`                 | Occurs when the `MintURIToken` URI from that issuer already exists.                                                                                |
 | `tecDIR_FULL`                  | Occurs when the source or destination accouts directory is full.                                                                                   |
 | `tecNO_ENTRY`                  | Occurs when the URIToken does not exist.                                                                                                           |
 | `tecNO_PERMISSION`             | Occurs when the URIToken is not owned by the source account.                                                                                       |
