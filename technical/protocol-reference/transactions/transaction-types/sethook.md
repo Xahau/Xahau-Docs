@@ -280,7 +280,7 @@ _All_ of the following conditions are met:
 **Behaviour**:
 
 * If the Corresponding Hook exists, it remains, nothing happens to it.
-* All HookState objects and the HookState directory for the specified namespace are removed from the ledger.
+* A subset of HookState objects and the HookState directory for the specified namespace are removed from the ledger, up to the defined limit (512). Further transactions are needed to continue the deletion process until all relevant records are removed. See [`tesPARTIAL`](https://docs.xahau.network/technical/protocol-reference/transactions/transaction-results/tes-codes).&#x20;
 
 **Example**:
 
