@@ -342,10 +342,10 @@ The `HookGrants` field is an array of objects that specify the grants associated
 
 The `HookParameters` field is an array of objects that specify the parameters of the hook. Each parameter object has the following fields:
 
-| Field   | JSON Type | Internal Type | Description                 |
-| ------- | --------- | ------------- | --------------------------- |
-| `Name`  | String    | Blob          | The name of the parameter.  |
-| `Value` | String    | Blob          | The value of the parameter. |
+| Field                | JSON Type | Internal Type | Description                 |
+| -------------------- | --------- | ------------- | --------------------------- |
+| `HookParameterName`  | String    | Blob          | The name of the parameter.  |
+| `HookParameterValue` | String    | Blob          | The value of the parameter. |
 
 ### Hook Executions
 
