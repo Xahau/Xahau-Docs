@@ -8,7 +8,7 @@ description: >-
 
 ### Responsible Disclosure Policy
 
-At [XRPL Labs](https://xrpl-labs.com/) ([XUMM](https://xumm.app/)), we believe that the security of our systems is extremely important.
+At Xahau, we believe that the security of our systems is extremely important.
 
 Despite our concern for the security of our systems during product development and maintenance, there's always the possibility of someone finding something we need to improve/update/change/fix /...
 
@@ -16,7 +16,7 @@ We appreciate you notifying us if you have found a weak point in one of our syst
 
 ### How to Report
 
-If you believe you have found a security issue in one of our systems, please notify us as soon as possible by [sending a ticket using our support portal](https://support.xumm.app/hc/en-us/requests/new).
+If you believe you have found a security issue in one of our systems, please notify us as soon as possible by posting a **high level description of your finding and contact information (so someone can reach out) on Github:** [**https://github.com/Xahau/xahaud/issues**](https://github.com/Xahau/xahaud/issues)
 
 ### Rules
 
@@ -46,11 +46,11 @@ This responsible disclosure policy is not an open invitation to actively scan ou
 * Phishing reports
 * Fraud reports
 
-For these complaints or reports, please [contact our support team](https://support.xumm.app/hc/en-us/requests/new).
+For these complaints or reports, please post a **high level description of your issue and contact information (so someone can reach out) on Github:** [**https://github.com/Xahau/xahaud/issues**](https://github.com/Xahau/xahaud/issues)
 
 ### Bug bounty program
 
-[XRPL Labs](https://xrpl-labs.com/) ([XUMM](https://xumm.app/)) encourages the reporting of security issues or vulnerabilities. We may make an appropriate reward for confidential disclosure of any design or implementation issue that could be used to compromise the confidentiality or integrity of our users' data that was not yet known to us. We decide whether the report is eligible and the amount of the reward.
+Xahau encourages the reporting of security issues or vulnerabilities. We may make an appropriate reward for confidential disclosure of any design or implementation issue that could be used to compromise the confidentiality or integrity of our users' data that was not yet known to us. We decide whether the report is eligible and the amount of the reward.
 
 ### Exclusions
 
