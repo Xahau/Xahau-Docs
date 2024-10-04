@@ -2,13 +2,43 @@
 
 | Dependency  | Working Version |
 | ----------- | --------------- |
-| Apple Clang | 14.0.3          |
-| LLVM        | 14.0.3          |
-| LLD         | 14.0.3          |
+| Apple Clang | 14.3.1          |
+| LLVM        | 14              |
+| LLD         | 14              |
 | Boost       | 1.77.0          |
 | CMake       | 3.23.1          |
 | Protobuf    | 3.20.0          |
 | WasmEdge    | 0.11.2          |
+
+### Force Apple Clang 14.3.1
+
+1. Download an older version of Xcode
+   1. Go to the \[Apple Developer Downloads]\(https://developer.apple.com/download/more/) page. You will need to sign in with your Apple Developer account.
+   2. Search for the version of Xcode that includes Apple Clang 14. This is typically specified in the release notes for each Xcode version.
+   3. Download the Xcode \`.xip\` file for the version you need.
+2. Install the older version of Xcode:
+   1. Once the download is complete, extract the \`.xip\` file, which will give you an Xcode application.
+   2. Rename this Xcode application if you want to keep multiple versions of Xcode on your system (e.g., \`Xcode\_14.3.1.app\`).
+   3. Drag the Xcode application to your \`/Applications\` directory.
+3. Switch to the desired version of the toolchain
+   1.  If you want to use the newly installed version of Xcode and its toolchain by default, you can switch to it using the \`xcode-select\` command:
+
+       ```
+       sudo xcode-select -s /Applications/Xcode_14.3.1.app/Contents/Developer
+       ```
+   2. Replace \`Xcode\_14.3.1.app\` with the actual name of the Xcode version you installed.
+   3.  Open Terminal and run the following command to check the version of Clang:
+
+       `clang --version`
+
+{% hint style="info" %}
+If you want to use a specific version of Apple Clang for command line builds you can use the following;
+{% endhint %}
+
+```
+export DEVELOPER_DIR=/Applications/Xcode_12.app/Contents/Developer
+clang --version
+```
 
 ### Set Build Env Variables
 
