@@ -36,7 +36,7 @@ If you want to use a specific version of Apple Clang for command line builds you
 {% endhint %}
 
 ```
-export DEVELOPER_DIR=/Applications/Xcode_12.app/Contents/Developer
+export DEVELOPER_DIR=/Applications/Xcode_14.3.1.app/Contents/Developer
 clang --version
 ```
 
@@ -107,7 +107,7 @@ wget -nc https://github.com/protocolbuffers/protobuf/releases/download/v$PROTOBU
 tar -xzf protobuf-all-$PROTOBUF_VERSION.tar.gz && \
 cd protobuf-$PROTOBUF_VERSION/ && \
 ./autogen.sh && \
-./configure --prefix=/usr --disable-shared link=static && \
+./configure --disable-shared link=static && \
 make -j$(sysctl -n hw.logicalcpu) && \
 sudo make install
 ```
