@@ -1,4 +1,4 @@
-# Mac OS - 13.5.2
+# Mac OS - 15.0.1
 
 | Dependency  | Working Version |
 | ----------- | --------------- |
@@ -13,7 +13,7 @@
 ### Force Apple Clang 14.3.1
 
 1. Download an older version of Xcode
-   1. Go to the \[Apple Developer Downloads]\(https://developer.apple.com/download/more/) page. You will need to sign in with your Apple Developer account.
+   1. Go to the [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/) page. You will need to sign in with your Apple Developer account.
    2. Search for the version of Xcode that includes Apple Clang 14. This is typically specified in the release notes for each Xcode version.
    3. Download the Xcode \`.xip\` file for the version you need.
 2. Install the older version of Xcode:
