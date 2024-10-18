@@ -5,7 +5,7 @@
 | GCC / G++  | 14.0.3          |
 | LLVM       | 14.0.3          |
 | LLD        | 14.0.3          |
-| Boost      | 1.77.0          |
+| Boost      | 1.86.0          |
 | CMake      | 3.23.1          |
 | Protobuf   | 3.20.0          |
 | WasmEdge   | 0.11.2          |
@@ -30,7 +30,7 @@ If you are using Ubuntu 20.04 change the \`UBUNTU\_VERSION=focal\`
 export UBUNTU_VERSION=jammy
 export LLVM_VERSION=14
 export CMAKE_VERSION=3.23.1
-export BOOST_VERSION=1.77.0
+export BOOST_VERSION=1.86.0
 export WASMEDGE_VERSION=0.11.2
 export PROTOBUF_VERSION=3.20.0
 ```
@@ -40,7 +40,7 @@ export PROTOBUF_VERSION=3.20.0
 ```
 export DEP_DIR=~/dependencies
 export BOOST_FOLDER_NAME="boost_$(echo "$BOOST_VERSION" | sed 's/\./_/g')"
-export BOOST_ROOT=/$DEP_DIR/$BOOST_FOLDER_NAME
+export BOOST_ROOT=$DEP_DIR/$BOOST_FOLDER_NAME
 export Boost_LIBRARY_DIRS=$BOOST_ROOT/libs
 export BOOST_INCLUDEDIR=$BOOST_ROOT/boost
 export LLVM_DIR=/usr/lib/llvm-$LLVM_VERSION/lib/cmake/llvm

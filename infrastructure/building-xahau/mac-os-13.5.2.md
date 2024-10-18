@@ -5,7 +5,7 @@
 | Apple Clang | 14.3.1          |
 | LLVM        | 14              |
 | LLD         | 14              |
-| Boost       | 1.77.0          |
+| Boost       | 1.86.0          |
 | CMake       | 3.23.1          |
 | Protobuf    | 3.20.0          |
 | WasmEdge    | 0.11.2          |
@@ -54,7 +54,7 @@ Next we need to set the environment variables.
 
 ```
 export LLVM_VERSION=14
-export BOOST_VERSION=1.77.0
+export BOOST_VERSION=1.86.0
 export WASMEDGE_VERSION=0.11.2
 export PROTOBUF_VERSION=3.20.0
 ```
