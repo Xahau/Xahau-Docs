@@ -43,6 +43,7 @@ export BOOST_FOLDER_NAME="boost_$(echo "$BOOST_VERSION" | sed 's/\./_/g')"
 export BOOST_ROOT=$DEP_DIR/$BOOST_FOLDER_NAME
 export Boost_LIBRARY_DIRS=$BOOST_ROOT/libs
 export BOOST_INCLUDEDIR=$BOOST_ROOT/boost
+export Boost_INCLUDE_DIRS=$BOOST_ROOT/boost
 export LLVM_DIR=/usr/lib/llvm-$LLVM_VERSION/lib/cmake/llvm
 export LLVM_LIBRARY_DIR=/usr/lib/llvm-$LLVM_VERSION/lib
 export LLD_DIR=/usr/lib/llvm-$LLVM_VERSION/lib/cmake/lld
