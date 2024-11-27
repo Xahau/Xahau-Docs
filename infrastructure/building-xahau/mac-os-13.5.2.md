@@ -166,3 +166,9 @@ cd build && \
 cmake -DCMAKE_BUILD_TYPE=Debug -DLLVM_DIR=$LLVM_DIR -DLLVM_LIBRARY_DIR=$LLVM_LIBRARY_DIR .. && \
 cmake --build . --target rippled --parallel -j$(sysctl -n hw.logicalcpu)
 ```
+
+Start the built node
+
+```
+./rippled
+```
