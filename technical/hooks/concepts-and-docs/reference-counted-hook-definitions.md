@@ -13,4 +13,4 @@ To avoid this burden (and high fees for end users) reference counting is used:
 * Subsequent installations by the same or other users for an identical Hook (i.e. with identical byte-code) increment the reference count. These installations point at the same object on the ledger. These transactions are billed in a similar way to setting a Trust Line, as the storage burden for the Hook was already paid for in the original Set Hook transaction.
 * While the reference count on the Hook Definition is greater than zero (meaning one or more accounts still have the Hook installed) the object remains on the ledger.
 
-![](../../../.gitbook/assets/df9b548-sethook-Page-2.drawio.png)
+![](<../../../.gitbook/assets/spaces_m6f29os4wP16vCS4lHNh_uploads_TlDL7tsVNYi1yU64EZQh_3ef0cee-sethook-Page-2 (1).png>)
