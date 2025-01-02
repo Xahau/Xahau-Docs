@@ -24,7 +24,11 @@ Hooks allow the creation of customized logic and automation within the XRPL, mak
 
 These triggers can be used to send on-ledger actions or execute other actions in response to the specified event. Hooks are currently available on the [Xahau network](https://xahau.network/).
 
-> _There is a_ [_Hooks Builder site_](https://hooks.xrpl.org/) _where you can develop, test, debug, and deploy your own Hooks on testnet in your browser, using our examples or building your own from scratch._
+> _To learn more about the theoretical concepts of Hooks you can visit the_ [_Concepts_](concepts/) _section._
+
+> _To learn how to code Hooks in C and its functions, visit_ [_Hooks C-Functions_](technical/hooks-c-functions/)_._
+
+> _There is a_ [_Hooks Builder site_](https://builder.xahau.network/) _where you can develop, test, debug, and deploy your own Hooks on testnet in your browser, using our examples or building your own from scratch._
 
 ### Why are Hooks a Big Deal? <a href="#why-are-hooks-a-big-deal" id="why-are-hooks-a-big-deal"></a>
 
