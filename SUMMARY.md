@@ -41,6 +41,8 @@
   * [Curated Tooling](features/developer-tooling/hook-tools.md)
   * [Client Libraries](features/developer-tooling/client-libraries.md)
   * [Developer Tricks](features/developer-tooling/developer-tricks.md)
+* [HTTP / WebSocket APIs](features/http-websocket-apis/README.md)
+  * [Request Formatting Guide](features/http-websocket-apis/request-formatting-guide.md)
 * [Network Features](features/network-features/README.md)
   * [Account Managment](features/network-features/account-managment.md)
   * [Balance Rewards](features/network-features/balance-rewards.md)
