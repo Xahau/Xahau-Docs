@@ -45,6 +45,7 @@
   * [Request Formatting Guide](features/http-websocket-apis/request-formatting-guide.md)
   * [Response Formatting Guide](features/http-websocket-apis/response-formatting-guide.md)
   * [Considerations](features/http-websocket-apis/considerations.md)
+  * [Public API Methods](features/http-websocket-apis/public-api-methods.md)
 * [Network Features](features/network-features/README.md)
   * [Account Managment](features/network-features/account-managment.md)
   * [Balance Rewards](features/network-features/balance-rewards.md)
