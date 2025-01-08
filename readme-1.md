@@ -11,7 +11,7 @@ coverY: 0
 
 
 {% hint style="info" %}
-Hooks are small, efficient WebAssembly modules designed specifically for the XRPL. They could be referred to as **Smart Contracts for the XRP Ledger Protocol**.
+Hooks are small, efficient WebAssembly modules designed specifically for Xahau.&#x20;
 
 Hooks can be written in any language (compilable with WebAssembly), and most business logic and smart contract concepts can be implemented in a hook.
 
@@ -20,7 +20,7 @@ Hooks can be written in any language (compilable with WebAssembly), and most bus
 
 ### What are Hooks? <a href="#what-are-hooks" id="what-are-hooks"></a>
 
-Hooks allow the creation of customized logic and automation within the XRPL, making transactions smarter and more convenient. These small, efficient modules add custom on-ledger functionality, such as creating custom triggers for specific events on the ledger.&#x20;
+Hooks allow the creation of customized logic and automation within the Xahau, making transactions smarter and more convenient. These small, efficient modules add custom on-ledger functionality, such as creating custom triggers for specific events on the ledger.&#x20;
 
 These triggers can be used to send on-ledger actions or execute other actions in response to the specified event. Hooks are currently available on the [Xahau network](https://xahau.network/).
 
@@ -30,9 +30,11 @@ These triggers can be used to send on-ledger actions or execute other actions in
 
 > _There is a_ [_Hooks Builder site_](https://builder.xahau.network/) _where you can develop, test, debug, and deploy your own Hooks on testnet in your browser, using our examples or building your own from scratch._
 
+> There is an upcoming development to allow writing Hooks in Javascript, also known as JSHooks. At the moment it can be tested using [JSHooks](https://github.com/Xahau/jshooks-alpha) repo.
+
 ### Why are Hooks a Big Deal? <a href="#why-are-hooks-a-big-deal" id="why-are-hooks-a-big-deal"></a>
 
-Simply put, Hooks add a robust smart contract functionality to the XRPL, empowering you to construct and deploy applications with bespoke functionalities aligning with your specific needs and requirements.
+Simply put, Hooks add a robust smart contract functionality to Xahau, empowering you to construct and deploy applications with bespoke functionalities aligning with your specific needs and requirements.
 
 Hooks provide a versatile platform as they can be used for implementing a broad spectrum of business logic and smart contract paradigms. Once a hook is set up on an account, it enables you to do the following:
 
@@ -50,30 +52,30 @@ Whether you're utilizing our examples or building from scratch, Hooks Builder pr
 
 ### Some Examples of specific Hooks and Use Cases <a href="#some-examples-of-specific-hooks" id="some-examples-of-specific-hooks"></a>
 
-Showcasing the potential of Hooks with these concrete examples, each illustrating a unique application of smart contract functionality on the XRPL:
+Showcasing the potential of Hooks with these concrete examples, each illustrating a unique application of smart contract functionality on Xahau:
 
-* **Auto-Savings Hook**: Automate savings by configuring a Hook to transfer a set amount of XRP to a separate savings account on the ledger. This could be done to help save a portion of XRP and build up savings at specified intervals—daily, weekly, or monthly. This recurring transfer mechanism can be a base for developing personal finance applications or subscription-based models.
+* **Auto-Savings Hook**: Automate savings by configuring a Hook to transfer a set amount of XAH to a separate savings account on the ledger. This could be done to help save a portion of XAH and build up savings at specified intervals—daily, weekly, or monthly. This recurring transfer mechanism can be a base for developing personal finance applications or subscription-based models.
 * **Carbon-Offset Hook**: Each transaction triggers an additional transfer of 1% of the amount to a carbon offset account managed by a trusted non-governmental organization (NGO) using the money for a good cause. This feature can be used as a base for building applications that contribute to environmental sustainability with every transaction made.
 * **Firewall Hook**: By filtering incoming and outgoing transactions. The Firewall Hook can block malicious transactions originating from known scam accounts or containing suspicious memos. By retrieving an updated blocklist from a Hook on a different account, the firewall maintains a robust defense against fraud without the need for manual intervention. Additionally, implementing spending limits to deny high-value unauthorized withdrawals could be a crucial feature for financial applications.
 
 ### **Distinguishing Hooks from Ethereum Virtual Machine (EVM)**
 
-XRPL Hooks and the EVM allow developers to build and deploy custom logic and automation within their platforms. However, some key differences between these two technologies set them apart.&#x20;
+Xahau Hooks and the EVM allow developers to build and deploy custom logic and automation within their platforms. However, some key differences between these two technologies set them apart.&#x20;
 
-* **Platform Compatibility**: Hooks are tailored for the XRP Ledger, while EVM smart contracts are designed for Ethereum-based blockchains.
+* **Platform Compatibility**: Hooks are tailored for Xahau, while EVM smart contracts are designed for Ethereum-based blockchains.
 * **Execution Efficiency**: Hooks utilize WebAssembly (WASM), outperforming the bytecode used by the EVM in terms of speed and efficiency.
-* **Predictable Execution Time**: XRPL Hooks use guards to ensure maximum execution time is well-bounded and known ahead of time, improving efficiency.
+* **Predictable Execution Time**: Xahau Hooks use guards to ensure maximum execution time is well-bounded and known ahead of time, improving efficiency.
 
-### Alternatives to Hooks on the XRPL
+### Alternatives to Hooks on the XRPL ecosystem
 
 Ripple and Peersyst announced that an EVM-compatible sidechain is now live [on the company's devnet](https://opensource.ripple.com/docs/evm-sidechain/intro-to-evm-sidechain/). This sidechain functions as an autonomous blockchain, complete with its unique consensus protocol and transaction rules. The EVM sidechain is an alternative to Hooks, adding smart contract functionality to the ecosystem.&#x20;
 
 However, it's essential to note that EVM sidechain contracts function on Layer 2, which requires a two-step process where XRP is transitioned onto the sidechain for contract execution and then back to the main ledger. Once on the sidechain, then again on the XRPL, meaning Layer 2 smart contracts cannot influence the flow. Hooks can decide if a transaction is allowed in the first place. Layer 2 can make a retroactive decision, but the initial transaction has already happened.
 
-Hooks are more closely integrated with XRPL, operating directly on Layer 1 of the XRPL, so they are more tightly integrated with the underlying blockchain technology than the EVM-compatible sidechain to take advantage of the specific features and capabilities of the XRPL platform. With the inherent scalability and performance of WebAssembly, Hooks are optimal to enhance XRPL's functionality.
+Hooks are more closely integrated with XRPL, operating directly on Xahau, an Layer 1 XRPL-core fork, so they are more tightly integrated with the underlying blockchain technology than the EVM-compatible sidechain to take advantage of the specific features and capabilities of the XRPL platform. With the inherent scalability and performance of WebAssembly, Hooks are optimal to enhance Xahau's functionality.
 
-### Hooks Will Expand the On-ledger Functionality and Help XRPL Grow
+### Hooks Will Expand the On-ledger Functionality and Help Xahau Grow
 
-Hooks add native smart contract capabilities to the XRPL, enabling the crafting of custom applications that meet the unique needs of users, bringing new functionalities, and opening up whole new domains of functionality. With Hooks, the possibilities are virtually unlimited.
+Hooks add native smart contract capabilities to Xahau, enabling the crafting of custom applications that meet the unique needs of users, bringing new functionalities, and opening up whole new domains of functionality. With Hooks, the possibilities are virtually unlimited.
 
-As the XRPL continues to grow, there is no doubt that Hooks will play a significant role in driving further innovation and adoption of the platform by retail and enterprise users.
+As Xahau continues to grow, there is no doubt that Hooks will play a significant role in driving further innovation and adoption of the platform by retail and enterprise users.
