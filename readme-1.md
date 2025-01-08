@@ -1,7 +1,5 @@
 ---
-description: >-
-  Introducing Hooks: Enhancing XRP Ledger Protocol with Smart Contract
-  Functionality
+description: 'Introducing Hooks: The Smart Contract Functionality for Xahau.'
 cover: .gitbook/assets/cdn.feather.webp
 coverY: 0
 ---
