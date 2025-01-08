@@ -4,16 +4,16 @@ Responses are structured differently based on whether the request is made throug
 
 ### Fields
 
-| Field           | Type     | Description                                                                                                                                                            |
-| --------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`            | (Varies) | (For WebSocket) The ID from the original request.                                                                                                                      |
-| `status`        | String   | (For WebSocket) Indicates `success` when the request was received and processed correctly.                                                                             |
-| `result.status` | String   | (For JSON-RPC and Commandline) Indicates `success` when the request was successfully processed.                                                                        |
-| `type`          | String   | (For WebSocket) The value `response` is used for direct replies to API requests. Asynchronous notifications use other values, such as `ledgerClosed` or `transaction`. |
-| `result`        | Object   | Contains the query result, with content that varies by command.                                                                                                        |
-| `warning`       | String   | _(Optional)_ If present, the value is `load`, indicating the client is nearing the rate limit threshold where the server may disconnect.                               |
-| `warnings`      | Array    | _(Optional)_ A list of **Warning Objects** with important server warnings. For more details, see API Warnings.                                                         |
-| `forwarded`     | Boolean  | _(Optional)_ `true` indicates the request was forwarded from a Reporting Mode server to a P2P server to fulfill the request. Default is `false`.                       |
+| Field         | Type     | Description                                                                                                                                                            |
+| ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | (Varies) | (For WebSocket) The ID from the original request.                                                                                                                      |
+| status        | String   | (For WebSocket) Indicates `success` when the request was received and processed correctly.                                                                             |
+| result.status | String   | (For JSON-RPC and Commandline) Indicates `success` when the request was successfully processed.                                                                        |
+| type          | String   | (For WebSocket) The value `response` is used for direct replies to API requests. Asynchronous notifications use other values, such as `ledgerClosed` or `transaction`. |
+| result        | Object   | Contains the query result, with content that varies by command.                                                                                                        |
+| warning       | String   | _(Optional)_ If present, the value is `load`, indicating the client is nearing the rate limit threshold where the server may disconnect.                               |
+| warnings      | Array    | _(Optional)_ A list of **Warning Objects** with important server warnings. For more details, see API Warnings.                                                         |
+| forwarded     | Boolean  | _(Optional)_ `true` indicates the request was forwarded from a Reporting Mode server to a P2P server to fulfill the request. Default is `false`.                       |
 
 API Warnings
 
