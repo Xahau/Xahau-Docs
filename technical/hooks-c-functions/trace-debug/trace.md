@@ -28,7 +28,7 @@ C
 
 ```c
 #define SBUF(str) (uint32_t)(str), sizeof(str)
-trace(SBUF("Buffer conatained"), SBUF(some_buffer), 1);
+trace(SBUF("Buffer contained"), SBUF(some_buffer), 1);
 ```
 
 ### Parameters
