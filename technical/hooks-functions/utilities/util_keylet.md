@@ -19,8 +19,8 @@ description: Compute a serialized keylet of a given type
 
 ### Definition
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t util_keylet (
     uint32_t write_ptr,
@@ -35,10 +35,27 @@ int64_t util_keylet (
 );
 ```
 
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+function util_keylet(
+    keylet_type: typeof KEYLET_HOOK_STATE,
+    accountid: ByteArray | HexString,
+    statekey: ByteArray | HexString,
+    namespace: ByteArray | HexString
+  ): ErrorCode | ByteArray
+```
+{% endtab %}
+{% endtabs %}
+
+
+
 ### Example
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 uint8_t keylet[34];
 if (util_keylet(keylet, 34, KEYLET_LINE,
@@ -48,12 +65,40 @@ if (util_keylet(keylet, 34, KEYLET_LINE,
 	rollback("Keylet Failed.", 14, 1);
 ```
 
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+util_keylet()
+```
+{% endtab %}
+{% endtabs %}
+
+
+
 ### Parameters
 
+{% tabs %}
+{% tab title="C" %}
 <table><thead><tr><th width="155">Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>write_ptr</td><td>uint32_t</td><td>Pointer to a buffer the serialized keylet will be written to</td></tr><tr><td>write_len</td><td>uint32_t</td><td>Length of output buffer, should be at least 34.</td></tr><tr><td>keylet_type</td><td>uint32_t</td><td>One of the keylet types as defined in <code>hookapi.h</code> e.g. <code>KEYLET_LINE</code> for a trustline.</td></tr><tr><td>a</td><td>uint32_t</td><td>See keylet table below</td></tr><tr><td>b</td><td>uint32_t</td><td>See keylet table below</td></tr><tr><td>c</td><td>uint32_t</td><td>See keylet table below</td></tr><tr><td>d</td><td>uint32_t</td><td>See keylet table below</td></tr><tr><td>e</td><td>uint32_t</td><td>See keylet table below</td></tr><tr><td>f</td><td>uint32_t</td><td>See keylet table below</td></tr></tbody></table>
+
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+<table><thead><tr><th width="155">Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>keylet_type</td><td></td><td>The type of the keylet to create</td></tr><tr><td>accountid</td><td></td><td>(Optional) First piece of data for the keylet, can be an array of numbers, a string, or a number.</td></tr><tr><td>statekey</td><td></td><td>(Optional) Second piece of data for the keylet, can be an array of numbers, a string, or a number.</td></tr><tr><td>namespace</td><td></td><td>(Optional) Third piece of data for the keylet, can be an array of numbers, a string, or a number.</td></tr></tbody></table>
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Keylet Table
 
+{% tabs %}
+{% tab title="C" %}
 | Keylet Type                                                                          | Parameters                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | KEYLET\_HOOK\_STATE                                                                  | <p><code>a</code> points to an Account ID<br><code>b</code> is the length of the Account ID (should be 20)<br><code>c</code> points to a hook state key<br><code>d</code> is the length of the key (should be 32)<br><code>e</code> points to a hook state namespace<br><code>f</code> is the length of the namespace (should be 32)</p>                                     |
@@ -68,8 +113,33 @@ if (util_keylet(keylet, 34, KEYLET_LINE,
 | <p>KEYLET_OFFER<br>KEYLET_CHECK<br>KEYLET_ESCROW<br>KEYLET_NFT_OFFER</p>             | <p><code>a</code> points to an Account ID.<br><code>b</code> is the length (should be 20.)<br>And Either:<br><code>c</code> is a 32bit unsigned integer (sequence)<br><code>d</code> is 0<br>Or:<br><code>c</code> points to a 32 byte key<br><code>d</code> is the length of the key (32).<br>In both cases:<br><code>e</code> and <code>f</code> must be 0.</p>            |
 | KEYLET\_PAYCHAN                                                                      | <p><code>a</code> points to an Account ID<br><code>b</code> is the length (should be 20)<br><code>c</code> points to an Account ID<br><code>d</code> is the length (should be 20)<br>And Either:<br><code>e</code> 32bit unsigned int to pass<br><code>f</code> is zero<br>Or:<br><code>e</code> points to a 32 byte key<br><code>f</code> is the length of the key (32)</p> |
 
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+{% endtab %}
+{% endtabs %}
+
+
+
 ### Return Code
 
+{% tabs %}
+{% tab title="C" %}
 | Type     | Description                                                                                                                                                                                                                                                                                                                                  |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | int64\_t | <p>The number of bytes written, should always be 34.<br><br>If negative, an error:<br><code>OUT_OF_BOUNDS</code><br>- pointers/lengths specified outside of hook memory.<br><br><code>INVALID_ARGUMENT</code><br>- Call didn't comply with the above table.<br><br><code>TOO_SMALL</code><br>- Writing buffer was smaller than 34 bytes.</p> |
+
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+| Type   | Description                                                                                                           |
+| ------ | --------------------------------------------------------------------------------------------------------------------- |
+| number | ErrorCode if there is an error in creating the keylet, otherwise returns the generated keylet as an array of numbers. |
+{% endtab %}
+{% endtabs %}
+

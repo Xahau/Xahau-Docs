@@ -87,4 +87,4 @@ The _second grant_ above allows:
 
 ### Using the Grant
 
-To make use of a grant, a Hook modifies State objects on a foreign account by calling [state\_foreign\_set](../technical/hooks-c-functions/state/state_foreign_set.md).
+To make use of a grant, a Hook modifies State objects on a foreign account by calling [state\_foreign\_set](../technical/hooks-functions/state/state_foreign_set.md).

@@ -23,18 +23,18 @@ Slots are part of the Hook API and provide a zero-copy _heterogenous_ access sys
 
 The avilable slot APIs are:
 
-| Hook API                                                               | What it does                                                                           |
-| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [slot](../technical/hooks-c-functions/slot/slot.md)                    | Serialize and output a slotted object                                                  |
-| [slot\_clear](../technical/hooks-c-functions/slot/slot_clear.md)       | Free up a currently occupied slot                                                      |
-| [slot\_count](../technical/hooks-c-functions/slot/slot_count.md)       | Count the elements of an array object in a slot                                        |
-| slot\_id                                                               | Compute the canonical hash of the slotted object and return it                         |
-| [slot\_set](../technical/hooks-c-functions/slot/slot_set.md)           | Locate an object based on its keylet and place it into a slot                          |
-| [slot\_subarray](../technical/hooks-c-functions/slot/slot_subarray.md) | Index into a slotted array and assign a sub-object to another slot                     |
-| [slot\_subfield](../technical/hooks-c-functions/slot/slot_subfield.md) | Index into a slotted object and assign a sub-object to another slot                    |
-| [slot\_type](../technical/hooks-c-functions/slot/slot_type.md)         | Retrieve the field code of an object in a slot and, optionally, some other information |
-| [slot\_float](../technical/hooks-c-functions/slot/slot_float.md)       | Parse the STI\_AMOUNT in the specified slot and return it as an XFL enclosed number    |
-| [slot\_size](../technical/hooks-c-functions/slot/slot_size.md)         | Compute the serialized size of an object in a slot                                     |
+| Hook API                                                             | What it does                                                                           |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [slot](../technical/hooks-functions/slot/slot.md)                    | Serialize and output a slotted object                                                  |
+| [slot\_clear](../technical/hooks-functions/slot/slot_clear.md)       | Free up a currently occupied slot                                                      |
+| [slot\_count](../technical/hooks-functions/slot/slot_count.md)       | Count the elements of an array object in a slot                                        |
+| slot\_id                                                             | Compute the canonical hash of the slotted object and return it                         |
+| [slot\_set](../technical/hooks-functions/slot/slot_set.md)           | Locate an object based on its keylet and place it into a slot                          |
+| [slot\_subarray](../technical/hooks-functions/slot/slot_subarray.md) | Index into a slotted array and assign a sub-object to another slot                     |
+| [slot\_subfield](../technical/hooks-functions/slot/slot_subfield.md) | Index into a slotted object and assign a sub-object to another slot                    |
+| [slot\_type](../technical/hooks-functions/slot/slot_type.md)         | Retrieve the field code of an object in a slot and, optionally, some other information |
+| [slot\_float](../technical/hooks-functions/slot/slot_float.md)       | Parse the STI\_AMOUNT in the specified slot and return it as an XFL enclosed number    |
+| [slot\_size](../technical/hooks-functions/slot/slot_size.md)         | Compute the serialized size of an object in a slot                                     |
 
 ### What are keylets?
 

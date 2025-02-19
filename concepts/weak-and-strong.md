@@ -36,9 +36,9 @@ A **Weak** connection means:
 
 ### Before or After
 
-Strong TSHes have their hooks executed _before_ the originating transaction is applied to the ledger. This means they have the ability to [rollback](../technical/hooks-c-functions/control/rollback.md) the transaction (because it hasn't yet been applied.) This gives strongly executed hooks the ability to completely block a transaction from occurring.
+Strong TSHes have their hooks executed _before_ the originating transaction is applied to the ledger. This means they have the ability to [rollback](../technical/hooks-functions/control/rollback.md) the transaction (because it hasn't yet been applied.) This gives strongly executed hooks the ability to completely block a transaction from occurring.
 
-Weak TSHes have their hooks executed _after_ the originating transaction has been applied to the ledger. This means they have access to the [transaction metadata](../technical/hooks-c-functions/originating-transaction/meta_slot.md) but cannot prevent the transaction from occurring.
+Weak TSHes have their hooks executed _after_ the originating transaction has been applied to the ledger. This means they have access to the [transaction metadata](../technical/hooks-functions/originating-transaction/meta_slot.md) but cannot prevent the transaction from occurring.
 
 > 📘 Hint
 >
@@ -52,7 +52,7 @@ During the execution of `hook`:
 
 * 0 means the Hook is being executed _strongly_
 * 1 means the Hook is being executed _weakly_
-* 2 means the Hook is being executed _weakly_ after being executed _strongly_ due to a [hook\_again](../technical/hooks-c-functions/hook-context/hook_again.md) call.
+* 2 means the Hook is being executed _weakly_ after being executed _strongly_ due to a [hook\_again](../technical/hooks-functions/hook-context/hook_again.md) call.
 
 During the execution of `cbak`:
 

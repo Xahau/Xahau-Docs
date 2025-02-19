@@ -12,13 +12,13 @@ description: Hooks can read and save small pieces of on-ledger data 🚀
 
 State Management is achieved using
 
-* [state](../technical/hooks-c-functions/state/state.md)
-* [state\_set](../technical/hooks-c-functions/state/state_set.md)
-* [state\_foreign](../technical/hooks-c-functions/state/state_foreign.md)
+* [state](../technical/hooks-functions/state/state.md)
+* [state\_set](../technical/hooks-functions/state/state_set.md)
+* [state\_foreign](../technical/hooks-functions/state/state_foreign.md)
 
 ### Storing and fetching
 
-The below example uses the [state\_set](../technical/hooks-c-functions/state/state_set.md) Hook API to assign the value `0xC001CAFE` to the key `0x0..000001` (uint256 = 1) in the Hook State of the Hook Account.
+The below example uses the [state\_set](../technical/hooks-functions/state/state_set.md) Hook API to assign the value `0xC001CAFE` to the key `0x0..000001` (uint256 = 1) in the Hook State of the Hook Account.
 
 ```c
 uint8_t key[32] = {
@@ -58,7 +58,7 @@ After the above code has run the `value` buffer will be populated with the value
 
 ### Foreign state
 
-From time to time it may be advantageous for one Hook running on one account to read the Hook State of another Hook running on another account. The [state\_foreign](../technical/hooks-c-functions/state/state_foreign.md) Hook API does exactly this. Because the ledger is public there is no reasonable expectation of privacy anyway. Any Hook may therefore _read_ (but not write) the Hook State of any other Hook.
+From time to time it may be advantageous for one Hook running on one account to read the Hook State of another Hook running on another account. The [state\_foreign](../technical/hooks-functions/state/state_foreign.md) Hook API does exactly this. Because the ledger is public there is no reasonable expectation of privacy anyway. Any Hook may therefore _read_ (but not write) the Hook State of any other Hook.
 
 ### Namespaces and querying
 

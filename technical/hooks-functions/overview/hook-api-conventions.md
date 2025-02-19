@@ -27,10 +27,12 @@ When Hooks communicate with `xahaud` they can only pass _integer_ values. Typica
 
 ### Allowed functions
 
-Only two functions are allowed within a Hook: `hook()` and `cbak()`. Read about this [here](https://xrpl-hooks.readme.io/docs/compiling-hooks)
+Only two functions are allowed within a Hook: `hook()` and `cbak()`. Read about this [here](../../../concepts/compiling-hooks.md)
 
 ### Parameters
 
+{% tabs %}
+{% tab title="C" %}
 All parameters passed to a Hook API must be one of: `uint32_t, int32_t, uint64_t, int64_t`. Typically these are pointers and lengths of buffers within the Hook's stack frame. Sometimes they are [Integer Encoded Floating Point Numbers (XFL)](../../../concepts/floating-point-numbers-xfl.md) or other data.
 
 The parameters to a Hook API are always in the following order:
@@ -42,6 +44,22 @@ The parameters to a Hook API are always in the following order:
 5. Specifics / other fields _if any_
 
 Some Hook APIs may only write or may only read from memory, and some might not do either and return a value only by return code.
+{% endtab %}
+
+{% tab title="Javascript" %}
+All parameters passed to a Hook API must be one of: `string, number[]`. Typically these are pointers and lengths of buffers within the Hook's stack frame. Sometimes they are [Integer Encoded Floating Point Numbers (XFL)](../../../concepts/floating-point-numbers-xfl.md) or other data.
+
+The parameters to a Hook API are always in the following order:
+
+1. Writing variable _if any_
+2. Reading variable _if any_
+3. Specifics / other fields _if any_
+
+Some Hook APIs may only write or may only read from memory, and some might not do either and return a value only by return code.
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Return codes
 

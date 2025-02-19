@@ -14,13 +14,13 @@ For example an `sfAmount` field serializes to a collection of bytes like `61D50F
 
 To assist Hook developers in working with serialized objects the `sto` namespace was created within the Hooks API. These functions manipulate pointers within a Hook-provided buffer. See table below.
 
-| Hook API                                                                      | at it does                                                                            |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [sto\_subfield](../technical/hooks-c-functions/serialization/sto_subfield.md) | Index into a xrpld serialized object and return the location and length of a subfield |
-| [sto\_subarray](../technical/hooks-c-functions/serialization/sto_subarray.md) | Index into a xrpld serialized array and return the location and length of an index    |
-| [sto\_emplace](../technical/hooks-c-functions/serialization/sto_emplace.md)   | Emplace a field into an existing STObject at its canonical placement                  |
-| [sto\_erase](../technical/hooks-c-functions/serialization/sto_erase.md)       | Remove a field from an STObject                                                       |
-| [sto\_validate](../technical/hooks-c-functions/serialization/sto_validate.md) | Validate an STObject                                                                  |
+| Hook API                                                                    | at it does                                                                            |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [sto\_subfield](../technical/hooks-functions/serialization/sto_subfield.md) | Index into a xrpld serialized object and return the location and length of a subfield |
+| [sto\_subarray](../technical/hooks-functions/serialization/sto_subarray.md) | Index into a xrpld serialized array and return the location and length of an index    |
+| [sto\_emplace](../technical/hooks-functions/serialization/sto_emplace.md)   | Emplace a field into an existing STObject at its canonical placement                  |
+| [sto\_erase](../technical/hooks-functions/serialization/sto_erase.md)       | Remove a field from an STObject                                                       |
+| [sto\_validate](../technical/hooks-functions/serialization/sto_validate.md) | Validate an STObject                                                                  |
 
 Where applicable these APIs return an _offset_ and a _length_ encoded into a single int64\_t. See individual documentation for details.
 

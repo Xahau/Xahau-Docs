@@ -16,12 +16,12 @@ The Hook API provides a set of functions in the namespace `trace` which write ou
 
 The following `trace` functions are available in the Hooks API
 
-| Hook API                                                                  | What it does                                                                              |
-| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [trace](../technical/hooks-c-functions/trace-debug/trace.md)              | Print a utf-8 message, followed by a user-specified buffer (this last optionally as hex.) |
-| [trace\_num](../technical/hooks-c-functions/trace-debug/trace_num.md)     | Print a utf-8 message, followed by an integer.                                            |
-| [trace\_float](../technical/hooks-c-functions/trace-debug/trace_float.md) | Print a utf-8 message, followed by an XFL Floating point number.                          |
-| trace\_slot                                                               | Print a utf-8 message, followed by the serialized contents of a slot.                     |
+| Hook API                                                                | What it does                                                                              |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [trace](../technical/hooks-functions/trace-debug/trace.md)              | Print a utf-8 message, followed by a user-specified buffer (this last optionally as hex.) |
+| [trace\_num](../technical/hooks-functions/trace-debug/trace_num.md)     | Print a utf-8 message, followed by an integer.                                            |
+| [trace\_float](../technical/hooks-functions/trace-debug/trace_float.md) | Print a utf-8 message, followed by an XFL Floating point number.                          |
+| trace\_slot                                                             | Print a utf-8 message, followed by the serialized contents of a slot.                     |
 
 ### Example
 

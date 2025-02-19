@@ -50,10 +50,10 @@ To erase a Parameter in a subsequent installation, specify the `ParameterName` k
 
 ### Using Parameters in Hooks
 
-Parameters can be read by the Hooks they are set on using [hook\_param](../technical/hooks-c-functions/hook-context/hook_param.md).
+Parameters can be read by the Hooks they are set on using [hook\_param](../technical/hooks-functions/hook-context/hook_param.md).
 
-If more than one Hook is installed in a Hook Chain, then [hook\_param\_set](../technical/hooks-c-functions/hook-context/hook_param_set.md) can be used in limited circumstances to modify the Hook Parameters of a Hook further down the chain on the same account.
+If more than one Hook is installed in a Hook Chain, then [hook\_param\_set](../technical/hooks-functions/hook-context/hook_param_set.md) can be used in limited circumstances to modify the Hook Parameters of a Hook further down the chain on the same account.
 
 ### Runtime Parameters
 
-On Xahau and the Xahau testnet, HookParameters may also be included at the top level of any transaction type according to the foregoing rules and size limits. These parameters can be accessed inside a hook using the [otxn\_param](../technical/hooks-c-functions/originating-transaction/otxn_param.md) API.
+On Xahau and the Xahau testnet, HookParameters may also be included at the top level of any transaction type according to the foregoing rules and size limits. These parameters can be accessed inside a hook using the [otxn\_param](../technical/hooks-functions/originating-transaction/otxn_param.md) API.

@@ -61,6 +61,6 @@ If there is an invalid value for `tx_blob` or `tx_blob` is missing, a regular JS
 
 ### Emission Fees
 
-Hooks have access to the same computation the _Fee RPC Helper_ does. To use this simply call [etxn\_fee\_base](../technical/hooks-c-functions/emitted-transaction/etxn_fee_base.md) with a buffer containing the serialised transaction as the arguments. As with the RPC call, you must ensure that the `Fee` field is present in the serialised transaction. The value is irrelevant.
+Hooks have access to the same computation the _Fee RPC Helper_ does. To use this simply call [etxn\_fee\_base](../technical/hooks-functions/emitted-transaction/etxn_fee_base.md) with a buffer containing the serialised transaction as the arguments. As with the RPC call, you must ensure that the `Fee` field is present in the serialised transaction. The value is irrelevant.
 
-When `etxn_fee_base` returns the recommended fee you may use [sto\_emplace](../technical/hooks-c-functions/serialization/sto_emplace.md) to emplace it into the serialised transaction before emission. The relevant field is `sfFee`.
+When `etxn_fee_base` returns the recommended fee you may use [sto\_emplace](../technical/hooks-functions/serialization/sto_emplace.md) to emplace it into the serialised transaction before emission. The relevant field is `sfFee`.

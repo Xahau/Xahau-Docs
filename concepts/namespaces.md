@@ -35,9 +35,9 @@ The subsequent user may specify their own Namespace, overriding the Default Name
 
 Choice of HookNamespace affects the behaviour of the following Hook APIs:
 
-* [state](../technical/hooks-c-functions/state/)
-* [state\_set](../technical/hooks-c-functions/state/state_set.md)
+* [state](../technical/hooks-functions/state/)
+* [state\_set](../technical/hooks-functions/state/state_set.md)
 
 ### Namespace API Helper
 
-See [account\_info](../technical/hooks-c-functions/websocket-apis/account_info.md) and [account\_namespace](../technical/hooks-c-functions/websocket-apis/account_namespace.md) for information about how to query the ledger regarding namespaces.
+See [account\_info](../technical/hooks-functions/websocket-apis/account_info.md) and [account\_namespace](../technical/hooks-functions/websocket-apis/account_namespace.md) for information about how to query the ledger regarding namespaces.

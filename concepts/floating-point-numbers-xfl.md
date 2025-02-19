@@ -48,28 +48,28 @@ Floating point regimes typically have a number of different ways to express zero
 
 Once you have an XFL you can use the Float API to do various computations. The Float API appears in the table below. Each API takes one or more XFL enclosing numbers and returns an XFL enclosing number. Negative return values _always_ represent a computational error (such as division by zero). There are no valid negative enclosing numbers.
 
-| Hook API                                                                  | What it does                                                          |
-| ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [float\_set](../technical/hooks-c-functions/float/float_set.md)           | Create a float from an exponent and mantissa                          |
-| [float\_multiply](../technical/hooks-c-functions/float/float_multiply.md) | Multiply two XFL numbers together                                     |
-| [float\_mulratio](../technical/hooks-c-functions/float/float_mulratio.md) | Multiply an XFL floating point by a non-XFL numerator and denominator |
-| [float\_negate](../technical/hooks-c-functions/float/float_negate.md)     | Negate an XFL floating point number                                   |
-| [float\_compare](../technical/hooks-c-functions/float/float_compare.md)   | Perform a comparison on two XFL floating point numbers                |
-| [float\_sum](../technical/hooks-c-functions/float/float_sum.md)           | Add two XFL numbers together                                          |
-| [float\_sto](../technical/hooks-c-functions/float/float_sto.md)           | Output an XFL as a serialized object                                  |
-| [float\_sto\_set](../technical/hooks-c-functions/float/float_sto_set.md)  | Read a serialized amount into an XFL                                  |
-| [float\_invert](../technical/hooks-c-functions/float/float_invert.md)     | Divide one by an XFL floating point number                            |
-| [float\_divide](../technical/hooks-c-functions/float/float_divide.md)     | Divide an XFL by another XFL floating point number                    |
-| [float\_one](../technical/hooks-c-functions/float/float_one.md)           | Return the number 1 represented in an XFL enclosing number            |
-| [float\_exponent](../technical/hooks-c-functions/float/float_exponent.md) | Get the exponent of an XFL enclosing number                           |
-| [float\_mantissa](../technical/hooks-c-functions/float/float_mantissa.md) | Get the mantissa of an XFL enclosing number                           |
-| [float\_sign](../technical/hooks-c-functions/float/float_sign.md)         | Get the sign of an XFL enclosing number                               |
-| float\_exponent\_set                                                      | Set the exponent of an XFL enclosing number                           |
-| float\_mantissa\_set                                                      | Set the mantissa of an XFL enclosing number                           |
-| float\_sign\_set                                                          | Set the sign of an XFL enclosing number                               |
-| [float\_int](../technical/hooks-c-functions/float/float_int.md)           | Convert an XFL floating point into an integer (floor)                 |
-| [float\_root](../technical/hooks-c-functions/float/float_root.md)         | Compute the nth root of an XFL                                        |
-| [float\_log](../technical/hooks-c-functions/float/float_log.md)           | Compute the decimal log of an XFL                                     |
+| Hook API                                                                | What it does                                                          |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [float\_set](../technical/hooks-functions/float/float_set.md)           | Create a float from an exponent and mantissa                          |
+| [float\_multiply](../technical/hooks-functions/float/float_multiply.md) | Multiply two XFL numbers together                                     |
+| [float\_mulratio](../technical/hooks-functions/float/float_mulratio.md) | Multiply an XFL floating point by a non-XFL numerator and denominator |
+| [float\_negate](../technical/hooks-functions/float/float_negate.md)     | Negate an XFL floating point number                                   |
+| [float\_compare](../technical/hooks-functions/float/float_compare.md)   | Perform a comparison on two XFL floating point numbers                |
+| [float\_sum](../technical/hooks-functions/float/float_sum.md)           | Add two XFL numbers together                                          |
+| [float\_sto](../technical/hooks-functions/float/float_sto.md)           | Output an XFL as a serialized object                                  |
+| [float\_sto\_set](../technical/hooks-functions/float/float_sto_set.md)  | Read a serialized amount into an XFL                                  |
+| [float\_invert](../technical/hooks-functions/float/float_invert.md)     | Divide one by an XFL floating point number                            |
+| [float\_divide](../technical/hooks-functions/float/float_divide.md)     | Divide an XFL by another XFL floating point number                    |
+| [float\_one](../technical/hooks-functions/float/float_one.md)           | Return the number 1 represented in an XFL enclosing number            |
+| [float\_exponent](../technical/hooks-functions/float/float_exponent.md) | Get the exponent of an XFL enclosing number                           |
+| [float\_mantissa](../technical/hooks-functions/float/float_mantissa.md) | Get the mantissa of an XFL enclosing number                           |
+| [float\_sign](../technical/hooks-functions/float/float_sign.md)         | Get the sign of an XFL enclosing number                               |
+| float\_exponent\_set                                                    | Set the exponent of an XFL enclosing number                           |
+| float\_mantissa\_set                                                    | Set the mantissa of an XFL enclosing number                           |
+| float\_sign\_set                                                        | Set the sign of an XFL enclosing number                               |
+| [float\_int](../technical/hooks-functions/float/float_int.md)           | Convert an XFL floating point into an integer (floor)                 |
+| [float\_root](../technical/hooks-functions/float/float_root.md)         | Compute the nth root of an XFL                                        |
+| [float\_log](../technical/hooks-functions/float/float_log.md)           | Compute the decimal log of an XFL                                     |
 
 > ❗️ Warning
 >
