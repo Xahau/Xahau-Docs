@@ -6,8 +6,21 @@ description: Convert an r-address into a 20 byte Account ID
 
 ### Behaviour
 
+{% tabs %}
+{% tab title="C" %}
 * Read an r-address from the `read_ptr`
 * Write a 20 byte Account ID to the `write_ptr`
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+* Read an r-address from the `raddress`
+* Returns a 20 byte Account ID or an ErrorCode
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Definition
 
