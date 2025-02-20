@@ -55,7 +55,7 @@ accept("Success", 7, 100);
 
 {% tab title="Javascript" %}
 ```javascript
-accept('Carbon: Emitted transaction', 0)
+accept('Success', 100)
 ```
 {% endtab %}
 {% endtabs %}

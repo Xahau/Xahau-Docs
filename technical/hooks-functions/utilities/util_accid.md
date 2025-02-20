@@ -63,8 +63,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-const out1 = util_accid("rD12uTNc4jdZChMsDirPwzNj7bV6GB9LZU")
-trace('', out1, true)
+const accId = util_accid('rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh')
 ```
 
 

@@ -56,7 +56,8 @@ if (!util_verify(payload_ptr,    payload_len,
 
 {% tab title="Javascript" %}
 ```javascript
-util_verify(signedData,signature,pubkey)
+if (util_verify(signedData,signature,pubkey))
+    rollback("Invalid Signature", 60)
 ```
 {% endtab %}
 {% endtabs %}

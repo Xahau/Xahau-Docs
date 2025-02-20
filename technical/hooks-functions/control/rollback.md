@@ -51,7 +51,7 @@ rollback("Rejected!", 9, 100);
 
 {% tab title="Javascript" %}
 ```javascript
-rollback('Carbon: sfAccount field missing.', 1)
+rollback('Rejected!', 100)
 ```
 {% endtab %}
 {% endtabs %}

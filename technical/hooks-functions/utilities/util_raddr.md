@@ -8,7 +8,7 @@ description: Convert a 20 byte Account ID to an r-address
 
 {% tabs %}
 {% tab title="C" %}
-* Read a Account ID from the `read_ptr`
+* Read a 20 byte  Account ID from the `read_ptr`
 * Write the equivalent r-address for that Account ID to `write_ptr`
 {% endtab %}
 
@@ -17,11 +17,6 @@ description: Convert a 20 byte Account ID to an r-address
 * Return the equivalent r-address for that Account ID
 {% endtab %}
 {% endtabs %}
-
-
-
-* Read a 20 byte Account ID from the `read_ptr`
-* Write the equivalent r-address for that Account ID to `write_ptr`
 
 ### Definition
 
@@ -67,7 +62,12 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-util_raddr("8D329C03074A98EF0488AB6ABBF5883F68CCFD4E")
+const raddr = util_raddr('8D329C03074A98EF0488AB6ABBF5883F68CCFD4E')
+// or
+const raddr = util_raddr([
+    0x8D, 0x32, 0x9C, 0x03, 0x07, 0x4A, 0x98, 0xEF, 0x04, 0x88,
+    0xAB, 0x6A, 0xBB, 0xF5, 0x88, 0x3F, 0x68, 0xCC, 0xFD, 0x4E
+])
 ```
 {% endtab %}
 {% endtabs %}
@@ -98,9 +98,9 @@ util_raddr("8D329C03074A98EF0488AB6ABBF5883F68CCFD4E")
 {% endtab %}
 
 {% tab title="Javascript" %}
-| Type   | Description                                                                               |
-| ------ | ----------------------------------------------------------------------------------------- |
-| string | ErrorCode if there is an error in formatting, otherwise returns the r-address as a string |
+| Type          | Description                                                                               |
+| ------------- | ----------------------------------------------------------------------------------------- |
+| string/number | ErrorCode if there is an error in formatting, otherwise returns the r-address as a string |
 {% endtab %}
 {% endtabs %}
 

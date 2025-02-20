@@ -41,7 +41,7 @@ int64_t util_keylet (
 {% tab title="Javascript" %}
 ```javascript
 function util_keylet(
-    keylet_type: typeof KEYLET_HOOK_STATE,
+    keylet_type: number,
     accountid: ByteArray | HexString,
     statekey: ByteArray | HexString,
     namespace: ByteArray | HexString
@@ -70,7 +70,10 @@ if (util_keylet(keylet, 34, KEYLET_LINE,
 
 {% tab title="Javascript" %}
 ```javascript
-util_keylet()
+if (util_keylet(
+        KEYLET_LINE, hook_accid, account_field, currency_code
+        ).length < 34) 
+    rollback("Keylet Failed.", 1)
 ```
 {% endtab %}
 {% endtabs %}

@@ -56,7 +56,8 @@ if (util_sha512h(hash_out, 32, data_in_ptr, data_in_len) < 0)
 
 {% tab title="Javascript" %}
 ```javascript
-util_sha512h(data)
+if (util_sha512h(data) < 0)
+    rollback("Could not generate Hash", 1)
 ```
 {% endtab %}
 {% endtabs %}
