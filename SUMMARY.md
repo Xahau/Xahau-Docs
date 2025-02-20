@@ -89,6 +89,8 @@
     * [util\_keylet](technical/hooks-functions/utilities/util_keylet.md)
   * [Serialization](technical/hooks-functions/serialization/README.md)
     * [sto\_subfield](technical/hooks-functions/serialization/sto_subfield.md)
+    * [sto\_to\_json](technical/hooks-functions/serialization/sto_to_json.md)
+    * [sto\_from\_json](technical/hooks-functions/serialization/sto_from_json.md)
     * [sto\_subarray](technical/hooks-functions/serialization/sto_subarray.md)
     * [sto\_emplace](technical/hooks-functions/serialization/sto_emplace.md)
     * [sto\_erase](technical/hooks-functions/serialization/sto_erase.md)
