@@ -12,6 +12,8 @@ description: >-
 
 ### Behaviour
 
+{% tabs %}
+{% tab title="C" %}
 * Parse a STArray pointed to by `read_ptr`
 * Find the array index specified by `array_id`
 * Return the byte offset and length of the serialized field within the STObject, if it is found
@@ -22,23 +24,47 @@ description: >-
 > Thus type 1 field 2 would be `0x10002U`.
 >
 > In the case of this array field ID is `array_id`.
+{% endtab %}
+
+{% tab title="Javascript" %}
+* Ask for the STO object (binary encoded ledger data) from which to extract the subarray.
+* Find the array index specified by `array_id`
+* Return a subarray from an STO object.
+{% endtab %}
+{% endtabs %}
 
 ### Definition
 
 C
 
-```c
-int64_t sto_subfield (
-    uint32_t read_ptr,
-  	uint32_t read_len,
-  	uint32_t array_id
+{% tabs %}
+{% tab title="C" %}
+<pre class="language-c"><code class="lang-c"><strong>int64_t sto_subfield (
+</strong>    uint32_t read_ptr,
+<strong>  	uint32_t read_len,
+</strong>  	uint32_t array_id
 );
+</code></pre>
+
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+function sto_subarray(
+    sto: ByteArray | HexString,
+    array_id: number
+  ): ErrorCode | number
 ```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Example
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 #define SUB_OFFSET(x) ((int32_t)(x >> 32))
 #define SUB_LENGTH(x) ((int32_t)(x & 0xFFFFFFFFULL))
@@ -58,20 +84,62 @@ else
 }
 ```
 
+
+
 > ### 📘
 >
 > hookmacro.h already contains the `SUB_OFFSET` and `SUB_LENGTH` macros.
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+sto_subarray(sto, array_id)
+```
+{% endtab %}
+{% endtabs %}
 
 ### Parameters
 
+{% tabs %}
+{% tab title="C" %}
 | Name      | Type      | Description                                                               |
 | --------- | --------- | ------------------------------------------------------------------------- |
 | read\_ptr | uint32\_t | Pointer to the buffer containing the STArray                              |
 | read\_len | uint32\_t | Length of STArray                                                         |
 | array\_id | uint32\_t | The index of the entry within the STArray you are seeking. Starts from 0. |
 
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+| Name      | Type                   | Description                                                                     |
+| --------- | ---------------------- | ------------------------------------------------------------------------------- |
+| sto       | ByteArray \| HexString | The STO object (binary encoded ledger data) from which to extract the subarray. |
+| array\_id | number                 | The ID of the array to be extracted.                                            |
+{% endtab %}
+{% endtabs %}
+
+
+
 ### Return Code
 
+{% tabs %}
+{% tab title="C" %}
 | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | int64\_t | <p>The location of the field within the specified buffer:<br>- The high 32 bits are the offset location.<br>- The low 32 bits are the length.<br><br>If negative, an error:<br><code>OUT_OF_BOUNDS</code><br>- pointers/lengths specified outside of hook memory.<br><br><code>TOO_SMALL</code><br>- Input buffer isn't large enough to possibly contain a valid STArray.<br><br><code>DOESNT_EXIST</code><br>- The searched for index isn't present in the supplied STArray.<br><br><code>PARSE_ERROR</code><br>- The supplied STArray is malformed or not an STArray.</p> |
+
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+| Type   | Description                                                                    |
+| ------ | ------------------------------------------------------------------------------ |
+| number | The value of the specified subarray, or an error code if the extraction fails. |
+{% endtab %}
+{% endtabs %}
+
