@@ -16,20 +16,42 @@ description: Fetch the last closed ledger's timestamp
 
 ### Definition
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t ledger_last_time ();
 ```
 
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+function ledger_last_time(): ErrorCode | number
+```
+{% endtab %}
+{% endtabs %}
+
 ### Example
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t ts =
     ledger_last_time();
 ```
+
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+ledger_last_time()
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Parameters
 
@@ -37,6 +59,21 @@ This API takes no parameters.
 
 ### Return Code
 
+{% tabs %}
+{% tab title="C" %}
 | Type     | Description                                  |
 | -------- | -------------------------------------------- |
 | int64\_t | The XRPL timestamp of the last closed ledger |
+
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+| Type   | Description                                                                                          |
+| ------ | ---------------------------------------------------------------------------------------------------- |
+| number | Returns an error code if an error occurs, or a number representing the timestamp of the last ledger. |
+{% endtab %}
+{% endtabs %}
+

@@ -14,20 +14,44 @@ description: Fetch the fee base of the current ledger
 
 ### Definition
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t fee_base ();
 ```
 
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+function fee_base(): number
+```
+{% endtab %}
+{% endtabs %}
+
+
+
 ### Example
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t fee =
     fee_base();
 ```
+
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+fee_base()
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Parameters
 
@@ -35,6 +59,19 @@ This API takes no parameters.
 
 ### Return Code
 
+{% tabs %}
+{% tab title="C" %}
 | Type     | Description                        |
 | -------- | ---------------------------------- |
 | int64\_t | The fee base of the current ledger |
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+| Type   | Description                        |
+| ------ | ---------------------------------- |
+| number | The fee base of the current ledger |
+{% endtab %}
+{% endtabs %}
+
