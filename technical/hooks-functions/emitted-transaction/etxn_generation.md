@@ -14,8 +14,6 @@ description: Get the generation of a hypothetically emitted transaction
 
 ### Definition
 
-C
-
 {% tabs %}
 {% tab title="C" %}
 ```c

@@ -14,8 +14,6 @@ description: Estimate the required fee for a txn to be emitted successfully
 
 ### Definition
 
-C
-
 {% tabs %}
 {% tab title="C" %}
 ```c

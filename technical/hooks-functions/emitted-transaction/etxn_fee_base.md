@@ -14,8 +14,6 @@
 
 ### Definition
 
-C
-
 {% tabs %}
 {% tab title="C" %}
 ```c
