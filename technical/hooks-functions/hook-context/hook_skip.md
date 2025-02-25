@@ -6,13 +6,22 @@ description: Skip a hook that appears later in the hook chain on the hook accoun
 
 ### Behaviour
 
+{% tabs %}
+{% tab title="C" %}
 * Search the hook chain for a hook identified by the hook hash at `read_ptr`
 * Mark it as disabled for this chain execution
+{% endtab %}
+
+{% tab title="Javascript" %}
+* Skip the execution of a hook based on the provided hash and flag.
+* Returns a status code indicating the result of the operation.
+{% endtab %}
+{% endtabs %}
 
 ### Definition
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t hook_skip (
     uint32_t read_ptr,
@@ -20,11 +29,24 @@ int64_t hook_skip (
     uint32_t flags
 );
 ```
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+function hook_skip(
+    hash: ByteArray | HexString,
+    flag: number
+  ): ErrorCode | number
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Example
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 uint8_t phash[] = { 0x19U, 0xFEU, 0x69U, 0xF1U, 0x53U, 0x66U, 0x4EU, 0x8CU, 
                     0x97U, 0xF4U, 0x4CU, 0x5CU, 0x3CU, 0x65U, 0x63U, 0x79U, 
@@ -33,15 +55,49 @@ uint8_t phash[] = { 0x19U, 0xFEU, 0x69U, 0xF1U, 0x53U, 0x66U, 0x4EU, 0x8CU,
 int64_t result = 
   	hook_skip(phash, 32, 0);
 ```
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+hook_skip(hash, flag)
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Parameters
+
+{% tabs %}
+{% tab title="C" %}
+
 
 | Name      | Type      | Description                                                                                                   |
 | --------- | --------- | ------------------------------------------------------------------------------------------------------------- |
 | read\_ptr | uint32\_t | Pointer to a buffer containing the hook hash                                                                  |
 | read\_len | uint32\_t | Length of the hook hash (always 32)                                                                           |
 | flags     | uint32\_t | <p>If 0:<br>- add the hash to the hook skip list<br><br>If 1<br>- remove the hash from the hook skip list</p> |
+{% endtab %}
+
+{% tab title="Javascript" %}
+
+
+| Name | Type                   | Description                                         |
+| ---- | ---------------------- | --------------------------------------------------- |
+| hash | ByteArray or HexString | The hash of the hook to skip.                       |
+| flag | number                 | A flag indicating the reason for skipping the hook. |
+{% endtab %}
+{% endtabs %}
 
 ### Return Code
 
+{% tabs %}
+{% tab title="C" %}
 <table><thead><tr><th width="163">Type</th><th>Description</th></tr></thead><tbody><tr><td>int64_t</td><td>If successful <code>1</code><br><br>If negative, an error:<br><code>OUT_OF_BOUNDS</code><br>- pointers/lengths specified outside of hook memory.<br><br><code>DOESNT_EXIST</code><br>- The specified paramater doesn't exist or is null<br><br><code>INVALID_ARGUMENT</code><br>- Hash is not 32 bytes</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Javascript" %}
+<table><thead><tr><th width="163">Type</th><th>Description</th></tr></thead><tbody><tr><td>number or ErrorCode</td><td>Returns a status code indicating the result of the operation.</td></tr></tbody></table>
+{% endtab %}
+{% endtabs %}
+
