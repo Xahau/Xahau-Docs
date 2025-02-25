@@ -164,6 +164,7 @@
     * [otxn\_type](technical/hooks-functions/originating-transaction/otxn_type.md)
     * [otxn\_slot](technical/hooks-functions/originating-transaction/otxn_slot.md)
     * [otxn\_param](technical/hooks-functions/originating-transaction/otxn_param.md)
+    * [otxn\_json](technical/hooks-functions/originating-transaction/otxn_json.md)
     * [meta\_slot](technical/hooks-functions/originating-transaction/meta_slot.md)
   * [Websocket APIs](technical/hooks-functions/websocket-apis/README.md)
     * [account\_info](technical/hooks-functions/websocket-apis/account_info.md)

@@ -10,22 +10,42 @@ description: Get the Transaction Type of the originating transaction
 
 ### Definition
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t otxn_type (
     void
 );
 ```
 
+
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+function otxn_type(): ErrorCode | number
+```
+{% endtab %}
+{% endtabs %}
+
+
+
 ### Example
 
-C
-
+{% tabs %}
+{% tab title="C" %}
 ```c
 int64_t tt = 
   otxn_type();
 ```
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+txn_type()
+```
+{% endtab %}
+{% endtabs %}
 
 ### Parameters
 
@@ -33,9 +53,21 @@ None
 
 ### Return Code
 
+{% tabs %}
+{% tab title="C" %}
 | Type     | Description                                                                                                                         |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | int64\_t | The Transaction Type of the originating transaction. Check the table below for a list of known Transaction Types at time of writing |
+{% endtab %}
+
+{% tab title="Javascript" %}
+| Type                | Description                                                                       |
+| ------------------- | --------------------------------------------------------------------------------- |
+| ErrorCode \| number | Returns the Transaction Type as a number, or an ErrorCode if the retrieval fails. |
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Known Transaction Types
 
