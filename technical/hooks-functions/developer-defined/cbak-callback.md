@@ -27,7 +27,7 @@ int64_t cbak (
 
 {% tab title="Javascript" %}
 ```javascript
-type Callback = (reserved?: number) => number
+type Callback = (reserved: number) => number
 ```
 {% endtab %}
 {% endtabs %}
@@ -50,7 +50,7 @@ int64_t cbak(uint32_t reserved)
 
 {% tab title="Javascript" %}
 ```javascript
-export const Callback = (reserved: number) => {
+const Callback = (reserved: number) => {
   return 0
 }
 ```

@@ -18,7 +18,7 @@ The solution: **Emitted Transactions**. We allow the Originating Transaction to 
 
 Emitted Transactions are _new_ transactions created by the execution of a Hook and entered into consensus for processing in the next ledger. The transaction may be of any Transaction Type but must follow strict emission rules.
 
-To emit a transaction the Hook first prepares the serialized transaction then calls [emit](../technical/hooks-functions/emitted-transaction/emit.md).
+To emit a transaction the Hook first prepares the serialized transaction then calls [emit](../technical/hooks-functions/emitted-transaction/emit-1.md).
 
 Because emitted transactions can trigger Hooks in the next ledger which in turn may emit more transactions, all emitted transactions carry a `burden` and a `generation` field in their `EmitDetails` block. The `EmitDetails` block replaces the signature field in a traditional transaction.
 
@@ -34,7 +34,7 @@ If an emitted transaction expires before it can be accepted into a ledger (for a
 
 ### Emission Rules
 
-The [emit](../technical/hooks-functions/emitted-transaction/emit.md) Hook API will enforce the following rules on a proposed (to be emitted) transaction.
+The [emit](../technical/hooks-functions/emitted-transaction/emit-1.md) Hook API will enforce the following rules on a proposed (to be emitted) transaction.
 
 | # | Emission Rule                                          | Explanation                                                                                                                                                                                                                                              |
 | - | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -47,7 +47,7 @@ Some Hook APIs may only write or may only read from memory, and some might not d
 {% endtab %}
 
 {% tab title="Javascript" %}
-All parameters passed to a Hook API must be one of: `string, number[]`. Typically these are pointers and lengths of buffers within the Hook's stack frame. Sometimes they are [Integer Encoded Floating Point Numbers (XFL)](../../../concepts/floating-point-numbers-xfl.md) or other data.
+All parameters passed to a Hook API must be one of: `string, number[], bigint(xfl), object(json)`. Typically these are pointers and lengths of buffers within the Hook's stack frame. Sometimes they are [Integer Encoded Floating Point Numbers (XFL)](../../../concepts/floating-point-numbers-xfl.md) or other data.
 
 The parameters to a Hook API are always in the following order:
 

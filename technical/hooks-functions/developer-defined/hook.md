@@ -29,7 +29,7 @@ int64_t hook (
 
 {% tab title="Javascript" %}
 ```javascript
-type Hook = (reserved?: number) => number
+type Hook = (reserved: number) => number
 ```
 
 
@@ -54,7 +54,7 @@ int64_t hook(uint32_t reserved)
 
 {% tab title="Javascript" %}
 ```javascript
-export const Hook = (reserved: number) => {
+const Hook = (reserved: number) => {
     return 0
 }
 ```

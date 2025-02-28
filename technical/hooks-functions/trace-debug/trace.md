@@ -75,7 +75,7 @@ trace("Buffer conatained", some_buffer, 1);
 | ------- | ------- | -------------------------------------------------------------------- |
 | message | string  | The 'logging key', message to output before the buffer (can be null) |
 | data    | any     | The data to log                                                      |
-| hex     | boolean | Should it log formatted in HEX?                                      |
+| hex     | boolean | <p>Should it log formatted in HEX?<br><br>0 - NO<br>1 - YES</p>      |
 {% endtab %}
 {% endtabs %}
 
