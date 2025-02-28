@@ -33,4 +33,4 @@ description: >-
 * HTTP POST RPC
   * `https://jshooks.xahau-test.net`
 * Network Definitions (Binary Codec, ...)
-  * [`https://jshooks.xahau-test.net/server_definitions.json`](https://xahau-test.net/server_definitions.json)
+  * [`https://jshooks.xahau-test.net/server_definitions.json`](https://jshooks.xahau-test.net/server_definitions.json)
