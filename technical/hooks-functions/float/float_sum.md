@@ -59,7 +59,8 @@ int64_t two =
 
 {% tab title="Javascript" %}
 ```javascript
-float_sum(f1, f2)
+const two =
+  float_sum(float_one(), float_one());
 ```
 {% endtab %}
 {% endtabs %}

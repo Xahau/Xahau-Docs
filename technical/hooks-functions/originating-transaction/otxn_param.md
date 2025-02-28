@@ -55,7 +55,8 @@ int64_t value_len =
 
 {% tab title="Javascript" %}
 ```javascript
-otxn_param(name)
+const pname = [0xCA, 0xFE]
+const pvalue = otxn_param(pname)
 ```
 {% endtab %}
 {% endtabs %}

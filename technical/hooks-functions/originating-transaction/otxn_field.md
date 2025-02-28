@@ -26,7 +26,7 @@ description: Serialize and output a field from the originating transaction
 int64_t otxn_field (
     uint32_t write_ptr,
     uint32_t write_len,
-  	uint32_t field_id
+    uint32_t field_id
 );
 ```
 {% endtab %}
@@ -54,7 +54,7 @@ int64_t account_field_len =
 
 {% tab title="Javascript" %}
 ```javascript
-otxn_field(field_id)
+const account_field = otxn_field(sfAccount)
 ```
 {% endtab %}
 {% endtabs %}

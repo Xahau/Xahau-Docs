@@ -46,8 +46,8 @@ int64_t float_sto (
 {% tab title="Javascript" %}
 ```javascript
 function float_sto(
-    cur: ByteArray | HexString | undefined,
-    isu: ByteArray | HexString | undefined,
+    currency: ByteArray | HexString | undefined,
+    issuer: ByteArray | HexString | undefined,
     f1: bigint,
     field_code: number
   ): ErrorCode | ByteArray
@@ -74,8 +74,9 @@ if (float_sto(SBUF(amt_out),
 
 {% tab title="Javascript" %}
 ```javascript
-function float_sto(
-    cur,isu,f1,field_code)
+const amt_out = float_sto(currency, hook_accid, pusd_to_send, -1)
+if (typeof amt_out === 'number')
+        rollback("Peggy: Could not dump pusd amount into sto", 1)
 ```
 {% endtab %}
 {% endtabs %}
@@ -109,8 +110,8 @@ function float_sto(
 
 | Name        | Type                                | Description                                                |
 | ----------- | ----------------------------------- | ---------------------------------------------------------- |
-| cur         | ByteArray \| HexString \| undefined | The current value to store into.                           |
-| isu         | ByteArray \| HexString \| undefined | The value to store.                                        |
+| currency    | ByteArray \| HexString \| undefined | The current value to store into.                           |
+| issuer      | ByteArray \| HexString \| undefined | The value to store.                                        |
 | f1          | bigint                              | The field code indicating where to store the float.        |
 | field\_code | number                              | An error code or the updated value as an array of numbers. |
 {% endtab %}

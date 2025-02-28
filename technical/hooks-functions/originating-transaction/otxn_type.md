@@ -42,7 +42,7 @@ int64_t tt =
 
 {% tab title="Javascript" %}
 ```javascript
-txn_type()
+const tt = txn_type()
 ```
 {% endtab %}
 {% endtabs %}

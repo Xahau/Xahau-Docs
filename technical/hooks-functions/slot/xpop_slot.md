@@ -15,8 +15,8 @@ description: Serialize and output the xpop transaction blob and metadata
 {% tab title="C" %}
 ```c
 int64_t xpop_slot (
-  	uint32_t slot_no_tx,
-  	uint32_t slot_no_meta
+    uint32_t slot_no_tx,
+    uint32_t slot_no_meta
 );
 ```
 
@@ -44,7 +44,7 @@ int64_t bytes_written =
 
 {% tab title="Javacript" %}
 ```javascript
-xpop_slot(slotno_tx, slotno_meta)
+const bytes_written = xpop_slot(1, 2)
 ```
 {% endtab %}
 {% endtabs %}

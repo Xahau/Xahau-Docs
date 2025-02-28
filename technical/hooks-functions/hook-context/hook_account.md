@@ -29,9 +29,8 @@ int64_t hook_account (
 {% endtab %}
 
 {% tab title="Javascript" %}
-```javascript
-function hook_account(): ErrorCode | ByteArray
-```
+<pre class="language-javascript"><code class="lang-javascript"><strong>function hook_account(): ErrorCode | ByteArray
+</strong></code></pre>
 {% endtab %}
 {% endtabs %}
 
@@ -52,7 +51,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-hook_account()
+const hook_acc_id =hook_account()
 ```
 {% endtab %}
 {% endtabs %}

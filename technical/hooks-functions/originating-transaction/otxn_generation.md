@@ -49,7 +49,7 @@ int64_t generation =
 
 {% tab title="Javascript" %}
 ```javascript
-otxn_generation()
+const generation = otxn_generation()
 ```
 {% endtab %}
 {% endtabs %}

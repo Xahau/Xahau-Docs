@@ -31,7 +31,7 @@ description: Convert an XFL floating point into an integer (floor)
 int64_t float_int (
     int64_t float1,
     uint32_t decimal_places,
-  	uint32_t absolute
+    uint32_t absolute
 );
 ```
 {% endtab %}
@@ -55,13 +55,14 @@ function float_int(
 {% tab title="C" %}
 ```c
 int64_t drops =
-    float_int(xrpbalance, 6, 0);
+    float_int(xahbalance, 6, 0);
 ```
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-float_int(f1, decimal_places abs)
+const drops =
+    float_int(xahbalance, 6, 0);
 ```
 {% endtab %}
 {% endtabs %}

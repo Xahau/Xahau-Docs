@@ -49,7 +49,7 @@ int64_t burden =
 
 {% tab title="Javascript" %}
 ```javascript
-otxn_burden()
+const burden = otxn_burden()
 ```
 {% endtab %}
 {% endtabs %}

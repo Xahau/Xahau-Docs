@@ -69,7 +69,8 @@ int64_t three =
 
 {% tab title="Javascript" %}
 ```javascript
-float_root(f1, n)
+const three =
+  float_root(nine, 2)
 ```
 {% endtab %}
 {% endtabs %}

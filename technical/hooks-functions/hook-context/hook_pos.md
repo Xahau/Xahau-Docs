@@ -13,7 +13,7 @@ description: Returns the position in the hook chain the currently executing hook
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t hook_pos (void);
+int64_t hook_pos(void);
 ```
 {% endtab %}
 
@@ -38,7 +38,7 @@ int64_t pos =
 
 {% tab title="Javascript" %}
 ```javascript
-hook_pos()
+const pos = hook_pos()
 ```
 {% endtab %}
 {% endtabs %}

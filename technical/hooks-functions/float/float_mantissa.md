@@ -59,7 +59,8 @@ int64_t exponent =
 
 {% tab title="Javascript" %}
 ```javascript
-float_mantissa(f1)
+const exponent =
+    float_exponent(float_one());
 ```
 {% endtab %}
 {% endtabs %}

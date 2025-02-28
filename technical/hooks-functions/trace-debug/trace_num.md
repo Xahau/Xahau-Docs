@@ -16,7 +16,7 @@ description: Write an integer to the Xahaud trace log
 int64_t trace_num (
     uint32_t mread_ptr,
     uint32_t mread_len,
-  	int64_t number 
+    int64_t number 
 );
 ```
 {% endtab %}

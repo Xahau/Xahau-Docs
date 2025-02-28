@@ -48,13 +48,11 @@ uint8_t hash[32];
 int64_t bytes_written = 
     ledger_last_hash(hash, 32);
 ```
-
-
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-ledger_last_hash()
+const hash = ledger_last_hash()
 ```
 {% endtab %}
 {% endtabs %}

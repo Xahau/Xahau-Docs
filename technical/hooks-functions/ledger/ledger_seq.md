@@ -15,15 +15,13 @@ C
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t ledger_seq ();
+int64_t ledger_seq();
 ```
-
-
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
- function ledger_seq(): ErrorCode | number
+function ledger_seq(): ErrorCode | number
 ```
 {% endtab %}
 {% endtabs %}
@@ -44,7 +42,7 @@ int64_t seq =
 
 {% tab title="Javascript" %}
 ```javascript
-ledger_seq()
+const seq = ledger_seq()
 ```
 {% endtab %}
 {% endtabs %}

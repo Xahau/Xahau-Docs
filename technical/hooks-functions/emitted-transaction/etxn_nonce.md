@@ -60,7 +60,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-etxn_nonce()
+const nonce = etxn_nonce()
 ```
 {% endtab %}
 {% endtabs %}

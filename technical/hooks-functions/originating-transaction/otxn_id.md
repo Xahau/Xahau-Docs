@@ -26,14 +26,14 @@ description: Output the canonical hash of the originating transaction
 int64_t otxn_id (
     uint32_t write_ptr,
     uint32_t write_len,
-  	uint32_t flags
+    uint32_t flags
 );
 ```
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-function otxn_id(flag?: number): ErrorCode | ByteArray
+function otxn_id(flag: number): ErrorCode | ByteArray
 ```
 {% endtab %}
 {% endtabs %}
@@ -53,7 +53,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-otxn_id(flag)
+const tx_id = otxn_id(0)
 ```
 {% endtab %}
 {% endtabs %}

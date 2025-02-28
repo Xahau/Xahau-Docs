@@ -27,7 +27,7 @@ int64_t etxn_fee_base (
 
 {% tab title="Javascript" %}
 ```javascript
-function etxn_reserve(txCount: number): ErrorCode | number
+function etxn_reserve(count: number): ErrorCode | number
 ```
 {% endtab %}
 {% endtabs %}
@@ -39,10 +39,7 @@ function etxn_reserve(txCount: number): ErrorCode | number
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t result = 
-    etxn_fee_base(2);
-if (result < 2)
-    rollback("Error reserving!", 16, 1);
+etxn_reserve(2);
 ```
 
 
@@ -50,7 +47,7 @@ if (result < 2)
 
 {% tab title="Javascript" %}
 ```javascript
-etxn_fee_base(2);
+etxn_reserve(2)
 ```
 {% endtab %}
 {% endtabs %}

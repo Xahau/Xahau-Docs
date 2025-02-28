@@ -17,10 +17,8 @@ description: Fetch the fee base of the current ledger
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t fee_base ();
+int64_t fee_base();
 ```
-
-
 {% endtab %}
 
 {% tab title="Javascript" %}
@@ -40,13 +38,11 @@ function fee_base(): number
 int64_t fee =
     fee_base();
 ```
-
-
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-fee_base()
+const fee = fee_base()
 ```
 {% endtab %}
 {% endtabs %}

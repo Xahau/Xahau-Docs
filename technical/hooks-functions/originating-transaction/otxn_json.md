@@ -30,7 +30,7 @@ function otxn_json(): ErrorCode | Record<string, any> | Transaction
 {% tabs %}
 {% tab title="Javascript" %}
 ```javascript
-otxn_json()
+const tx_json = otxn_json()
 ```
 {% endtab %}
 {% endtabs %}

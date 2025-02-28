@@ -32,7 +32,7 @@ description: Emit a new transaction from the hook
 ```c
 int64_t emit (
     uint32_t write_ptr,
-  	uint32_t write_len,
+    uint32_t write_len,
     uint32_t read_ptr,
     uint32_t read_len
 );
@@ -66,7 +66,9 @@ if (emit(tx, tx_len) < 0)
 
 {% tab title="Javascript" %}
 ```javascript
-emit(txJson)
+const emitResult = emit(txJson)
+if(typeof emitResult === 'number')
+    rollback("Failed to emit!", 1)
 ```
 {% endtab %}
 {% endtabs %}
@@ -103,7 +105,7 @@ emit(txJson)
 {% tab title="Javascript" %}
 
 
-<table><thead><tr><th width="127">Type</th><th>Description</th></tr></thead><tbody><tr><td>ErrorCode | ByteArray</td><td>Returns an ErrorCode if there is an error, or an array of emitted transaction hashes on success.</td></tr></tbody></table>
+<table><thead><tr><th width="231">Type</th><th>Description</th></tr></thead><tbody><tr><td>ErrorCode | ByteArray</td><td>Returns an ErrorCode if there is an error, or an array of emitted transaction hashes on success.</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

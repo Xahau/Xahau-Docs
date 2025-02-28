@@ -16,7 +16,7 @@ description: Write a XFL float to the Xahaud trace log
 int64_t trace_float (
     uint32_t mread_ptr,
     uint32_t mread_len,
-  	int64_t float1 
+    int64_t float1 
 );
 ```
 {% endtab %}

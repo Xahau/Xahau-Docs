@@ -66,7 +66,10 @@ if (float_compare(pusd_to_send, 0, COMPARE_LESS) == 1)
 
 {% tab title="Javascript" %}
 ```javascript
-float_compare(f1, f2, mode)
+if (float_compare(pusd_to_send, 0n, COMPARE_LESS) == 1)
+{
+  // pusd_to_send is less than 0
+}
 ```
 {% endtab %}
 {% endtabs %}

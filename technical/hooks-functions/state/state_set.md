@@ -58,14 +58,18 @@ if (state_set(SBUF(vault), SBUF(vault_key)) < 0)
 > ### 📘Hint
 >
 > To delete the state use `state_set(0, 0, SBUF(key);`.
-
-
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-state_set(value, key)
+const result = state_set(vault, vault_key)
+if (result < 0)
+    rollback("Error: could not set state!", 1);
 ```
+
+> ### 📘Hint
+>
+> To delete the state use `state_set(null, key);`.
 {% endtab %}
 {% endtabs %}
 
@@ -84,7 +88,7 @@ state_set(value, key)
 
 > ### 🚧 Caution
 >
-> Xahaud sets internally a maximum hook data size. At time of writing and for public testnet this is hard coded at 128 bytes, however in future it will be a validator-votable number.
+> Xahaud sets internally a maximum hook data size. At time of writing and for mainnet this is hard coded at 256 bytes, however in future it will be a validator-votable number.
 {% endtab %}
 
 {% tab title="Javascript" %}

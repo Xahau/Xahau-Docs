@@ -50,13 +50,15 @@ function state(key: ByteArray | HexString): ErrorCode | ByteArray
 ```c
 #define SBUF(str) (uint32_t)(str), sizeof(str)
 if (state(SBUF(vault), SBUF(vault_key)) != 16)
-		rollback(SBUF("Error: could not read state!"), 1);
+    rollback(SBUF("Error: could not read state!"), 1);
 ```
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-state(key)
+const value = state(SBUF(vault), SBUF(vault_key))
+if (typeof value === 'number' || value.length != 16)
+    rollback("Error: could not read state!", 1);
 ```
 {% endtab %}
 {% endtabs %}

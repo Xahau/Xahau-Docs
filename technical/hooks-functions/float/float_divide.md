@@ -57,7 +57,8 @@ int64_t still_one =
 
 {% tab title="Javascript" %}
 ```javascript
-float_divide(f1, f2)
+const still_one =
+    float_divide(float_one(), float_one())
 ```
 {% endtab %}
 {% endtabs %}

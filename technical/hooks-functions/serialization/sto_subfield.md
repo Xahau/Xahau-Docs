@@ -45,8 +45,8 @@ description: >-
 ```c
 int64_t sto_subfield (
     uint32_t read_ptr,
-  	uint32_t read_len,
-  	uint32_t field_id
+    uint32_t read_len,
+    uint32_t field_id
 );
 ```
 
@@ -58,7 +58,7 @@ int64_t sto_subfield (
 function sto_subfield(
     sto: ByteArray | HexString,
     field_id: number
-  ): ErrorCode | number
+  ): ErrorCode | bigint
 ```
 {% endtab %}
 {% endtabs %}
@@ -72,17 +72,17 @@ function sto_subfield(
 ```c
 #define SUB_OFFSET(x) ((int32_t)(x >> 32))
 #define SUB_LENGTH(x) ((int32_t)(x & 0xFFFFFFFFULL))
-int64_t memo_lookup =
-    sto_subfield(memo_ptr, memo_len, sfMemo);
-if (memo_lookup < 0)
+int64_t memos_lookup =
+    sto_subfield(txn_ptr, txn_len, sfMemos);
+if (memos_lookup < 0)
 {
-    // sfMemo was not found in the STObject pointed at by memo_ptr
+    // sfMemos was not found in the STObject pointed at by memo_ptr
 }
 else
 {
-    // sfMemo was found and its location is as follows:
-	  uint8_t* memo_ptr = SUB_OFFSET(memo_lookup) + memo_ptr;
-	  int64_t  memo_len = SUB_LENGTH(memo_lookup);
+    // sfMemos was found and its location is as follows:
+    uint8_t* memos_ptr = SUB_OFFSET(memos_lookup) + memos_ptr;
+    int64_t  memos_len = SUB_LENGTH(memos_lookup);
 }
 ```
 
@@ -95,7 +95,20 @@ else
 
 {% tab title="Javascript" %}
 ```javascript
-sto_subfield()
+const SUB_OFFSET = (x) => Number(x >> 32n)
+const SUB_LENGTH = (x) => Number(x & 0xFFFFFFFFn)
+const memos_lookup = sto_subfield(txn, sfMemos);
+if (typeof memos_lookup === 'number')
+{
+    // sfMemos was not found in the STObject pointed at by memo_ptr
+}
+else
+{
+    // sfMemos was found and its location is as follows:
+    const memo_start = SUB_OFFSET(memos_lookup)
+    const memo_len = SUB_LENGTH(memos_lookup)
+    const memo = txn.slice(memo_start, memo_len)
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -141,9 +154,9 @@ sto_subfield()
 {% tab title="Javascript" %}
 
 
-| Type   | Description                                                                    |
-| ------ | ------------------------------------------------------------------------------ |
-| number | The value of the specified subfield, or an error code if the extraction fails. |
+| Type               | Description                                                                                                                                                                                              |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bigint / ErrorCode | <p>The location of the field within the specified buffer:<br>- The high 32 bits are the offset location.<br>- The low 32 bits are the length.</p><p></p><p>or an error code if the extraction fails.</p> |
 {% endtab %}
 {% endtabs %}
 

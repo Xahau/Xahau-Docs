@@ -16,8 +16,7 @@ description: Get the sign of an XFL enclosing number
 {% endtab %}
 
 {% tab title="Javascript" %}
-* Retrieves the mantissa of a float representation.
-* Returns An error code or the mantissa as a bigint.
+* Return 1 if the XFL is negative, otherwise return 0
 {% endtab %}
 {% endtabs %}
 
@@ -34,7 +33,7 @@ int64_t float_sign (
 
 {% tab title="Javascript" %}
 ```javascript
-function float_mantissa(f1: bigint): ErrorCode | bigint
+function float_sign(f1: bigint): ErrorCode | number
 ```
 {% endtab %}
 {% endtabs %}
@@ -57,7 +56,8 @@ int64_t sign =
 
 {% tab title="Javascript" %}
 ```javascript
-float_mantissa(f1)
+const sign =
+   float_sign(float_one());
 ```
 {% endtab %}
 {% endtabs %}

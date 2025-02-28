@@ -55,7 +55,8 @@ int64_t value_len =
 
 {% tab title="Javascript" %}
 ```javascript
-hook_param(key)
+const pname = [0xCA, 0xFE]
+const pvalue = hook_param(pname)
 ```
 {% endtab %}
 {% endtabs %}

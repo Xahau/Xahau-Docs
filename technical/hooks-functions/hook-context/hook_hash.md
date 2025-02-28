@@ -28,7 +28,7 @@ description: Retreive the 32 byte namespace biased SHA512H of the currently exec
 int64_t hook_hash (
     uint32_t write_ptr,
     uint32_t write_len,
-  	int32_t  hook_no
+    int32_t  hook_no
 );
 ```
 
@@ -57,7 +57,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-hook_hash(hookno)
+const hash = hook_hash(hookno)
 ```
 {% endtab %}
 {% endtabs %}

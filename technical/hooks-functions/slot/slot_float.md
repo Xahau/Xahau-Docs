@@ -53,7 +53,7 @@ int64_t xfl =
 
 {% tab title="Javascript" %}
 ```javascript
-slot_float(slotno)
+const xfl = slot_float(amt_slot)
 ```
 {% endtab %}
 {% endtabs %}

@@ -31,7 +31,7 @@ description: Produce an sfEmitDetails suitable for a soon-to-be emitted transact
 ```c
 int64_t etxn_details (
     uint32_t write_ptr,
-  	uint32_t write_len
+    uint32_t write_len
 );
 ```
 
@@ -40,7 +40,7 @@ int64_t etxn_details (
 
 {% tab title="Javascript" %}
 ```javascript
-etxn_details(): ErrorCode | ByteArray
+function etxn_details(): ErrorCode | ByteArray
 ```
 {% endtab %}
 {% endtabs %}
@@ -64,7 +64,9 @@ if (result != 105)
 
 {% tab title="Javascript" %}
 ```javascript
-etxn_details()
+const emitdet = etxn_details()
+if (typeof emitdet === 'string || emitdet.length != 105)
+    rollback("Etxndetails failed.", 1)
 ```
 {% endtab %}
 {% endtabs %}

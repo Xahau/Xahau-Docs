@@ -38,7 +38,7 @@ function sto_from_json(
 {% tabs %}
 {% tab title="Javascript" %}
 ```javascript
-sto_from_json(jsonobj)
+const stoBlob = sto_from_json(stoJson)
 ```
 {% endtab %}
 {% endtabs %}

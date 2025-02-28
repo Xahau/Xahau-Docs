@@ -30,7 +30,7 @@ description: Serialize and output a slotted object
 int64_t slot (
     uint32_t write_ptr,
     uint32_t write_len,
-  	uint32_t slot_no
+    uint32_t slot_no
 );
 ```
 
@@ -59,7 +59,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-slot(slotno)
+const txn = slot(1) // assumes a transaction is slotted into slot=1
 ```
 {% endtab %}
 {% endtabs %}

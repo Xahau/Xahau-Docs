@@ -14,7 +14,7 @@ description: Load the metadata of the originating transaction into a slot
 {% tab title="First Tab" %}
 ```c
 int64_t meta_slot (
-  	uint32_t slot_no
+    uint32_t slot_no
 );
 ```
 {% endtab %}
@@ -40,7 +40,7 @@ int64_t meta_slot_no =
 
 {% tab title="Javascript" %}
 ```javascript
-meta_slot(slotno)
+const meta_slot_no = meta_slot(0)
 ```
 {% endtab %}
 {% endtabs %}

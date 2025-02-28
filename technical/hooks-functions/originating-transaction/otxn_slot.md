@@ -14,7 +14,7 @@ description: Load the originating transaction into a slot
 {% tab title="C" %}
 ```c
 int64_t otxn_slot (
-  	uint32_t slot_no
+    uint32_t slot_no
 );
 ```
 {% endtab %}
@@ -40,7 +40,7 @@ int64_t otxn_slot_no =
 
 {% tab title="Javascript" %}
 ```javascript
-otxn_slot(slotno)
+const otxn_slot_no = otxn_slot(0)
 ```
 {% endtab %}
 {% endtabs %}

@@ -27,8 +27,8 @@ description: Index into a slotted array and assign a sub-object to another slot
 ```c
 int64_t slot_subarray (
     uint32_t parent_slot,
-  	uint32_t array_id,
-  	uint32_t new_slot
+    uint32_t array_id,
+    uint32_t new_slot
 );
 ```
 {% endtab %}
@@ -59,7 +59,8 @@ subslot =
 
 {% tab title="Javascript" %}
 ```javascript
-slot_subarray(parent_slotno, array_id, new_slotno)
+let subslot = 0
+subslot = slot_subarray(slot_no, i, subslot)
 ```
 {% endtab %}
 {% endtabs %}

@@ -56,7 +56,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-ledger_nonce()
+const nonce = ledger_nonce()
 ```
 {% endtab %}
 {% endtabs %}

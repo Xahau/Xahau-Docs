@@ -40,7 +40,7 @@ function sto_to_json(
 {% tabs %}
 {% tab title="Javascript" %}
 ```javascript
-sto_to_json(blob)
+const jsonSto = sto_to_json(stoBlob)
 ```
 {% endtab %}
 {% endtabs %}

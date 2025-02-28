@@ -19,7 +19,7 @@ description: Fetch the last closed ledger's timestamp
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t ledger_last_time ();
+int64_t ledger_last_time();
 ```
 
 
@@ -46,7 +46,7 @@ int64_t ts =
 
 {% tab title="Javascript" %}
 ```javascript
-ledger_last_time()
+const ts = ledger_last_time()
 ```
 {% endtab %}
 {% endtabs %}

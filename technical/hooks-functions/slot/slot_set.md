@@ -28,7 +28,7 @@ description: Locate an object based on its keylet and place it into a slot
 int64_t slot_set (
     uint32_t read_ptr,
     uint32_t read_len,
-  	uint32_t slot_no
+    uint32_t slot_no
 );
 ```
 
@@ -59,7 +59,7 @@ int64_t slot_no =
 
 {% tab title="Javascript" %}
 ```javascript
-slot_set(kl, slotno)
+const slot_no = slot_set(keylet, 0)
 ```
 {% endtab %}
 {% endtabs %}

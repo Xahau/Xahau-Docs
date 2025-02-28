@@ -39,12 +39,12 @@ C
 ```c
 int64_t sto_emplace (
     uint32_t write_ptr,
-  	uint32_t write_len,
+    uint32_t write_len,
     uint32_t sread_ptr,
     uint32_t sread_len,
     uint32_t fread_ptr,
     uint32_t fread_len,
-  	uint32_t field_id
+    uint32_t field_id
 );
 ```
 
@@ -85,7 +85,9 @@ if (tx_len <= 0)
 
 {% tab title="Javascript" %}
 ```javascript
-sto_emplace(sto, field_bytes, field_id)
+const tx_out = sto_emplace(tx_in, sequence_field, sfSequence)
+if (typeof tx_out === 'number')
+    rollback("Emplacing failed.", 1)
 ```
 {% endtab %}
 {% endtabs %}

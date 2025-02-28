@@ -47,7 +47,7 @@ int64_t bytes_needed = slot_size(1); // get size of slot 1
 
 {% tab title="Javascript" %}
 ```javascript
-slot_size(slotno)
+const bytes_needed = slot_size(1); // get size of slot 1
 ```
 {% endtab %}
 {% endtabs %}

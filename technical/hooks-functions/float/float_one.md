@@ -27,7 +27,7 @@ description: Return the number 1 represented in an XFL enclosing number
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t float_one ();
+int64_t float_one();
 ```
 {% endtab %}
 
@@ -45,7 +45,7 @@ function float_one(): ErrorCode | bigint
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t still_one =
+int64_t one =
     float_one();
 ```
 
@@ -54,7 +54,7 @@ int64_t still_one =
 
 {% tab title="Javascript" %}
 ```javascript
-float_one()
+const one = float_one()
 ```
 {% endtab %}
 {% endtabs %}
@@ -75,9 +75,9 @@ This function has no parameters.
 {% endtab %}
 
 {% tab title="Javascript" %}
-| Type     | Description                      |
-| -------- | -------------------------------- |
-| int64\_t | The XFL (xls17) enclosing number |
+| Type                | Description                      |
+| ------------------- | -------------------------------- |
+| ErrorCode \| bigint | The XFL (xls17) enclosing number |
 {% endtab %}
 {% endtabs %}
 

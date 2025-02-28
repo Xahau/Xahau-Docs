@@ -20,7 +20,7 @@ description: Create a float from an exponent and mantissa
 
 {% tab title="Javascript" %}
 * Sets the exponent and mantissa for a float representation.
-* Returns an error code or the resulting bigint.
+* Returns an error code or a new XFL as a bigint.
 {% endtab %}
 {% endtabs %}
 
@@ -63,7 +63,7 @@ int64_t small_amount =
 
 {% tab title="Javascript" %}
 ```javascript
-float_set(exponent, mantissa)
+const small_amount = float_set(-81, 1);
 ```
 {% endtab %}
 {% endtabs %}
@@ -116,9 +116,9 @@ float_set(exponent, mantissa)
 {% tab title="Javascript" %}
 
 
-| Type                | Description                            |
-| ------------------- | -------------------------------------- |
-| ErrorCode \| bigint | An error code or the resulting bigint. |
+| Type                | Description                                        |
+| ------------------- | -------------------------------------------------- |
+| ErrorCode \| bigint | An error code or the XFL (xls17) enclosing number. |
 {% endtab %}
 {% endtabs %}
 

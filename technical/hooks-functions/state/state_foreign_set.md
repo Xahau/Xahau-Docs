@@ -63,13 +63,14 @@ function state_foreign_set(
 ```c
 #define SBUF(str) (uint32_t)(str), sizeof(str)
 if (state_foreign_set(SBUF(vault), SBUF(vault_key), SBUF(namespace), SBUF(account)) < 0)
-		rollback(SBUF("Error: could not set foreign state!"), 1);
+    rollback(SBUF("Error: could not set foreign state!"), 1);
 ```
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-state_foreign_set(value, key, namespace, accountid)
+if (state_foreign_set(vault, vault_key, namespace, account) < 0)
+    rollback("Error: could not set foreign state!", 1);
 ```
 {% endtab %}
 {% endtabs %}

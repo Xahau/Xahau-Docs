@@ -26,8 +26,8 @@ description: >-
 {% tab title="C" %}
 ```c
 int64_t slot_type (
-  	uint32_t slot_no,
-  	uint32_t flags
+    uint32_t slot_no,
+    uint32_t flags
 );
 ```
 {% endtab %}
@@ -54,7 +54,7 @@ int64_t bytes_written =
 
 {% tab title="Javascript" %}
 ```javascript
-slot_type(slotno, flags)
+const txn_id = slot_type(1) // assumes a txn is slotted into slot=1
 ```
 {% endtab %}
 {% endtabs %}

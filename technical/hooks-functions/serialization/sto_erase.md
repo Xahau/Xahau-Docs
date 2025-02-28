@@ -30,10 +30,10 @@ description: Remove a field from an STObject
 ```c
 int64_t sto_erase (
     uint32_t write_ptr,
-  	uint32_t write_len,
+    uint32_t write_len,
     uint32_t read_ptr,
     uint32_t read_len,
-  	uint32_t field_id
+    uint32_t field_id
 );
 ```
 
@@ -75,7 +75,10 @@ if (tx_len <= 0)
 
 {% tab title="Javascript" %}
 ```javascript
-sto_erase(sto, field_id)
+const tx_out = sto_erase(tx_in, sfSigners)
+
+if (typeof tx_out === 'number')
+    rollback("Erasing failed.", 1)
 ```
 {% endtab %}
 {% endtabs %}

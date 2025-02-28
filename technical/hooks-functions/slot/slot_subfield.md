@@ -27,8 +27,8 @@ description: Index into a slotted object and assign a sub-object to another slot
 ```c
 int64_t slot_subfield (
     uint32_t parent_slot,
-  	uint32_t field_id,
-  	uint32_t new_slot
+    uint32_t field_id,
+    uint32_t new_slot
 );
 ```
 {% endtab %}
@@ -58,7 +58,7 @@ int64_t amt_slot =
 
 {% tab title="Javascript" %}
 ```javascript
-slot_subfield(parent_slotno, field_id, new_slotno)
+const amt_slot = slot_subfield(oslot, sfAmount, 0)
 ```
 {% endtab %}
 {% endtabs %}

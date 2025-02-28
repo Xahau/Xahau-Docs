@@ -64,7 +64,10 @@ if (tx_len <= 0)
 
 {% tab title="Javascript" %}
 ```javascript
-sto_validate(blob)
+const result = sto_validate(tx_out)
+
+if (result <= 0)
+    rollback("Invalid STO.", 1)
 ```
 {% endtab %}
 {% endtabs %}

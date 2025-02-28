@@ -39,16 +39,14 @@ function etxn_generation(): ErrorCode | number
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t burden = 
+int64_t generation = 
   etxn_generation();
 ```
-
-
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-etxn_generation();
+const generation = etxn_generation()
 ```
 {% endtab %}
 {% endtabs %}

@@ -68,7 +68,11 @@ if (lookup < 0)
 
 {% tab title="Javascript" %}
 ```javascript
-state_foreign(key, namespace, accountid)
+const ns = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+const blacklist_status =
+    state_foreign(otxn_accid, ns, blacklist_accid)
+if (typeof blacklist_status === 'number')
+     rollback("Error: could not find key on foreign state.", 1);
 ```
 {% endtab %}
 {% endtabs %}

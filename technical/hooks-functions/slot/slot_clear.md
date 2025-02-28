@@ -39,7 +39,7 @@ slot_clear(1); // assumes a transaction is slotted into slot=1
 
 {% tab title="Javascript" %}
 ```javascript
-slot_clear(slotno)
+slot_clear(1) // assumes a transaction is slotted into slot=1
 ```
 {% endtab %}
 {% endtabs %}

@@ -42,7 +42,7 @@ slot_count(1); // assumes an array is slotted into slot=1
 
 {% tab title="Javascript" %}
 ```javascript
-slot_count(slotno)
+slot_count(1) // assumes an array is slotted into slot=1
 ```
 {% endtab %}
 {% endtabs %}

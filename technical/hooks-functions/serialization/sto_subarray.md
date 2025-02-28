@@ -39,10 +39,10 @@ C
 
 {% tabs %}
 {% tab title="C" %}
-<pre class="language-c"><code class="lang-c"><strong>int64_t sto_subfield (
+<pre class="language-c"><code class="lang-c"><strong>int64_t sto_subarray (
 </strong>    uint32_t read_ptr,
-<strong>  	uint32_t read_len,
-</strong>  	uint32_t array_id
+<strong>    uint32_t read_len,
+</strong>    uint32_t array_id
 );
 </code></pre>
 
@@ -54,7 +54,7 @@ C
 function sto_subarray(
     sto: ByteArray | HexString,
     array_id: number
-  ): ErrorCode | number
+  ): bigint | number
 ```
 {% endtab %}
 {% endtabs %}
@@ -93,7 +93,22 @@ else
 
 {% tab title="Javascript" %}
 ```javascript
-sto_subarray(sto, array_id)
+const SUB_OFFSET = (x) => Number(x >> 32n)
+const SUB_LENGTH = (x) => Number(x & 0xFFFFFFFFn)
+
+const memo_lookup = sto_subarray(memos, 0)
+
+if (typeof memo_lookup === 'number')
+{
+    // sfMemo was not found in the STObject pointed at
+}
+else
+{
+    // 0th index of the STArray was found and its location is as follows:
+    const memo_start = SUB_OFFSET(memo_lookup)
+    const memo_len = SUB_LENGTH(memo_lookup)
+    const memo = memos.slice(memo_start, memo_len)
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -137,9 +152,9 @@ sto_subarray(sto, array_id)
 {% tab title="Javascript" %}
 
 
-| Type   | Description                                                                    |
-| ------ | ------------------------------------------------------------------------------ |
-| number | The value of the specified subarray, or an error code if the extraction fails. |
+| Type               | Description                                                                                                                                                                                        |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bigint / ErrorCode | <p>The location of the field within the specified buffer:<br>- The high 32 bits are the offset location.<br>- The low 32 bits are the length.<br><br>or an error code if the extraction fails.</p> |
 {% endtab %}
 {% endtabs %}
 

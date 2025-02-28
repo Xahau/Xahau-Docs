@@ -41,8 +41,12 @@ Because exponents can be negative, and because negatives are reserved for error 
 #define float_exponent(f)\
         (((int32_t)(((f) >> 54U) & 0xFFU)) - 97)
 ```
+{% endtab %}
 
-
+{% tab title="Javascript" %}
+```javascript
+const float_exponent = (f) => (Number(((f) >> 54n) & 0xFFn) - 97)
+```
 {% endtab %}
 {% endtabs %}
 

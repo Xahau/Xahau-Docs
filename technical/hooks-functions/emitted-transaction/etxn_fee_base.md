@@ -19,7 +19,7 @@
 ```c
 int64_t etxn_fee_base (
     uint32_t read_ptr,
-  	uint32_t read_len
+    uint32_t read_len
 );
 ```
 
@@ -49,7 +49,7 @@ int64_t fee_to_pay =
 
 {% tab title="Javascript" %}
 ```javascript
-etxn_fee_base(txblob)
+const fee_to_pay = etxn_fee_base(tx_blob)
 ```
 {% endtab %}
 {% endtabs %}

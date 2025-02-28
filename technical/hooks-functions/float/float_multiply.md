@@ -18,7 +18,7 @@ description: Multiply two XFL numbers together
 
 {% tab title="Javascript" %}
 * Compute the multiplication of two XFL (xls17) floating point numbers
-* Return n error code or the product as a bigint.
+* Return n error code or new XFL as a bigint.
 {% endtab %}
 {% endtabs %}
 
@@ -60,7 +60,8 @@ int64_t max_vault_pusd =
 
 {% tab title="Javascript" %}
 ```javascript
-float_multiply(f1, f2)
+const max_vault_pusd =
+    float_multiply(vault_xrp, exchange_rate)
 ```
 {% endtab %}
 {% endtabs %}
@@ -107,9 +108,9 @@ float_multiply(f1, f2)
 {% tab title="Javascript" %}
 
 
-| Type               | Description                               |
-| ------------------ | ----------------------------------------- |
-| Errorcor or bigint | An error code or the product as a bigint. |
+| Type               | Description                                       |
+| ------------------ | ------------------------------------------------- |
+| Errorcor or bigint | An error code or The XFL (xls17) enclosing number |
 {% endtab %}
 {% endtabs %}
 

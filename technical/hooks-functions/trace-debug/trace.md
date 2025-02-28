@@ -18,7 +18,7 @@ int64_t trace (
     uint32_t mread_len,
     uint32_t dread_ptr,
     uint32_t dread_len,
-  	uint32_t as_hex
+    uint32_t as_hex
 );
 ```
 
@@ -50,7 +50,7 @@ trace(SBUF("Buffer conatained"), SBUF(some_buffer), 1);
 
 {% tab title="Javascript" %}
 ```javascript
-trace("Hello")
+trace("Buffer conatained", some_buffer, 1);
 ```
 {% endtab %}
 {% endtabs %}

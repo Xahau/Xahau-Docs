@@ -18,7 +18,7 @@ description: Multiply an XFL floating point by a non-XFL numerator and denominat
 
 {% tab title="Javascript" %}
 * Multiplies a float by a ratio defined by a numerator and denominator.
-* Returns an error code or the resulting bigint.
+* Returns an error code or new XFL as a bigint.
 {% endtab %}
 {% endtabs %}
 
@@ -27,15 +27,13 @@ description: Multiply an XFL floating point by a non-XFL numerator and denominat
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t float_multiply (
+int64_t float_mulratio (
     int64_t float1,
     uint32_t round_up,
     uint32_t numerator,
     uint32_t denominator
 );
 ```
-
-
 {% endtab %}
 
 {% tab title="Javascript" %}
@@ -65,7 +63,9 @@ int64_t max_vault_pusd =
 
 {% tab title="Javascript" %}
 ```javascript
-float_mulradio(f1, round_up, numerator, denominator)
+const max_vault_pusd =
+    float_mulratio(max_vault_pusd, 0,
+        COLLATERALIZATION_NUMERATOR, COLLATERALIZATION_DENOMINATOR);
 ```
 {% endtab %}
 {% endtabs %}
@@ -118,9 +118,9 @@ float_mulradio(f1, round_up, numerator, denominator)
 {% tab title="Javascript" %}
 
 
-| Type                | Description                                    |
-| ------------------- | ---------------------------------------------- |
-| ErrorCode or bigint | Returns an error code or the resulting bigint. |
+| Type                | Description                                                 |
+| ------------------- | ----------------------------------------------------------- |
+| ErrorCode or bigint | Returns an error code or tThe XFL (xls17) enclosing number. |
 {% endtab %}
 {% endtabs %}
 

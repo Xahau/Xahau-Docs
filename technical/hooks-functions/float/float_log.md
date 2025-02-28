@@ -66,7 +66,8 @@ int64_t zero =
 
 {% tab title="Javascript" %}
 ```javascript
-float_log(f1)
+const zero =
+    float_log(float_one())
 ```
 {% endtab %}
 {% endtabs %}

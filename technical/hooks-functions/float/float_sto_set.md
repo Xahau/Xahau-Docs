@@ -41,7 +41,6 @@ int64_t float_sto_set (
 {% tab title="Javascript" %}
 ```javascript
 function float_sto_set(buf: ByteArray | HexString): ErrorCode | number
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -63,7 +62,9 @@ if (vault_pusd < 0)
 
 {% tab title="Javascript" %}
 ```javascript
-float_sto_set(buf)
+const vault_pusd = float_sto_set(vault)
+if (typeof vault_pusd === 'string')
+  rollback("Failed to parse serialized float.", 1)
 ```
 {% endtab %}
 {% endtabs %}

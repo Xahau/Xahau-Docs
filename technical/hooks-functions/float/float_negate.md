@@ -62,7 +62,8 @@ int64_t negative_one =
 
 {% tab title="Javascript" %}
 ```javascript
-float_negate(f1)
+const negative_one =
+    float_negate(float_one());
 ```
 {% endtab %}
 {% endtabs %}
@@ -103,9 +104,9 @@ float_negate(f1)
 {% endtab %}
 
 {% tab title="Javascript" %}
-| Type                | Description                                     |
-| ------------------- | ----------------------------------------------- |
-| ErrorCode or bigint | An error code or the negated float as a bigint. |
+| Type                | Description                                        |
+| ------------------- | -------------------------------------------------- |
+| ErrorCode or bigint | An error code or The XFL (xls17) enclosing number. |
 {% endtab %}
 {% endtabs %}
 

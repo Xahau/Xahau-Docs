@@ -58,7 +58,8 @@ int64_t still_one =
 
 {% tab title="Javascript" %}
 ```javascript
-float_invert(f1)
+const still_one =
+    float_invert(float_one())
 ```
 {% endtab %}
 {% endtabs %}
