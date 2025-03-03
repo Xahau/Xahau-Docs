@@ -46,15 +46,14 @@ function slot_type(slotno: number, flags: number): ErrorCode | number
 {% tabs %}
 {% tab title="C" %}
 ```c
-uint8_t txn_id[32];
-int64_t bytes_written = 
-    slot_id(txn_id, 32, 1); // assumes a txn is slotted into slot=1
+int64_t fidle_code = 
+    slot_type(1, 0);
 ```
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-const txn_id = slot_type(1) // assumes a txn is slotted into slot=1
+const field_code = slot_type(1, 0)
 ```
 {% endtab %}
 {% endtabs %}
