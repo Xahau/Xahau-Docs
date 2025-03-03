@@ -6,7 +6,7 @@ description: What to expect when your Hook runs.
 
 ### Hook Creation Fees
 
-SetHook transactions are charged per byte of created webassembly. The rate is 10000 drops per byte. Thus a 1kib Hook will cost 10 XAH to create.
+SetHook transactions are charged per byte of created webassembly. The rate is 500 drops per byte. Thus a 1kib Hook will cost 0.5 XAH to create.
 
 ### Hook Execution Fees
 
