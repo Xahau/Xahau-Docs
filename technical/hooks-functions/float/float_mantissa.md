@@ -48,8 +48,8 @@ function float_mantissa(f1: bigint): ErrorCode | bigint
 {% tabs %}
 {% tab title="C" %}
 ```c
-int64_t exponent =
-    float_exponent(float_one());
+int64_t mantissa =
+    float_mantissa(float_one());
 ```
 
 > ### 📘Hint
@@ -59,8 +59,8 @@ int64_t exponent =
 
 {% tab title="Javascript" %}
 ```javascript
-const exponent =
-    float_exponent(float_one());
+const mantissa =
+    float_mantissa(float_one());
 ```
 {% endtab %}
 {% endtabs %}
