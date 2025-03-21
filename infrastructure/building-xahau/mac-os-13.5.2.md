@@ -53,7 +53,7 @@ Next we need to set the environment variables.
 ### Set Version Env Variables
 
 ```
-export LLVM_VERSION=14
+export LLVM_VERSION=16
 export BOOST_VERSION=1.86.0
 export WASMEDGE_VERSION=0.11.2
 export PROTOBUF_VERSION=3.20.0
