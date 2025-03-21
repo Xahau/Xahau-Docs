@@ -67,7 +67,7 @@
   * [Running a Testnet Node](infrastructure/peering/peering-your-own-node.md)
 * [Building Xahau (Dev)](infrastructure/building-xahau/README.md)
   * [Ubuntu - 22.04](infrastructure/building-xahau/ubuntu-22.04.md)
-  * [Mac OS - 15.0.1](infrastructure/building-xahau/mac-os-13.5.2.md)
+  * [Mac OS - 15.3.2 (24D81)](infrastructure/building-xahau/mac-os-13.5.2.md)
 
 ## Technical
 

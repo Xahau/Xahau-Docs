@@ -1,8 +1,8 @@
-# Mac OS - 15.0.1
+# Mac OS - 15.3.2 (24D81)
 
 | Dependency  | Working Versions |
-|-------------|------------------|
-| Apple Clang | 14.3.1, 16.0.0   |
+| ----------- | ---------------- |
+| Apple Clang | 16.0.0           |
 | LLVM        | 14               |
 | LLD         | 14               |
 | Boost       | 1.86.0           |
@@ -10,15 +10,7 @@
 | Protobuf    | 3.20.0           |
 | WasmEdge    | 0.11.2           |
 
-### Using Clang 16.0.0
-
-The XCode that matches MacOS Sequoia 15.3 bundles Clang 16.0.0. It has a performance regression
-when instantiating templates from large enum ranges.
-
-If you experience any hanging compiles, make sure you to merge the following PR:
-https://github.com/Xahau/xahaud/pull/436
-
-### Force Apple Clang 14.3.1
+### Using Apple Clang 14.3.1 (Deprecated)
 
 1. Download an older version of Xcode
    1. Go to the [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/) page. You will need to sign in with your Apple Developer account.
@@ -121,9 +113,7 @@ sudo make install
 ```
 
 {% hint style="info" %}
-Note that it's currently necessary to remove any homebrew installations of protobuf otherwise
-cmake will mix up both installations. There would of course be better workarounds for this, 
-but simply removing the homebrew installations is a quick fix.
+Note that it's currently necessary to remove any homebrew installations of protobuf otherwise cmake will mix up both installations. There would of course be better workarounds for this, but simply removing the homebrew installations is a quick fix.
 {% endhint %}
 
 Install Boost
