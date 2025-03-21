@@ -2,7 +2,7 @@
 
 | Dependency  | Working Versions |
 | ----------- | ---------------- |
-| Apple Clang | 16.0.0           |
+| Apple Clang | 14.3.1, 16.0.0   |
 | LLVM        | 14               |
 | LLD         | 14               |
 | Boost       | 1.86.0           |
@@ -10,7 +10,7 @@
 | Protobuf    | 3.20.0           |
 | WasmEdge    | 0.11.2           |
 
-### Using Apple Clang 14.3.1 (Deprecated)
+### Using Apple Clang 14.3.1
 
 1. Download an older version of Xcode
    1. Go to the [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/) page. You will need to sign in with your Apple Developer account.
