@@ -1,7 +1,7 @@
 ---
 description: >-
-  Import is a new transaction which accepts an XPOP from the XRPL Mainnet
-  chain (network_id=0) or Testnet (network_id=1) and provides account synchronisation.
+  Import is a new transaction which accepts an XPOP from the XRPL Mainnet chain
+  (network_id=0) or Testnet (network_id=1) and provides account synchronisation.
 ---
 
 # Import
@@ -38,7 +38,7 @@ _(Added by the \[Import amendment]\[].)_
 
 ### Notes
 
-_It is recommended that if you use a `SignersList` or `RegularKey` to sign your transactions that you key your accounts **FIRST** before attempting to B2M_ XAH_._
+_It is recommended that if you use a `SignersList` or `RegularKey` to sign your transactions that you key your accounts **FIRST** before attempting to \_B2M_ XAH\_ .
 
 * If the inner (xpop) transaction is `AccountSet` the mainet existing flags will be transfered to the new network.
 * If the inner (xpop) transaction is `SetRegularKey` with the `RegularKey` field omitted or empty, and a signers list does not exist for the account then the `lsfDisableMaster` flag will be set on the account.
