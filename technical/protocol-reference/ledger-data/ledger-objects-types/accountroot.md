@@ -62,6 +62,7 @@ An `AccountRoot` object has the following fields:
 | `GovernanceFlags`      | String    | Hash256             | No        |                                                                                                                                                                                                                                                                                        |
 | `GovernanceMarks`      | String    | Hash256             | No        |                                                                                                                                                                                                                                                                                        |
 | `AccountIndex`         | String    | UInt64              | No        | The account's \[Index Number]\[]. _(Added by the \[xahauGenesis amendment]\[] :enabled:)_                                                                                                                                                                                              |
+| `TouchCount`           | String    | UInt64              | No        | An incrementing counter for every time the ledger entry is "touched".                                                                                                                                                                                                                  |
 
 ### AccountRoot Flags
 

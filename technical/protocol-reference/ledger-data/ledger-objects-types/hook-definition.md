@@ -37,7 +37,8 @@ A `HookDefinition` object has the following fields:
 | Field             | JSON Type | \[Internal Type]\[] | Required? | Description                                                                                                       |
 | ----------------- | --------- | ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
 | `HookHash`        | String    | Hash256             | Yes       | The unique identifier of the hook.                                                                                |
-| `HookOn`          | String    | Hash256             | Yes       | The account that the hook is attached to.                                                                         |
+| `HookOn`          | String    | Hash256             | Yes       | The transaction/s on which the hook is triggered.                                                                 |
+| `HookCanEmit`     | String    | Hash256             | No        | The transaction/s which the hook can emit.                                                                        |
 | `HookNamespace`   | String    | Hash256             | Yes       | The namespace of the hook.                                                                                        |
 | `HookParameters`  | String    | Vector              | Yes       | The parameters that the hook accepts.                                                                             |
 | `HookApiVersion`  | Number    | UInt16              | Yes       | The version of the hook API that the hook uses.                                                                   |

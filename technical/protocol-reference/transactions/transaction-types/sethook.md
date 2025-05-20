@@ -307,16 +307,17 @@ JSON
 
 The following fields are used in the hook object:
 
-| Field            | JSON Type | Internal Type | Description                               |
-| ---------------- | --------- | ------------- | ----------------------------------------- |
-| `HookHash`       | String    | Hash256       | The hash of the hook.                     |
-| `CreateCode`     | String    | Blob          | The WebAssembly code for the hook.        |
-| `HookGrants`     | Array     | Array         | The grants associated with the hook.      |
-| `HookNamespace`  | String    | Hash256       | The namespace of the hook.                |
-| `HookParameters` | Array     | Array         | The parameters of the hook.               |
-| `HookOn`         | String    | Hash256       | The event on which the hook is triggered. |
-| `HookApiVersion` | Number    | UInt16        | The API version of the hook.              |
-| `Flags`          | Number    | UInt32        | Additional flags for the hook.            |
+| Field            | JSON Type | Internal Type | Description                                       |
+| ---------------- | --------- | ------------- | ------------------------------------------------- |
+| `HookHash`       | String    | Hash256       | The hash of the hook.                             |
+| `CreateCode`     | String    | Blob          | The WebAssembly code for the hook.                |
+| `HookGrants`     | Array     | Array         | The grants associated with the hook.              |
+| `HookNamespace`  | String    | Hash256       | The namespace of the hook.                        |
+| `HookParameters` | Array     | Array         | The parameters of the hook.                       |
+| `HookOn`         | String    | Hash256       | The transaction/s on which the hook is triggered. |
+| `HookCanEmit`    | String    | Hash256       | The transaction/s which the hook can emit.        |
+| `HookApiVersion` | Number    | UInt16        | The API version of the hook.                      |
+| `Flags`          | Number    | UInt32        | Additional flags for the hook.                    |
 
 ### Flags
 

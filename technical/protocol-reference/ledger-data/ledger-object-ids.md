@@ -10,6 +10,12 @@ Generally, a ledger object's ID is returned as the `index` field in JSON, at the
 
 \{{ include\_svg("img/ledger-object-ids.svg", "Diagram: xahaud uses SHA-512Half to generate IDs for ledger objects. The space key prevents IDs for different object types from colliding.") \}}
 
+### Flags <a href="#flags" id="flags"></a>
+
+Flags are on/off settings, which are represented as binary values that are combined into a single number using bitwise-OR operations. The bit values for the flags in ledger entries are different than the values used to enable or disable those flags in a transaction. Ledger state flags have names that begin with **`lsf`**.
+
+The possible values for the flags field vary based on the ledger entry type. Some ledger entry types have no flags defined. In these cases, the `Flags` field always has the value `0`.
+
 ### See Also
 
 * For more information how Xahau creates and uses hashes, see Hashes.
