@@ -23,7 +23,7 @@ _(Added by the \[_&#x52;emarks _amendment]\[].)_
       "Remark": {
         "RemarkName": "CAFE",
         "RemarkValue": "DEADBEEF",
-        "Flags": 0,
+        "Flags": 0
       }
     }
   ]
