@@ -196,7 +196,7 @@
       * [Remit](technical/protocol-reference/transactions/transaction-types/remit.md)
       * [SetHook](technical/protocol-reference/transactions/transaction-types/sethook.md)
       * [SetRegularKey](technical/protocol-reference/transactions/transaction-types/setregularkey.md)
-      * [SetRemarks](technical/protocol-reference/transactions/transaction-types/sethook-1.md)
+      * [SetRemarks](technical/protocol-reference/transactions/transaction-types/setremarks.md)
       * [SignerListSet](technical/protocol-reference/transactions/transaction-types/signerlistset.md)
       * [TicketCreate](technical/protocol-reference/transactions/transaction-types/ticketcreate.md)
       * [TrustSet](technical/protocol-reference/transactions/transaction-types/trustset.md)
