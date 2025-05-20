@@ -1,10 +1,16 @@
 # Mac OS - 15.3.2 (24D81)
 
+{% hint style="warning" %}
+Xahaud now supports building using Conan. We recommend using Conan to build the repository. The build instructions for Conan can be found in the [BUILD.md](https://github.com/Xahau/xahaud/blob/dev/BUILD.md) file in the source code.
+{% endhint %}
+
+## CMake Legacy Building
+
 | Dependency  | Working Versions |
 | ----------- | ---------------- |
 | Apple Clang | 14.3.1, 16.0.0   |
-| LLVM        | 14               |
-| LLD         | 14               |
+| LLVM        | 14, 16           |
+| LLD         | 14, 16           |
 | Boost       | 1.86.0           |
 | CMake       | 3.23.1           |
 | Protobuf    | 3.20.0           |

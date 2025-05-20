@@ -1,5 +1,11 @@
 # Ubuntu - 22.04
 
+{% hint style="warning" %}
+Xahaud now supports building using Conan. We recommend using Conan to build the repository. The build instructions for Conan can be found in the [BUILD.md](https://github.com/Xahau/xahaud/blob/dev/BUILD.md) file in the source code.
+{% endhint %}
+
+## CMake Legacy Building
+
 | Dependency | Working Version |
 | ---------- | --------------- |
 | GCC / G++  | 14.0.3          |
@@ -12,7 +18,7 @@
 
 ### Set Build Env Variables
 
-First make a dependency directory. I like to use `~/dependencies`&#x20;
+First make a dependency directory. I like to use `~/dependencies`
 
 ```
 mkdir ~/dependencies
